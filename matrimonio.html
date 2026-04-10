@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Il Matrimonio — Giorgio & Lucrezia</title>
+  <meta name="description" content="Giorgio e Lucrezia si sposano! Festeggia con noi! — 12 Settembre 2026, Cernobbio, Lago di Como">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Giorgio & Lucrezia — 12.09.2026">
+  <meta property="og:title" content="Giorgio e Lucrezia si sposano!">
+  <meta property="og:description" content="Giorgio e Lucrezia si sposano! Festeggia con noi! — 12 Settembre 2026, Cernobbio, Lago di Como">
+  <meta property="og:image" content="img/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="it_IT">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Giorgio e Lucrezia si sposano!">
+  <meta name="twitter:description" content="Giorgio e Lucrezia si sposano! Festeggia con noi! — 12 Settembre 2026, Cernobbio, Lago di Como">
+  <meta name="twitter:image" content="img/og-image.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --white: #F4F5F7;
+    --green: #B5EAAC;
+    --green-dark: #7dc975;
+    --green-deep: #3a7d44;
+    --ink: #1a1f1a;
+    --ink-light: #4a5548;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body { background:var(--white); color:var(--ink); font-family:'Montserrat',sans-serif; font-weight:300; overflow-x:hidden; }
+
+  nav {
+    position:fixed; top:0; left:0; width:100%; z-index:100;
+    padding:22px 40px;
+    display:flex; align-items:center; justify-content:space-between;
+    background:rgba(244,245,247,0.92);
+    backdrop-filter:blur(12px);
+    border-bottom:1px solid rgba(181,234,172,0.3);
+  }
+  .nav-monogram { font-family:'Cormorant Garamond',serif; font-size:1.5rem; font-weight:300; letter-spacing:0.08em; color:var(--ink); text-decoration:none; }
+  .nav-monogram span { color:var(--green-deep); }
+  .nav-links { display:flex; gap:36px; }
+  .nav-links a { font-size:0.68rem; font-weight:500; letter-spacing:0.18em; text-transform:uppercase; color:var(--ink-light); text-decoration:none; transition:color 0.3s; }
+  .nav-links a:hover, .nav-links a.active { color:var(--green-deep); }
+
+  /* HERO */
+  .page-hero {
+    min-height: 65vh;
+    display:flex; align-items:flex-end;
+    padding:120px 80px 60px;
+    position:relative; overflow:hidden;
+    background: var(--ink);
+  }
+  .page-hero-img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center 40%; opacity:0.4; }
+  .page-hero-overlay { position:absolute; inset:0; background:linear-gradient(160deg, rgba(26,31,26,0.6) 0%, rgba(26,31,26,0.2) 100%); }
+  .page-hero-content { position:relative; z-index:1; }
+  .page-hero-tag { font-size:0.62rem; letter-spacing:0.3em; text-transform:uppercase; color:var(--green); margin-bottom:16px; }
+  .page-hero-title { font-family:'Cormorant Garamond',serif; font-size:clamp(3rem,7vw,6rem); font-weight:300; color:#fff; line-height:0.95; }
+  .page-hero-title em { font-style:italic; color:var(--green); }
+
+  /* TIMELINE PROGRAM */
+  .program-section { padding: 80px 60px; max-width:1100px; margin:0 auto; }
+  .section-label { font-size:0.62rem; letter-spacing:0.3em; text-transform:uppercase; color:var(--green-deep); margin-bottom:48px; }
+  .timeline { position:relative; padding-left: 40px; }
+  .timeline::before { content:''; position:absolute; left:0; top:8px; bottom:8px; width:1px; background:linear-gradient(to bottom, var(--green), rgba(181,234,172,0.2)); }
+  .timeline-item { position:relative; margin-bottom:52px; }
+  .timeline-item::before {
+    content:''; position:absolute; left:-46px; top:6px;
+    width:12px; height:12px; border-radius:50%;
+    background:var(--green); border:2px solid var(--white);
+    box-shadow: 0 0 0 2px var(--green-dark);
+  }
+  .timeline-time { font-size:0.62rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--green-deep); margin-bottom:8px; }
+  .timeline-title { font-family:'Cormorant Garamond',serif; font-size:1.7rem; font-weight:300; font-style:italic; color:var(--ink); margin-bottom:6px; }
+  .timeline-sub { font-size:0.78rem; color:var(--ink-light); line-height:1.6; }
+
+  /* VENUE CARDS */
+  .venues-section { background:var(--ink); padding:80px 0; }
+  .venues-inner { max-width:1100px; margin:0 auto; padding:0 60px; }
+  .venues-label { font-size:0.62rem; letter-spacing:0.3em; text-transform:uppercase; color:var(--green); margin-bottom:48px; }
+  .venue-grid { display:grid; grid-template-columns:1fr 1fr; gap:32px; }
+  .venue-card { position:relative; overflow:hidden; }
+  .venue-img { width:100%; aspect-ratio:4/3; object-fit:cover; display:block; transition:transform 0.7s cubic-bezier(0.25,0.46,0.45,0.94); }
+  .venue-card:hover .venue-img { transform:scale(1.04); }
+  .venue-info { padding: 28px 0 0; }
+  .venue-tag { font-size:0.58rem; letter-spacing:0.25em; text-transform:uppercase; color:var(--green); margin-bottom:10px; }
+  .venue-name { font-family:'Cormorant Garamond',serif; font-size:1.8rem; font-weight:300; font-style:italic; color:#fff; margin-bottom:10px; }
+  .venue-desc { font-size:0.78rem; line-height:1.7; color:rgba(244,245,247,0.6); }
+  .venue-details { margin-top:20px; display:flex; flex-direction:column; gap:8px; }
+  .venue-detail { display:flex; align-items:flex-start; gap:12px; font-size:0.75rem; color:rgba(244,245,247,0.5); }
+  .venue-detail-icon { color:var(--green); flex-shrink:0; width:16px; }
+  .venue-cta {
+    display:inline-block; margin-top:18px;
+    font-size:0.62rem; letter-spacing:0.2em; text-transform:uppercase;
+    color:var(--green); border-bottom:1px solid var(--green);
+    text-decoration:none; padding-bottom:3px;
+    transition:letter-spacing 0.3s;
+  }
+  .venue-cta:hover { letter-spacing:0.28em; }
+
+  /* LOCATION AREA */
+  .location-section { padding:80px 60px; max-width:1100px; margin:0 auto; }
+  .location-grid { display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center; }
+  .location-img { width:100%; aspect-ratio:4/3; object-fit:cover; }
+  .location-text h2 { font-family:'Cormorant Garamond',serif; font-size:2.5rem; font-weight:300; font-style:italic; margin-bottom:20px; }
+  .location-text p { font-size:0.82rem; line-height:1.85; color:var(--ink-light); margin-bottom:16px; }
+  .location-cta {
+    display:inline-block; margin-top:8px;
+    font-size:0.65rem; letter-spacing:0.2em; text-transform:uppercase;
+    background:var(--green); color:var(--ink);
+    padding:12px 28px; text-decoration:none;
+    transition:background 0.3s;
+  }
+  .location-cta:hover { background:var(--green-dark); }
+
+  /* INFO BOX */
+  .info-band { background:var(--green); padding:56px 60px; }
+  .info-band-inner { max-width:1100px; margin:0 auto; }
+  .info-band-title { font-family:'Cormorant Garamond',serif; font-size:1.4rem; font-weight:300; font-style:italic; color:var(--ink); margin-bottom:28px; }
+  .info-items { display:grid; grid-template-columns:repeat(3,1fr); gap:32px; }
+  .info-item-label { font-size:0.6rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--green-deep); margin-bottom:6px; }
+  .info-item-val { font-size:0.82rem; color:var(--ink); line-height:1.6; }
+
+  footer { background:var(--ink); color:var(--white); text-align:center; padding:48px 40px; }
+  footer .foot-names { font-family:'Cormorant Garamond',serif; font-size:2rem; font-weight:300; font-style:italic; color:var(--green); }
+  footer .foot-date { font-size:0.62rem; letter-spacing:0.25em; text-transform:uppercase; color:rgba(244,245,247,0.45); margin-top:12px; }
+
+  @media (max-width: 900px) {
+    nav { padding:16px 20px; }
+    .nav-links { gap:20px; }
+    .page-hero { padding:100px 24px 48px; }
+    .program-section, .venues-inner, .location-section { padding:60px 24px; }
+    .venue-grid, .location-grid, .info-items { grid-template-columns:1fr; }
+    .info-band { padding:48px 24px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-monogram">G <span>&</span> L</a>
+  <div class="nav-links">
+    <a href="sposi.html">Gli Sposi</a>
+    <a href="matrimonio.html" class="active">Il Matrimonio</a>
+    <a href="viaggio.html">Viaggio di Nozze</a>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <img src="img/evento/castello.jpg" alt="Castello Visconti di San Vito" class="page-hero-img">
+  <div class="page-hero-overlay"></div>
+  <div class="page-hero-content">
+    <p class="page-hero-tag">12 Settembre 2026</p>
+    <h1 class="page-hero-title">Il <em>Matrimonio</em></h1>
+  </div>
+</section>
+
+<section class="program-section">
+  <p class="section-label">Il Programma della Giornata</p>
+  <div class="timeline">
+    <div class="timeline-item">
+      <p class="timeline-time">h 15:00</p>
+      <h3 class="timeline-title">Cerimonia Religiosa</h3>
+      <p class="timeline-sub">Chiesa Parrocchiale di San Vincenzo Martire<br>Via Regina, Cernobbio (CO)</p>
+    </div>
+    <div class="timeline-item">
+      <p class="timeline-time">h 16:30</p>
+      <h3 class="timeline-title">Trasferimento al Castello</h3>
+      <p class="timeline-sub">Al termine della cerimonia, partenza verso il Castello Visconti di San Vito a Somma Lombardo</p>
+    </div>
+    <div class="timeline-item">
+      <p class="timeline-time">h 17:30</p>
+      <h3 class="timeline-title">Aperitivo di Benvenuto</h3>
+      <p class="timeline-sub">Benvenuti al castello — aperitivo nei giardini storici con i primi brindisi agli sposi</p>
+    </div>
+    <div class="timeline-item">
+      <p class="timeline-time">h 19:30</p>
+      <h3 class="timeline-title">Cena di Gala</h3>
+      <p class="timeline-sub">Castello Visconti di San Vito<br>Via Visconti di San Vito, Somma Lombardo (VA)</p>
+    </div>
+    <div class="timeline-item">
+      <p class="timeline-time">h 22:00</p>
+      <h3 class="timeline-title">Festa & Ballo</h3>
+      <p class="timeline-sub">La serata continua con musica, balli e una grande festa — fino alle ore 01:00</p>
+    </div>
+  </div>
+</section>
+
+<section class="venues-section">
+  <div class="venues-inner">
+    <p class="venues-label">Le Location</p>
+    <div class="venue-grid">
+      <div class="venue-card">
+        <img src="img/evento/chiesa1.jpg" alt="Chiesa di San Vincenzo" class="venue-img">
+        <div class="venue-info">
+          <p class="venue-tag">Cerimonia · h 15:00</p>
+          <h3 class="venue-name">Chiesa di San Vincenzo</h3>
+          <p class="venue-desc">L'antica chiesa parrocchiale di Cernobbio, affacciata sul lungolago di Como, sarà la cornice sacra in cui Giorgio e Lucrezia si scambieranno il loro sì. Un luogo di rara bellezza, immerso nel verde e nella storia del borgo.</p>
+          <div class="venue-details">
+            <div class="venue-detail">
+              <span class="venue-detail-icon">📍</span>
+              <span>Via Regina — Cernobbio (CO)</span>
+            </div>
+            <div class="venue-detail">
+              <span class="venue-detail-icon">🕒</span>
+              <span>Sabato 12 Settembre 2026, ore 15:00</span>
+            </div>
+          </div>
+          <a href="https://maps.google.com/?q=Chiesa+San+Vincenzo+Cernobbio" target="_blank" class="venue-cta">Apri in Maps →</a>
+        </div>
+      </div>
+
+      <div class="venue-card">
+        <img src="img/evento/castello.jpg" alt="Castello Visconti di San Vito" class="venue-img">
+        <div class="venue-info">
+          <p class="venue-tag">Cena & Festa · h 19:30</p>
+          <h3 class="venue-name">Castello Visconti di San Vito</h3>
+          <p class="venue-desc">Un castello medievale dalla storia millenaria, immerso in un parco secolare a Somma Lombardo. Tra le sue sale storiche e i giardini romantici, la serata si trasformerà in un ricordo indelebile.</p>
+          <div class="venue-details">
+            <div class="venue-detail">
+              <span class="venue-detail-icon">📍</span>
+              <span>Via Visconti di San Vito — Somma Lombardo (VA)</span>
+            </div>
+            <div class="venue-detail">
+              <span class="venue-detail-icon">🕒</span>
+              <span>Sabato 12 Settembre 2026, ore 19:30</span>
+            </div>
+          </div>
+          <a href="https://maps.google.com/?q=Castello+Visconti+di+San+Vito+Somma+Lombardo" target="_blank" class="venue-cta">Apri in Maps →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="location-section">
+  <div class="location-grid">
+    <img src="img/evento/cernobbio.jpg" alt="Cernobbio, Lago di Como" class="location-img">
+    <div class="location-text">
+      <p class="section-label">Il Territorio</p>
+      <h2>Cernobbio,<br>Lago di Como</h2>
+      <p>Il borgo di Cernobbio è una delle perle del Lago di Como — un paese che ha saputo conservare l'autenticità del tessuto antico pur aprendo le sue porte al mondo. Le sue ville storiche, i suoi giardini e il suo lungolago sono lo sfondo perfetto per una giornata come questa.</p>
+      <p>Chi arriva da fuori città troverà nei dintorni strutture ricettive di ogni tipo, dalla grande tradizione dell'ospitalità lariana fino ai boutique hotel più moderni.</p>
+      <a href="https://maps.google.com/?q=Cernobbio+Como" target="_blank" class="location-cta">Esplora la zona</a>
+    </div>
+  </div>
+</section>
+
+<div class="info-band">
+  <div class="info-band-inner">
+    <h3 class="info-band-title">Informazioni pratiche</h3>
+    <div class="info-items">
+      <div>
+        <p class="info-item-label">Dress Code</p>
+        <p class="info-item-val">Elegante. Cerimonia in chiesa — abbigliamento formale consigliato.</p>
+      </div>
+      <div>
+        <p class="info-item-label">Conferma presenza</p>
+        <p class="info-item-val">Vi preghiamo di confermare la vostra presenza entro il 31 Luglio 2026.</p>
+      </div>
+      <div>
+        <p class="info-item-label">Contatti</p>
+        <p class="info-item-val">Giorgio: <a href="tel:+393406006211" style="color:var(--ink);text-decoration:none;">340 600 6211</a><br>Lucrezia: <a href="tel:+393339312139" style="color:var(--ink);text-decoration:none;">333 931 2139</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p class="foot-names">Giorgio & Lucrezia</p>
+  <p class="foot-date">12 · 09 · 2026 — Cernobbio, Como</p>
+</footer>
+
+</body>
+</html>
