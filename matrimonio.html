@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="shortcut icon" href="favicon.svg">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#F5F0E8">
+<title>Il Matrimonio — Lucrezia & Giorgio</title>
+  <meta name="description" content="Giorgio e Lucrezia si sposano! Festeggia con noi! — 12 Settembre 2026, Cernobbio, Lago di Como">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Lucrezia & Giorgio — 12.09.2026">
+  <meta property="og:title" content="Giorgio e Lucrezia si sposano!">
+  <meta property="og:description" content="Giorgio e Lucrezia si sposano! Festeggia con noi! — 12 Settembre 2026, Cernobbio, Lago di Como">
+  <meta property="og:image" content="https://www.giorgioelucrezia.it/img/insieme/ins02.jpg">
+  <meta property="og:image:width" content="960">
+  <meta property="og:image:height" content="1280">
+  <meta property="og:locale" content="it_IT">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Giorgio e Lucrezia si sposano!">
+  <meta name="twitter:description" content="Giorgio e Lucrezia si sposano! Festeggia con noi! — 12 Settembre 2026, Cernobbio, Lago di Como">
+  <meta name="twitter:image" content="https://www.giorgioelucrezia.it/img/insieme/ins02.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --white: #F5F0E8;
+    --green: #A8C89A;
+    --green-dark: #5C7A4E;
+    --green-deep: #2C4A1E;
+    --ink: #2C3B28;
+    --ink-light: #4a5e3a;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body { background:var(--white); color:var(--ink); font-family:'Montserrat',sans-serif; font-weight:300; overflow-x:hidden; }
+
+  nav {
+    position:fixed; top:0; left:0; width:100%; z-index:100;
+    padding:22px 40px;
+    display:flex; align-items:center; justify-content:space-between;
+    background:rgba(245,240,232,0.94);
+    backdrop-filter:blur(12px);
+    border-bottom:1px solid rgba(168,200,154,0.3);
+  }
+  .nav-monogram { font-family:'Cormorant Garamond',serif; font-size:1.5rem; font-weight:300; letter-spacing:0.08em; color:var(--ink); text-decoration:none; }
+  .nav-monogram span { color:var(--green-deep); }
+  .nav-links { display:flex; gap:36px; }
+  .nav-links a { font-size:0.68rem; font-weight:500; letter-spacing:0.18em; text-transform:uppercase; color:var(--ink-light); text-decoration:none; transition:color 0.3s; }
+  .nav-links a:hover, .nav-links a.active { color:var(--green-deep); }
+  .nav-rsvp {
+    border: 1px solid currentColor;
+    padding: 4px 14px;
+    border-radius: 2px;
+    display: inline-flex;
+    align-items: center;
+    line-height: 1;
+  }
+  .nav-rsvp:hover, .nav-rsvp.active {
+    background: var(--green-deep);
+    color: var(--white) !important;
+    border-color: var(--green-deep);
+  }
+
+  /* HERO */
+  .page-hero {
+    min-height: 65vh;
+    display:flex; align-items:flex-end;
+    padding:120px 80px 60px;
+    position:relative; overflow:hidden;
+    background: var(--ink);
+  }
+  .page-hero-img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center 40%; opacity:0.4; }
+  .page-hero-overlay { position:absolute; inset:0; background:linear-gradient(160deg, rgba(26,31,26,0.6) 0%, rgba(26,31,26,0.2) 100%); }
+  .page-hero-content { position:relative; z-index:1; }
+  .page-hero-tag { font-size:0.62rem; letter-spacing:0.3em; text-transform:uppercase; color:var(--green); margin-bottom:16px; }
+  .page-hero-title { font-family:'Cormorant Garamond',serif; font-size:clamp(3rem,7vw,6rem); font-weight:300; color:#fff; line-height:0.95; }
+  .page-hero-title em { font-style:italic; color:var(--green); }
+
+  /* TIMELINE PROGRAM */
+  .program-section { padding: 80px 60px; max-width:1100px; margin:0 auto; }
+  .section-label { font-size:0.62rem; letter-spacing:0.3em; text-transform:uppercase; color:var(--green-deep); margin-bottom:48px; }
+  .timeline { position:relative; padding-left: 40px; }
+  .timeline::before { content:''; position:absolute; left:0; top:8px; bottom:8px; width:1px; background:linear-gradient(to bottom, var(--green), rgba(181,234,172,0.2)); }
+  .timeline-item { position:relative; margin-bottom:52px; }
+  .timeline-item::before {
+    content:''; position:absolute; left:-46px; top:6px;
+    width:12px; height:12px; border-radius:50%;
+    background:var(--green); border:2px solid var(--white);
+    box-shadow: 0 0 0 2px var(--green-dark);
+  }
+  .timeline-time { font-size:0.62rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--green-deep); margin-bottom:8px; }
+  .timeline-title { font-family:'Cormorant Garamond',serif; font-size:1.7rem; font-weight:300; font-style:italic; color:var(--ink); margin-bottom:6px; }
+  .timeline-sub { font-size:0.78rem; color:var(--ink-light); line-height:1.6; }
+
+  /* VENUE CARDS */
+  .venues-section { background:var(--ink); padding:80px 0; }
+  .venues-inner { max-width:1100px; margin:0 auto; padding:0 60px; }
+  .venues-label { font-size:0.62rem; letter-spacing:0.3em; text-transform:uppercase; color:var(--green); margin-bottom:48px; }
+  .venue-grid { display:grid; grid-template-columns:1fr 1fr; gap:32px; }
+  .venue-card { position:relative; overflow:hidden; }
+  .venue-img { width:100%; aspect-ratio:4/3; object-fit:cover; display:block; transition:transform 0.7s cubic-bezier(0.25,0.46,0.45,0.94); }
+  .venue-card:hover .venue-img { transform:scale(1.04); }
+  .venue-info { padding: 28px 0 0; }
+  .venue-tag { font-size:0.58rem; letter-spacing:0.25em; text-transform:uppercase; color:var(--green); margin-bottom:10px; }
+  .venue-name { font-family:'Cormorant Garamond',serif; font-size:1.8rem; font-weight:300; font-style:italic; color:#fff; margin-bottom:10px; }
+  .venue-desc { font-size:0.78rem; line-height:1.7; color:rgba(245,240,232,0.6); }
+  .venue-details { margin-top:20px; display:flex; flex-direction:column; gap:8px; }
+  .venue-detail { display:flex; align-items:flex-start; gap:12px; font-size:0.75rem; color:rgba(245,240,232,0.5); }
+  .venue-detail-icon { color:var(--green); flex-shrink:0; width:16px; }
+  .venue-cta {
+    display:inline-block; margin-top:18px;
+    font-size:0.62rem; letter-spacing:0.2em; text-transform:uppercase;
+    color:var(--green); border-bottom:1px solid var(--green);
+    text-decoration:none; padding-bottom:3px;
+    transition:letter-spacing 0.3s;
+  }
+  .venue-cta:hover { letter-spacing:0.28em; }
+
+  /* LOCATION AREA */
+  .location-section { padding:80px 60px; max-width:1100px; margin:0 auto; }
+  .location-grid { display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center; }
+  .location-img { width:100%; aspect-ratio:4/3; object-fit:cover; }
+  .location-text h2 { font-family:'Cormorant Garamond',serif; font-size:2.5rem; font-weight:300; font-style:italic; margin-bottom:20px; }
+  .location-text p { font-size:0.82rem; line-height:1.85; color:var(--ink-light); margin-bottom:16px; }
+  .location-cta {
+    display:inline-block; margin-top:8px;
+    font-size:0.65rem; letter-spacing:0.2em; text-transform:uppercase;
+    background:var(--green); color:var(--ink);
+    padding:12px 28px; text-decoration:none;
+    transition:background 0.3s;
+  }
+  .location-cta:hover { background:var(--green-dark); }
+
+  /* INFO BOX */
+  .info-band { background:var(--green); padding:56px 60px; }
+  .info-band-inner { max-width:1100px; margin:0 auto; }
+  .info-band-title { font-family:'Cormorant Garamond',serif; font-size:1.4rem; font-weight:300; font-style:italic; color:var(--ink); margin-bottom:28px; }
+  .info-items { display:grid; grid-template-columns:repeat(3,1fr); gap:32px; }
+  .info-item-label { font-size:0.6rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--green-deep); margin-bottom:6px; }
+  .info-item-val { font-size:0.82rem; color:var(--ink); line-height:1.6; }
+
+  footer { background:var(--ink); color:var(--white); text-align:center; padding:48px 40px; }
+  footer .foot-names { font-family:'Cormorant Garamond',serif; font-size:2rem; font-weight:300; font-style:italic; color:var(--green); }
+  footer .foot-date { font-size:0.62rem; letter-spacing:0.25em; text-transform:uppercase; color:rgba(245,240,232,0.45); margin-top:12px; }
+
+  @media (max-width: 900px) {
+    nav { padding:16px 20px; }
+    .nav-links { gap:20px; }
+    .page-hero { padding:100px 24px 48px; }
+    .program-section, .venues-inner, .location-section { padding:60px 24px; }
+    .venue-grid, .location-grid, .info-items { grid-template-columns:1fr; }
+    .info-band { padding:48px 24px; }
+  }
+
+  /* Mobile nav: prevent monogram from wrapping */
+  @media (max-width: 700px) {
+    nav { padding: 14px 16px; flex-wrap: nowrap; gap: 8px; }
+    .nav-monogram { font-size: 1.1rem; white-space: nowrap; flex-shrink: 0; }
+    .nav-links { gap: 12px; flex-wrap: wrap; justify-content: flex-end; }
+    .nav-links a { font-size: 0.56rem; letter-spacing: 0.1em; }
+    .nav-rsvp { padding: 3px 8px; }
+  }
+
+  /* ── HAMBURGER MENU ── */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 36px; height: 36px;
+    cursor: pointer;
+    background: none; border: none;
+    padding: 4px;
+    z-index: 310;
+    flex-shrink: 0;
+  }
+  .hamburger span {
+    display: block; width: 22px; height: 1.5px;
+    background: var(--ink);
+    transition: transform 0.35s, opacity 0.25s;
+    transform-origin: center;
+  }
+  .hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+  .hamburger.open span:nth-child(2) { opacity: 0; }
+  .hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+  /* Drawer overlay */
+  .nav-overlay {
+    display: none;
+    position: fixed; inset: 0; z-index: 290;
+    background: rgba(44, 59, 40, 0.45);
+    backdrop-filter: blur(2px);
+    opacity: 0; transition: opacity 0.3s;
+  }
+  .nav-overlay.open { opacity: 1; }
+
+  /* Drawer panel */
+  .nav-drawer {
+    position: fixed; top: 0; right: 0; bottom: 0;
+    width: min(300px, 82vw);
+    background: var(--white);
+    z-index: 300;
+    transform: translateX(100%);
+    transition: transform 0.38s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex; flex-direction: column;
+    padding: 80px 36px 48px;
+    box-shadow: -8px 0 40px rgba(44,59,40,0.12);
+  }
+  .nav-drawer.open { transform: translateX(0); }
+
+  .nav-drawer-monogram {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.6rem; font-weight: 300; letter-spacing: 0.08em;
+    color: var(--ink); margin-bottom: 40px;
+    text-decoration: none;
+  }
+  .nav-drawer-monogram span { color: var(--green-deep); }
+
+  .nav-drawer-links {
+    display: flex; flex-direction: column; gap: 0;
+  }
+  .nav-drawer-links a {
+    font-size: 1rem; font-weight: 400; letter-spacing: 0.06em;
+    color: var(--ink-light); text-decoration: none;
+    padding: 16px 0;
+    border-bottom: 1px solid rgba(168,200,154,0.25);
+    transition: color 0.2s, padding-left 0.2s;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .nav-drawer-links a::after { content: '→'; opacity: 0; transition: opacity 0.2s; font-size: 0.85rem; }
+  .nav-drawer-links a:hover { color: var(--green-deep); padding-left: 6px; }
+  .nav-drawer-links a:hover::after { opacity: 1; }
+  .nav-drawer-links a.active { color: var(--green-deep); font-weight: 500; }
+  .nav-drawer-links .nav-rsvp {
+    margin-top: 24px;
+    border: 1px solid var(--green-deep) !important;
+    padding: 14px 20px !important;
+    border-radius: 2px;
+    color: var(--green-deep) !important;
+    justify-content: center;
+    letter-spacing: 0.15em;
+  }
+  .nav-drawer-links .nav-rsvp::after { display: none; }
+  .nav-drawer-links .nav-rsvp:hover {
+    background: var(--green-deep);
+    color: var(--white) !important;
+    padding-left: 20px !important;
+  }
+
+  @media (max-width: 768px) {
+    .hamburger { display: flex; }
+    .nav-links { display: none; }
+    .nav-overlay { display: block; pointer-events: none; }
+    .nav-overlay.open { pointer-events: all; }
+    nav { padding: 16px 20px; }
+    .nav-monogram { font-size: 1.3rem; }
+  }
+
+
+  /* Focus visibile per navigazione da tastiera */
+  a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+    outline: 2px solid var(--green-dark);
+    outline-offset: 3px;
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-monogram">L <span>&</span> G</a>
+  <div class="nav-links">
+    <a href="sposi.html">Gli Sposi</a>
+    <a href="matrimonio.html" class="active">Il Matrimonio</a>
+    <a href="viaggio.html">Lista Viaggio</a>
+    <a href="rsvp.html" class="nav-rsvp">R.S.V.P.</a>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <img src="img/evento/castello.jpg" alt="Castello Visconti di San Vito" class="page-hero-img">
+  <div class="page-hero-overlay"></div>
+  <div class="page-hero-content">
+    <p class="page-hero-tag">12 Settembre 2026</p>
+    <h1 class="page-hero-title">Il <em>Matrimonio</em></h1>
+  </div>
+</section>
+
+<section class="program-section">
+  <p class="section-label">Il Programma della Giornata</p>
+  <div class="timeline">
+    <div class="timeline-item">
+      <p class="timeline-time">h 15:00</p>
+      <h3 class="timeline-title">Cerimonia Religiosa</h3>
+      <p class="timeline-sub">Chiesa Parrocchiale di San Vincenzo Martire<br>Via Regina, Cernobbio (CO)</p>
+    </div>
+    <div class="timeline-item">
+      <p class="timeline-time">h 16:30</p>
+      <h3 class="timeline-title">Trasferimento al Castello</h3>
+      <p class="timeline-sub">Al termine della cerimonia, partenza verso il Castello Visconti di San Vito a Somma Lombardo</p>
+    </div>
+    <div class="timeline-item">
+      <p class="timeline-time">h 17:30</p>
+      <h3 class="timeline-title">Aperitivo di Benvenuto</h3>
+      <p class="timeline-sub">Benvenuti al castello — aperitivo nei giardini storici con i primi brindisi agli sposi</p>
+    </div>
+    <div class="timeline-item">
+      <p class="timeline-time">h 19:30</p>
+      <h3 class="timeline-title">Cena di Gala</h3>
+      <p class="timeline-sub">Castello Visconti di San Vito<br>Via Visconti di San Vito, Somma Lombardo (VA)</p>
+    </div>
+    <div class="timeline-item">
+      <p class="timeline-time">h 22:00</p>
+      <h3 class="timeline-title">Festa & Ballo</h3>
+      <p class="timeline-sub">La serata continua con musica, balli e una grande festa — fino alle ore 01:00</p>
+    </div>
+  </div>
+</section>
+
+<section class="venues-section">
+  <div class="venues-inner">
+    <p class="venues-label">Le Location</p>
+    <div class="venue-grid">
+      <div class="venue-card">
+        <img src="img/evento/chiesa1.jpg" alt="Chiesa di San Vincenzo" class="venue-img">
+        <div class="venue-info">
+          <p class="venue-tag">Cerimonia · h 15:00</p>
+          <h3 class="venue-name">Chiesa di San Vincenzo</h3>
+          <p class="venue-desc">L'antica chiesa parrocchiale di Cernobbio, affacciata sul lungolago di Como, sarà la cornice sacra in cui Giorgio e Lucrezia si scambieranno il loro sì. Un luogo di rara bellezza, immerso nel verde e nella storia del borgo.</p>
+          <div class="venue-details">
+            <div class="venue-detail">
+              <span class="venue-detail-icon">📍</span>
+              <span>Via Regina — Cernobbio (CO)</span>
+            </div>
+            <div class="venue-detail">
+              <span class="venue-detail-icon">🕒</span>
+              <span>Sabato 12 Settembre 2026, ore 15:00</span>
+            </div>
+          </div>
+          <a href="https://maps.google.com/?q=Chiesa+San+Vincenzo+Cernobbio" target="_blank" class="venue-cta">Apri in Maps →</a>
+        </div>
+      </div>
+
+      <div class="venue-card">
+        <img src="img/evento/castello.jpg" alt="Castello Visconti di San Vito" class="venue-img">
+        <div class="venue-info">
+          <p class="venue-tag">Cena & Festa · h 19:30</p>
+          <h3 class="venue-name">Castello Visconti di San Vito</h3>
+          <p class="venue-desc">Un castello medievale dalla storia millenaria, immerso in un parco secolare a Somma Lombardo. Tra le sue sale storiche e i giardini romantici, la serata si trasformerà in un ricordo indelebile.</p>
+          <div class="venue-details">
+            <div class="venue-detail">
+              <span class="venue-detail-icon">📍</span>
+              <span>Via Visconti di San Vito — Somma Lombardo (VA)</span>
+            </div>
+            <div class="venue-detail">
+              <span class="venue-detail-icon">🕒</span>
+              <span>Sabato 12 Settembre 2026, ore 19:30</span>
+            </div>
+          </div>
+          <a href="https://maps.google.com/?q=Castello+Visconti+di+San+Vito+Somma+Lombardo" target="_blank" class="venue-cta">Apri in Maps →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="location-section">
+  <div class="location-grid">
+    <img src="img/evento/cernobbio.jpg" alt="Cernobbio, Lago di Como" class="location-img">
+    <div class="location-text">
+      <p class="section-label">Il Territorio</p>
+      <h2>Cernobbio,<br>Lago di Como</h2>
+      <p>Il borgo di Cernobbio è una delle perle del Lago di Como — un paese che ha saputo conservare l'autenticità del tessuto antico pur aprendo le sue porte al mondo. Le sue ville storiche, i suoi giardini e il suo lungolago sono lo sfondo perfetto per una giornata come questa.</p>
+      <p>Chi arriva da fuori città troverà nei dintorni strutture ricettive di ogni tipo, dalla grande tradizione dell'ospitalità lariana fino ai boutique hotel più moderni.</p>
+      <a href="https://maps.google.com/?q=Cernobbio+Como" target="_blank" class="location-cta">Esplora la zona</a>
+    </div>
+  </div>
+</section>
+
+<div class="info-band">
+  <div class="info-band-inner">
+    <h3 class="info-band-title">Informazioni pratiche</h3>
+    <div class="info-items">
+      <div>
+        <p class="info-item-label">Dress Code</p>
+        <p class="info-item-val">Elegante. Cerimonia in chiesa — abbigliamento formale consigliato.</p>
+      </div>
+      <div>
+        <p class="info-item-label">Conferma presenza</p>
+        <p class="info-item-val">Vi preghiamo di confermare la vostra presenza entro il 31 Luglio 2026.</p>
+        <a href="rsvp.html" style="display:inline-block;margin-top:14px;font-size:0.62rem;letter-spacing:0.2em;text-transform:uppercase;background:var(--ink);color:var(--white);padding:10px 24px;text-decoration:none;transition:background 0.3s;" onmouseover="this.style.background='#1a2518'" onmouseout="this.style.background='var(--ink)'">Conferma la presenza →</a>
+      </div>
+      <div>
+        <p class="info-item-label">Celebrazione</p>
+        <p class="info-item-val">Per permettere a tutti i nostri ospiti di godersi la serata, abbiamo organizzato una celebrazione per soli adulti.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FAQ SECTION -->
+<section style="padding:80px 0; background:var(--white);">
+  <div style="max-width:900px; margin:0 auto; padding:0 60px;">
+    <p style="font-size:0.62rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--green-dark);margin-bottom:16px;">Domande frequenti</p>
+    <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(2.2rem,5vw,3.5rem);font-weight:300;font-style:italic;color:var(--ink);margin-bottom:56px;line-height:1.1;">FAQ</h2>
+
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          A che ora inizia la cerimonia?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <p>La cerimonia religiosa inizierà alle ore 15:00 presso la Chiesa di San Vincenzo a Cernobbio.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Quando è previsto l'arrivo al ricevimento?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <p>Al termine della cerimonia sarà effettuato il trasferimento al Castello Visconti di San Vito, con arrivo previsto indicativamente per le ore 17:30.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          È previsto un servizio navetta?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <p>No, gli spostamenti sono a cura dei singoli ospiti. Vi invitiamo a organizzarvi per tempo, eventualmente condividendo i tragitti con altri invitati.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          C'è parcheggio disponibile in location?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <p>Sì, è disponibile un ampio parcheggio gratuito nel parco adiacente all'ingresso pedonale del castello.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Il ricevimento sarà al chiuso o all'aperto?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <p>Il Castello mette a disposizione un parco all'aperto per il cocktail di benvenuto, e ampie sale interne coperte per la cena e la festa.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Qual è il dress code?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <p>Il dress code richiede sobrietà ed eleganza. Si prega di evitare il bianco (riservato alla sposa), colori troppo sgargianti, e il nero integrale di giorno.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Come posso comunicare intolleranze o allergie alimentari?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <p>Nel modulo di conferma della partecipazione nella sezione <a href="rsvp.html" style="color:var(--green-dark);text-decoration:none;border-bottom:1px solid var(--green-dark);">R.S.V.P.</a> è presente un campo apposito dove indicare intolleranze o allergie alimentari.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          I bambini sono invitati?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <p>Per permettere a tutti i nostri ospiti, compresi i genitori, di godersi pienamente la serata, abbiamo scelto di organizzare una celebrazione per soli adulti.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Dove posso trovare la lista nozze?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <p>Sul nostro sito, nella sezione <a href="viaggio.html" style="color:var(--green-dark);text-decoration:none;border-bottom:1px solid var(--green-dark);">Lista Viaggio</a>. La nostra lista nozze è fatta di latitudini e longitudini!</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Entro quando devo confermare la mia presenza?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <p>Vi preghiamo di confermare la vostra presenza entro venerdì 31 luglio 2026.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Come posso confermare la mia presenza?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <p>Compilando il modulo nella pagina <a href="rsvp.html" style="color:var(--green-dark);text-decoration:none;border-bottom:1px solid var(--green-dark);">R.S.V.P.</a>, oppure contattando direttamente gli sposi al numero di Giorgio (340 600 6211) o di Lucrezia (333 931 2139).</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+  .faq-list { display:flex; flex-direction:column; gap:0; }
+  .faq-item { border-bottom:1px solid rgba(92,122,78,0.2); }
+  .faq-q {
+    width:100%; text-align:left; background:none; border:none; cursor:pointer;
+    padding:22px 0;
+    display:flex; justify-content:space-between; align-items:center; gap:20px;
+    font-family:'Montserrat',sans-serif; font-size:0.82rem; font-weight:500;
+    letter-spacing:0.04em; color:var(--ink); transition:color 0.3s;
+  }
+  .faq-q:hover { color:var(--green-dark); }
+  .faq-q.open { color:var(--green-dark); }
+  .faq-icon { font-size:1.4rem; font-weight:300; line-height:1; flex-shrink:0; transition:transform 0.3s; color:var(--green-dark); }
+  .faq-q.open .faq-icon { transform:rotate(45deg); }
+  .faq-a { display:none; padding:0 0 24px; }
+  .faq-a.open { display:block; }
+  .faq-a p { font-size:0.8rem; line-height:1.85; color:var(--ink-light); }
+</style>
+<script>
+  function toggleFaq(btn) {
+    const item = btn.closest('.faq-item');
+    const answer = item.querySelector('.faq-a');
+    const isOpen = btn.classList.contains('open');
+    // Close all
+    document.querySelectorAll('.faq-q.open').forEach(b => { b.classList.remove('open'); b.closest('.faq-item').querySelector('.faq-a').classList.remove('open'); });
+    if (!isOpen) { btn.classList.add('open'); answer.classList.add('open'); }
+  }
+</script>
+
+<footer>
+  <p class="foot-names">Lucrezia & Giorgio</p>
+  <p class="foot-date">12 · 09 · 2026 — Cernobbio, Como</p>
+</footer>
+
+
+<script>
+(function() {
+  // Build drawer if on mobile (inject once)
+  if (document.getElementById('navDrawer')) return;
+
+  const overlay = document.createElement('div');
+  overlay.className = 'nav-overlay';
+  overlay.id = 'navOverlay';
+
+  // Clone nav links into drawer
+  const navLinks = document.querySelector('.nav-links');
+  const monogram = document.querySelector('.nav-monogram');
+
+  const drawer = document.createElement('div');
+  drawer.className = 'nav-drawer';
+  drawer.id = 'navDrawer';
+
+  // Monogram inside drawer
+  const dm = document.createElement('a');
+  dm.href = monogram.href;
+  dm.className = 'nav-drawer-monogram';
+  dm.innerHTML = monogram.innerHTML;
+  drawer.appendChild(dm);
+
+  // Links inside drawer
+  const dl = document.createElement('div');
+  dl.className = 'nav-drawer-links';
+  dl.innerHTML = navLinks.innerHTML;
+  drawer.appendChild(dl);
+
+  document.body.appendChild(overlay);
+  document.body.appendChild(drawer);
+
+  // Hamburger button
+  const ham = document.createElement('button');
+  ham.className = 'hamburger';
+  ham.id = 'hamburger';
+  ham.setAttribute('aria-label', 'Apri menu');
+  ham.setAttribute('aria-expanded', 'false');
+  ham.innerHTML = '<span></span><span></span><span></span>';
+  document.querySelector('nav').appendChild(ham);
+
+  function openDrawer() {
+    ham.classList.add('open');
+    ham.setAttribute('aria-expanded', 'true');
+    overlay.classList.add('open');
+    drawer.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeDrawer() {
+    ham.classList.remove('open');
+    ham.setAttribute('aria-expanded', 'false');
+    overlay.classList.remove('open');
+    drawer.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  ham.addEventListener('click', () => ham.classList.contains('open') ? closeDrawer() : openDrawer());
+  overlay.addEventListener('click', closeDrawer);
+  dl.querySelectorAll('a').forEach(a => a.addEventListener('click', closeDrawer));
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && drawer.classList.contains('open')) closeDrawer(); });
+})();
+</script>
+
+</body>
+</html>
