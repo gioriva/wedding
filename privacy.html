@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="shortcut icon" href="favicon.svg">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#F5F0E8">
+<title>Privacy & Cookie — Lucrezia & Giorgio</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --white: #F5F0E8;
+    --green: #A8C89A;
+    --green-dark: #5C7A4E;
+    --green-deep: #2C4A1E;
+    --ink: #2C3B28;
+    --ink-light: #4a5e3a;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body { background:var(--white); color:var(--ink); font-family:'Montserrat',sans-serif; font-weight:300; overflow-x:hidden; }
+
+  nav {
+    position:fixed; top:0; left:0; width:100%; z-index:200;
+    padding:22px 40px; display:flex; align-items:center; justify-content:space-between;
+    background:rgba(245,240,232,0.94); backdrop-filter:blur(12px);
+    border-bottom:1px solid rgba(168,200,154,0.3);
+  }
+  .nav-monogram { font-family:'Cormorant Garamond',serif; font-size:1.5rem; font-weight:300; letter-spacing:0.08em; color:var(--ink); text-decoration:none; }
+  .nav-monogram span { color:var(--green-deep); }
+  .nav-links { display:flex; gap:36px; }
+  .nav-links a { font-size:0.68rem; font-weight:500; letter-spacing:0.18em; text-transform:uppercase; color:var(--ink-light); text-decoration:none; transition:color 0.3s; }
+  .nav-links a:hover, .nav-links a.active { color:var(--green-deep); }
+  .nav-rsvp {
+    border: 1px solid currentColor;
+    padding: 4px 14px;
+    border-radius: 2px;
+    display: inline-flex;
+    align-items: center;
+    line-height: 1;
+  }
+  .nav-rsvp:hover, .nav-rsvp.active {
+    background: var(--green-deep);
+    color: var(--white) !important;
+    border-color: var(--green-deep);
+  }
+
+  .page-head {
+    padding:150px 40px 60px;
+    max-width:760px; margin:0 auto;
+  }
+  .page-eyebrow { font-size:0.62rem; letter-spacing:0.3em; text-transform:uppercase; color:var(--green-dark); margin-bottom:14px; }
+  .page-title { font-family:'Cormorant Garamond',serif; font-size:clamp(2.4rem,5vw,3.8rem); font-weight:300; font-style:italic; line-height:1.05; }
+  .page-updated { font-size:0.68rem; color:var(--ink-light); margin-top:18px; }
+
+  .content { max-width:760px; margin:0 auto; padding:20px 40px 90px; }
+  .content h2 {
+    font-family:'Cormorant Garamond',serif; font-size:1.6rem; font-weight:400; font-style:italic;
+    color:var(--green-deep); margin:44px 0 14px;
+  }
+  .content p, .content li { font-size:0.82rem; line-height:1.9; color:var(--ink-light); margin-bottom:12px; }
+  .content ul { padding-left:22px; margin-bottom:14px; }
+  .content a { color:var(--green-dark); text-decoration:none; border-bottom:1px solid var(--green-dark); }
+  .content strong { color:var(--ink); font-weight:500; }
+  .consent-box {
+    margin-top:24px; padding:24px 28px;
+    background:rgba(168,200,154,0.18);
+    border-left:3px solid var(--green-dark);
+  }
+  .consent-box p { margin-bottom:14px; }
+  .consent-btn {
+    font-family:'Montserrat',sans-serif; font-size:0.62rem; font-weight:500;
+    letter-spacing:0.18em; text-transform:uppercase;
+    background:var(--ink); color:var(--white);
+    border:none; cursor:pointer; padding:12px 28px;
+    transition:background 0.3s; border-radius:2px;
+  }
+  .consent-btn:hover { background:var(--green-deep); }
+  #consentStatus { font-size:0.75rem; font-weight:400; }
+
+  footer { background:var(--ink); color:var(--white); text-align:center; padding:48px 40px; }
+  footer .foot-names { font-family:'Cormorant Garamond',serif; font-size:2rem; font-weight:300; font-style:italic; color:var(--green); }
+  footer .foot-date { font-size:0.62rem; letter-spacing:0.25em; text-transform:uppercase; color:rgba(245,240,232,0.45); margin-top:12px; }
+
+  /* ── HAMBURGER MENU ── */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 36px; height: 36px;
+    cursor: pointer;
+    background: none; border: none;
+    padding: 4px;
+    z-index: 310;
+    flex-shrink: 0;
+  }
+  .hamburger span {
+    display: block; width: 22px; height: 1.5px;
+    background: var(--ink);
+    transition: transform 0.35s, opacity 0.25s;
+    transform-origin: center;
+  }
+  .hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+  .hamburger.open span:nth-child(2) { opacity: 0; }
+  .hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+  .nav-overlay {
+    display: none;
+    position: fixed; inset: 0; z-index: 290;
+    background: rgba(44, 59, 40, 0.45);
+    backdrop-filter: blur(2px);
+    opacity: 0; transition: opacity 0.3s;
+  }
+  .nav-overlay.open { opacity: 1; }
+
+  .nav-drawer {
+    position: fixed; top: 0; right: 0; bottom: 0;
+    width: min(300px, 82vw);
+    background: var(--white);
+    z-index: 300;
+    transform: translateX(100%);
+    transition: transform 0.38s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex; flex-direction: column;
+    padding: 80px 36px 48px;
+    box-shadow: -8px 0 40px rgba(44,59,40,0.12);
+  }
+  .nav-drawer.open { transform: translateX(0); }
+  .nav-drawer-monogram {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.6rem; font-weight: 300; letter-spacing: 0.08em;
+    color: var(--ink); margin-bottom: 40px;
+    text-decoration: none;
+  }
+  .nav-drawer-monogram span { color: var(--green-deep); }
+  .nav-drawer-links { display: flex; flex-direction: column; gap: 0; }
+  .nav-drawer-links a {
+    font-size: 1rem; font-weight: 400; letter-spacing: 0.06em;
+    color: var(--ink-light); text-decoration: none;
+    padding: 16px 0;
+    border-bottom: 1px solid rgba(168,200,154,0.25);
+    transition: color 0.2s, padding-left 0.2s;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .nav-drawer-links a::after { content: '→'; opacity: 0; transition: opacity 0.2s; font-size: 0.85rem; }
+  .nav-drawer-links a:hover { color: var(--green-deep); padding-left: 6px; }
+  .nav-drawer-links a:hover::after { opacity: 1; }
+  .nav-drawer-links .nav-rsvp {
+    margin-top: 24px;
+    border: 1px solid var(--green-deep) !important;
+    padding: 14px 20px !important;
+    border-radius: 2px;
+    color: var(--green-deep) !important;
+    justify-content: center;
+    letter-spacing: 0.15em;
+  }
+  .nav-drawer-links .nav-rsvp::after { display: none; }
+  .nav-drawer-links .nav-rsvp:hover {
+    background: var(--green-deep);
+    color: var(--white) !important;
+    padding-left: 20px !important;
+  }
+
+  @media (max-width: 768px) {
+    .hamburger { display: flex; }
+    .nav-links { display: none; }
+    .nav-overlay { display: block; pointer-events: none; }
+    .nav-overlay.open { pointer-events: all; }
+    nav { padding: 16px 20px; }
+    .nav-monogram { font-size: 1.3rem; }
+    .page-head { padding: 120px 24px 40px; }
+    .content { padding: 10px 24px 70px; }
+  }
+
+  a:focus-visible, button:focus-visible {
+    outline: 2px solid var(--green-dark);
+    outline-offset: 3px;
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-monogram">L <span>&</span> G</a>
+  <div class="nav-links">
+    <a href="sposi.html">Gli Sposi</a>
+    <a href="matrimonio.html">Il Matrimonio</a>
+    <a href="viaggio.html">Lista Viaggio</a>
+    <a href="rsvp.html" class="nav-rsvp">R.S.V.P.</a>
+  </div>
+</nav>
+
+<div class="page-head">
+  <p class="page-eyebrow">Informativa</p>
+  <h1 class="page-title">Privacy & Cookie</h1>
+  <p class="page-updated">Ultimo aggiornamento: giugno 2026</p>
+</div>
+
+<div class="content">
+
+  <p>Questa pagina descrive come vengono trattati i dati personali dei visitatori di <strong>www.giorgioelucrezia.it</strong>, il sito dedicato al matrimonio di Lucrezia e Giorgio.</p>
+
+  <h2>Titolare del trattamento</h2>
+  <p>I titolari del trattamento sono gli sposi, <strong>Lucrezia e Giorgio</strong>, contattabili ai recapiti indicati nella pagina <a href="rsvp.html">R.S.V.P.</a> del sito.</p>
+
+  <h2>Dati raccolti tramite il modulo R.S.V.P.</h2>
+  <p>Compilando il modulo di conferma presenza, vengono raccolti: nome, cognome, numero di cellulare, indirizzo email (facoltativo), conferma di partecipazione, eventuali intolleranze o allergie alimentari e note libere.</p>
+  <p>Questi dati sono utilizzati <strong>esclusivamente per l'organizzazione del matrimonio</strong> (gestione degli inviti, predisposizione del menù, comunicazioni relative all'evento) e non vengono condivisi con terze parti per finalità commerciali. Le informazioni su intolleranze e allergie sono trattate al solo scopo di garantire un menù adeguato e vengono comunicate al solo personale di catering.</p>
+  <p>L'invio del modulo avviene tramite il servizio <strong>Formspree</strong> (Formspree, Inc.), che agisce come responsabile del trattamento. Per maggiori dettagli: <a href="https://formspree.io/legal/privacy-policy/" target="_blank" rel="noopener">privacy policy di Formspree</a>.</p>
+  <p>I dati raccolti saranno conservati fino al termine delle attività organizzative legate all'evento e successivamente cancellati.</p>
+
+  <h2>Cookie e strumenti di analisi</h2>
+  <p>Il sito utilizza due tipologie di strumenti:</p>
+  <ul>
+    <li><strong>Cookie tecnici</strong> — necessari al funzionamento del sito (ad esempio, la memorizzazione della tua scelta sui cookie). Non richiedono consenso.</li>
+    <li><strong>Google Analytics</strong> — strumento di analisi statistica fornito da Google Ireland Ltd., utilizzato per capire come i visitatori navigano il sito (pagine visitate, durata della visita, tipo di dispositivo). L'indirizzo IP viene anonimizzato. Google Analytics viene attivato <strong>solo dopo il tuo consenso esplicito</strong> tramite il banner. Per maggiori informazioni: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">privacy policy di Google</a>.</li>
+  </ul>
+  <p>Nessun dato viene utilizzato per finalità pubblicitarie o di profilazione.</p>
+
+  <h2>Gestione del consenso</h2>
+  <div class="consent-box">
+    <p>Stato attuale del tuo consenso: <strong id="consentStatus">—</strong></p>
+    <button class="consent-btn" onclick="resetConsent()">Modifica la tua scelta</button>
+  </div>
+
+  <h2>I tuoi diritti</h2>
+  <p>In qualsiasi momento puoi esercitare i diritti previsti dagli artt. 15-22 del Regolamento UE 2016/679 (GDPR): accesso ai dati, rettifica, cancellazione, limitazione del trattamento, opposizione e portabilità. Per farlo è sufficiente contattare gli sposi ai recapiti presenti sul sito.</p>
+  <p>Hai inoltre il diritto di proporre reclamo al <a href="https://www.garanteprivacy.it" target="_blank" rel="noopener">Garante per la Protezione dei Dati Personali</a>.</p>
+
+  <h2>Hosting</h2>
+  <p>Il sito è ospitato su <strong>GitHub Pages</strong> (GitHub, Inc.). Il provider può raccogliere log tecnici (es. indirizzi IP) per finalità di sicurezza e funzionamento dell'infrastruttura. Per maggiori informazioni: <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">privacy statement di GitHub</a>.</p>
+
+</div>
+
+<footer>
+  <p class="foot-names">Lucrezia & Giorgio</p>
+  <p class="foot-date">12 · 09 · 2026 — Cernobbio, Como</p>
+  <p style="margin-top:18px;"><a href="privacy.html" style="font-size:0.58rem;letter-spacing:0.15em;text-transform:uppercase;color:rgba(245,240,232,0.3);text-decoration:none;border-bottom:1px solid rgba(245,240,232,0.2);">Privacy & Cookie</a></p>
+</footer>
+
+<script>
+(function() {
+  // Drawer mobile (stessa logica delle altre pagine)
+  if (document.getElementById('navDrawer')) return;
+  const overlay = document.createElement('div');
+  overlay.className = 'nav-overlay';
+  overlay.id = 'navOverlay';
+  const navLinks = document.querySelector('.nav-links');
+  const monogram = document.querySelector('.nav-monogram');
+  const drawer = document.createElement('div');
+  drawer.className = 'nav-drawer';
+  drawer.id = 'navDrawer';
+  const dm = document.createElement('a');
+  dm.href = monogram.href;
+  dm.className = 'nav-drawer-monogram';
+  dm.innerHTML = monogram.innerHTML;
+  drawer.appendChild(dm);
+  const dl = document.createElement('div');
+  dl.className = 'nav-drawer-links';
+  dl.innerHTML = navLinks.innerHTML;
+  drawer.appendChild(dl);
+  document.body.appendChild(overlay);
+  document.body.appendChild(drawer);
+  const ham = document.createElement('button');
+  ham.className = 'hamburger';
+  ham.id = 'hamburger';
+  ham.setAttribute('aria-label', 'Apri menu');
+  ham.setAttribute('aria-expanded', 'false');
+  ham.innerHTML = '<span></span><span></span><span></span>';
+  document.querySelector('nav').appendChild(ham);
+  function openDrawer() {
+    ham.classList.add('open');
+    ham.setAttribute('aria-expanded', 'true');
+    overlay.classList.add('open');
+    drawer.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeDrawer() {
+    ham.classList.remove('open');
+    ham.setAttribute('aria-expanded', 'false');
+    overlay.classList.remove('open');
+    drawer.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  ham.addEventListener('click', () => ham.classList.contains('open') ? closeDrawer() : openDrawer());
+  overlay.addEventListener('click', closeDrawer);
+  dl.querySelectorAll('a').forEach(a => a.addEventListener('click', closeDrawer));
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && drawer.classList.contains('open')) closeDrawer(); });
+})();
+
+// ── Stato consenso ──
+function refreshConsentStatus() {
+  var el = document.getElementById('consentStatus');
+  var v = null;
+  try { v = localStorage.getItem('lg-cookie-consent'); } catch(e) {}
+  el.textContent = v === 'accepted' ? 'Hai accettato i cookie di analisi'
+                 : v === 'rejected' ? 'Hai rifiutato i cookie di analisi'
+                 : 'Nessuna scelta effettuata';
+}
+function resetConsent() {
+  try { localStorage.removeItem('lg-cookie-consent'); } catch(e) {}
+  location.reload();
+}
+refreshConsentStatus();
+</script>
+
+<!-- ── Cookie consent + Google Analytics (caricato solo dopo consenso) ── -->
+<script>
+(function() {
+  var GA_ID = 'G-4PJDZDQ47H';
+  function loadGA() {
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+    document.head.appendChild(s);
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    window.gtag = gtag;
+    gtag('js', new Date());
+    gtag('config', GA_ID, { 'anonymize_ip': true });
+  }
+  var consent = null;
+  try { consent = localStorage.getItem('lg-cookie-consent'); } catch(e) {}
+  if (consent === 'accepted') { loadGA(); return; }
+  if (consent === 'rejected') return;
+  var banner = document.createElement('div');
+  banner.id = 'cookieBanner';
+  banner.setAttribute('role', 'dialog');
+  banner.setAttribute('aria-label', 'Informativa cookie');
+  banner.innerHTML =
+    '<div class="cb-inner">' +
+      '<p class="cb-text">🌿 &nbsp;Questo sito utilizza cookie di analisi (Google Analytics) per capire come viene visitato. Nessun dato viene usato per pubblicit\u00e0. <a href="privacy.html">Leggi l\u2019informativa</a></p>' +
+      '<div class="cb-actions">' +
+        '<button class="cb-btn cb-accept" id="cbAccept">Accetta</button>' +
+        '<button class="cb-btn cb-reject" id="cbReject">Rifiuta</button>' +
+      '</div>' +
+    '</div>';
+  document.body.appendChild(banner);
+  var style = document.createElement('style');
+  style.textContent =
+    '#cookieBanner{position:fixed;bottom:0;left:0;right:0;z-index:500;background:#2C3B28;box-shadow:0 -8px 30px rgba(44,59,40,0.25);transform:translateY(100%);animation:cbUp .45s .6s cubic-bezier(.4,0,.2,1) forwards;}' +
+    '@keyframes cbUp{to{transform:translateY(0)}}' +
+    '.cb-inner{max-width:1100px;margin:0 auto;padding:20px 28px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;}' +
+    '.cb-text{font-family:Montserrat,sans-serif;font-size:.74rem;font-weight:300;line-height:1.65;color:rgba(245,240,232,.85);margin:0;flex:1;min-width:240px;}' +
+    '.cb-text a{color:#A8C89A;text-decoration:none;border-bottom:1px solid #A8C89A;}' +
+    '.cb-actions{display:flex;gap:10px;flex-shrink:0;}' +
+    '.cb-btn{font-family:Montserrat,sans-serif;font-size:.62rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;padding:12px 26px;cursor:pointer;transition:all .25s;border-radius:2px;}' +
+    '.cb-accept{background:#A8C89A;color:#2C3B28;border:1px solid #A8C89A;}' +
+    '.cb-accept:hover{background:#bcd6b0;}' +
+    '.cb-reject{background:transparent;color:rgba(245,240,232,.7);border:1px solid rgba(245,240,232,.3);}' +
+    '.cb-reject:hover{color:#fff;border-color:rgba(245,240,232,.6);}' +
+    '@media(max-width:600px){.cb-inner{padding:18px 20px;flex-direction:column;align-items:stretch;text-align:center;}.cb-actions{justify-content:center;}.cb-btn{flex:1;}}';
+  document.head.appendChild(style);
+  function choose(value) {
+    try { localStorage.setItem('lg-cookie-consent', value); } catch(e) {}
+    banner.style.transition = 'transform .35s, opacity .35s';
+    banner.style.transform = 'translateY(100%)';
+    banner.style.opacity = '0';
+    setTimeout(function(){ banner.remove(); refreshConsentStatus(); }, 400);
+    if (value === 'accepted') loadGA();
+  }
+  document.getElementById('cbAccept').addEventListener('click', function(){ choose('accepted'); });
+  document.getElementById('cbReject').addEventListener('click', function(){ choose('rejected'); });
+})();
+</script>
+
+</body>
+</html>
