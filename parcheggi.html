@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="shortcut icon" href="favicon.svg">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#F5F0E8">
+<title>Parcheggi — Lucrezia & Giorgio</title>
+  <meta name="description" content="Dove parcheggiare per il matrimonio di Lucrezia e Giorgio, 12 settembre 2026 a Cernobbio e Somma Lombardo">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Lucrezia & Giorgio — 12.09.2026">
+  <meta property="og:title" content="Parcheggi — Lucrezia e Giorgio">
+  <meta property="og:description" content="Dove parcheggiare per la cerimonia a Cernobbio e per il ricevimento al Castello Visconti di San Vito">
+  <meta property="og:image" content="https://www.giorgioelucrezia.it/img/og-social.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="it_IT">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Parcheggi — Lucrezia e Giorgio">
+  <meta name="twitter:description" content="Dove parcheggiare per la cerimonia a Cernobbio e per il ricevimento al Castello Visconti di San Vito">
+  <meta name="twitter:image" content="https://www.giorgioelucrezia.it/img/og-social.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --white: #F5F0E8;
+    --green: #A8C89A;
+    --green-dark: #5C7A4E;
+    --green-deep: #2C4A1E;
+    --ink: #2C3B28;
+    --ink-light: #4a5e3a;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body { background:var(--white); color:var(--ink); font-family:'Montserrat',sans-serif; font-weight:300; overflow-x:hidden; }
+
+  nav {
+    position:fixed; top:0; left:0; width:100%; z-index:200;
+    padding:22px 40px; display:flex; align-items:center; justify-content:space-between;
+    background:rgba(245,240,232,0.94); backdrop-filter:blur(12px);
+    border-bottom:1px solid rgba(168,200,154,0.3);
+  }
+  .nav-monogram { font-family:'Cormorant Garamond',serif; font-size:1.5rem; font-weight:300; letter-spacing:0.08em; color:var(--ink); text-decoration:none; }
+  .nav-monogram span { color:var(--green-deep); }
+  .nav-links { display:flex; gap:36px; }
+  .nav-links a { font-size:0.68rem; font-weight:500; letter-spacing:0.18em; text-transform:uppercase; color:var(--ink-light); text-decoration:none; transition:color 0.3s; }
+  .nav-links a:hover, .nav-links a.active { color:var(--green-deep); }
+  .nav-rsvp {
+    border:1px solid currentColor; padding:4px 14px; border-radius:2px;
+    display:inline-flex; align-items:center; line-height:1;
+  }
+  .nav-rsvp:hover, .nav-rsvp.active {
+    background:var(--green-deep); color:var(--white) !important; border-color:var(--green-deep);
+  }
+
+  /* HERO */
+  .page-hero {
+    padding:150px 40px 60px;
+    max-width:1000px; margin:0 auto;
+    position:relative;
+  }
+  .page-eyebrow { font-size:0.62rem; letter-spacing:0.3em; text-transform:uppercase; color:var(--green-dark); margin-bottom:14px; }
+  .page-title { font-family:'Cormorant Garamond',serif; font-size:clamp(2.6rem,6vw,4.5rem); font-weight:300; font-style:italic; line-height:1.02; color:var(--ink); }
+  .page-intro { font-size:0.85rem; line-height:1.9; color:var(--ink-light); margin-top:26px; max-width:620px; }
+
+  /* SECTIONS */
+  .park-section { max-width:1000px; margin:0 auto; padding:50px 40px; }
+  .park-section-head { display:flex; align-items:baseline; gap:16px; margin-bottom:8px; flex-wrap:wrap; }
+  .park-step { font-family:'Cormorant Garamond',serif; font-size:2.4rem; font-style:italic; color:var(--green); line-height:1; }
+  .park-h2 { font-family:'Cormorant Garamond',serif; font-size:clamp(1.7rem,3.5vw,2.4rem); font-weight:400; color:var(--ink); }
+  .park-when { font-size:0.6rem; letter-spacing:0.22em; text-transform:uppercase; color:var(--green-dark); margin-bottom:32px; }
+
+  /* CARDS */
+  .park-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(280px,1fr)); gap:14px; }
+  .park-card {
+    background:#fff;
+    border:1px solid rgba(168,200,154,0.45);
+    padding:24px 26px 22px;
+    display:flex; flex-direction:column; gap:10px;
+    text-decoration:none;
+    transition:border-color .3s, transform .3s, box-shadow .3s;
+  }
+  .park-card:hover {
+    border-color:var(--green-dark);
+    transform:translateY(-3px);
+    box-shadow:0 10px 28px rgba(44,59,40,0.07);
+  }
+  .park-card-num {
+    font-family:'Cormorant Garamond',serif; font-size:0.95rem; font-style:italic;
+    color:var(--green-dark); letter-spacing:0.05em;
+  }
+  .park-card-name {
+    font-family:'Cormorant Garamond',serif; font-size:1.35rem; font-weight:400;
+    color:var(--ink); line-height:1.25;
+  }
+  .park-card-note { font-size:0.76rem; line-height:1.7; color:var(--ink-light); flex:1; }
+  .park-card-link {
+    font-size:0.6rem; letter-spacing:0.2em; text-transform:uppercase;
+    color:var(--green-dark); display:inline-flex; align-items:center; gap:7px;
+    padding-top:6px;
+  }
+  .park-card:hover .park-card-link { color:var(--green-deep); }
+  .park-card-link span { transition:transform .3s; }
+  .park-card:hover .park-card-link span { transform:translateX(4px); }
+
+  /* CASTELLO HIGHLIGHT */
+  .castle-band { background:var(--ink); color:var(--white); padding:56px 0; margin-top:20px; }
+  .castle-inner { max-width:1000px; margin:0 auto; padding:0 40px; }
+  .castle-eyebrow { font-size:0.6rem; letter-spacing:0.28em; text-transform:uppercase; color:var(--green); margin-bottom:14px; }
+  .castle-title { font-family:'Cormorant Garamond',serif; font-size:clamp(1.9rem,4vw,2.8rem); font-weight:300; font-style:italic; color:#fff; margin-bottom:16px; }
+  .castle-text { font-size:0.83rem; line-height:1.85; color:rgba(245,240,232,0.68); max-width:600px; margin-bottom:28px; }
+  .castle-btn {
+    display:inline-flex; align-items:center; gap:12px;
+    font-size:0.66rem; font-weight:500; letter-spacing:0.2em; text-transform:uppercase;
+    background:var(--green); color:var(--ink); text-decoration:none;
+    padding:16px 38px; border-radius:2px; transition:background .3s, transform .2s;
+  }
+  .castle-btn:hover { background:#bcd6b0; transform:translateY(-2px); }
+
+  /* TIPS */
+  .tips { max-width:1000px; margin:0 auto; padding:60px 40px 90px; }
+  .tips-title { font-family:'Cormorant Garamond',serif; font-size:1.6rem; font-weight:400; font-style:italic; color:var(--green-deep); margin-bottom:22px; }
+  .tips ul { list-style:none; display:flex; flex-direction:column; gap:14px; }
+  .tips li {
+    font-size:0.81rem; line-height:1.8; color:var(--ink-light);
+    padding-left:24px; position:relative;
+  }
+  .tips li::before {
+    content:'✦'; position:absolute; left:0; top:1px;
+    color:var(--green); font-size:0.72rem;
+  }
+  .back-link {
+    display:inline-flex; align-items:center; gap:10px; margin-top:40px;
+    font-size:0.62rem; letter-spacing:0.2em; text-transform:uppercase;
+    color:var(--ink); text-decoration:none;
+    border-bottom:1px solid var(--green-dark); padding-bottom:4px;
+  }
+  .back-link:hover { color:var(--green-deep); }
+
+  footer { background:var(--ink); color:var(--white); text-align:center; padding:48px 40px; }
+  footer .foot-names { font-family:'Cormorant Garamond',serif; font-size:2rem; font-weight:300; font-style:italic; color:var(--green); }
+  footer .foot-date { font-size:0.62rem; letter-spacing:0.25em; text-transform:uppercase; color:rgba(245,240,232,0.45); margin-top:12px; }
+
+  /* HAMBURGER */
+  .hamburger {
+    display:none; flex-direction:column; justify-content:center; gap:5px;
+    width:36px; height:36px; cursor:pointer; background:none; border:none;
+    padding:4px; z-index:310; flex-shrink:0;
+  }
+  .hamburger span {
+    display:block; width:22px; height:1.5px; background:var(--ink);
+    transition:transform .35s, opacity .25s; transform-origin:center;
+  }
+  .hamburger.open span:nth-child(1) { transform:translateY(6.5px) rotate(45deg); }
+  .hamburger.open span:nth-child(2) { opacity:0; }
+  .hamburger.open span:nth-child(3) { transform:translateY(-6.5px) rotate(-45deg); }
+  .nav-overlay {
+    display:none; position:fixed; inset:0; z-index:290;
+    background:rgba(44,59,40,0.45); backdrop-filter:blur(2px);
+    opacity:0; transition:opacity .3s;
+  }
+  .nav-overlay.open { opacity:1; }
+  .nav-drawer {
+    position:fixed; top:0; right:0; bottom:0; width:min(300px,82vw);
+    background:var(--white); z-index:300; transform:translateX(100%);
+    transition:transform .38s cubic-bezier(.4,0,.2,1);
+    display:flex; flex-direction:column; padding:80px 36px 48px;
+    box-shadow:-8px 0 40px rgba(44,59,40,.12);
+  }
+  .nav-drawer.open { transform:translateX(0); }
+  .nav-drawer-monogram {
+    font-family:'Cormorant Garamond',serif; font-size:1.6rem; font-weight:300;
+    letter-spacing:.08em; color:var(--ink); margin-bottom:40px; text-decoration:none;
+  }
+  .nav-drawer-monogram span { color:var(--green-deep); }
+  .nav-drawer-links { display:flex; flex-direction:column; }
+  .nav-drawer-links a {
+    font-size:1rem; font-weight:400; letter-spacing:.06em; color:var(--ink-light);
+    text-decoration:none; padding:16px 0;
+    border-bottom:1px solid rgba(168,200,154,.25);
+    transition:color .2s, padding-left .2s;
+    display:flex; align-items:center; justify-content:space-between;
+  }
+  .nav-drawer-links a::after { content:'→'; opacity:0; transition:opacity .2s; font-size:.85rem; }
+  .nav-drawer-links a:hover { color:var(--green-deep); padding-left:6px; }
+  .nav-drawer-links a:hover::after { opacity:1; }
+  .nav-drawer-links .nav-rsvp {
+    margin-top:24px; border:1px solid var(--green-deep) !important;
+    padding:14px 20px !important; border-radius:2px;
+    color:var(--green-deep) !important; justify-content:center; letter-spacing:.15em;
+  }
+  .nav-drawer-links .nav-rsvp::after { display:none; }
+  .nav-drawer-links .nav-rsvp:hover {
+    background:var(--green-deep); color:var(--white) !important; padding-left:20px !important;
+  }
+
+  @media (max-width:768px) {
+    .hamburger { display:flex; }
+    .nav-links { display:none; }
+    .nav-overlay { display:block; pointer-events:none; }
+    .nav-overlay.open { pointer-events:all; }
+    nav { padding:16px 20px; }
+    .nav-monogram { font-size:1.3rem; }
+    .page-hero { padding:120px 24px 40px; }
+    .park-section { padding:40px 24px; }
+    .castle-inner, .tips { padding-left:24px; padding-right:24px; }
+    .tips { padding-top:50px; padding-bottom:70px; }
+  }
+
+  a:focus-visible, button:focus-visible {
+    outline:2px solid var(--green-dark); outline-offset:3px;
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-monogram">L <span>&</span> G</a>
+  <div class="nav-links">
+    <a href="sposi.html">Gli Sposi</a>
+    <a href="matrimonio.html">Il Matrimonio</a>
+    <a href="viaggio.html">Lista Viaggio</a>
+    <a href="rsvp.html" class="nav-rsvp">R.S.V.P.</a>
+  </div>
+</nav>
+
+<header class="page-hero">
+  <p class="page-eyebrow">Come arrivare</p>
+  <h1 class="page-title">Parcheggi</h1>
+  <p class="page-intro">Cernobbio è un paese piccolo e il 12 settembre sarà una giornata di alta stagione sul lago. Qui trovate i parcheggi consigliati per la cerimonia, e quello del castello per la sera. Ogni scheda apre le indicazioni su Google Maps.</p>
+</header>
+
+<!-- CERIMONIA -->
+<section class="park-section">
+  <div class="park-section-head">
+    <span class="park-step">01</span>
+    <h2 class="park-h2">Per la cerimonia a Cernobbio</h2>
+  </div>
+  <p class="park-when">Chiesa di San Vincenzo, ore 15:00</p>
+
+  <div class="park-grid">
+
+    <a href="https://maps.app.goo.gl/Dfg1eLngckbPDh1y7" target="_blank" rel="noopener" class="park-card">
+      <span class="park-card-num">01</span>
+      <h3 class="park-card-name">Parcheggio Villa Erba</h3>
+      <p class="park-card-note">L'area più capiente della zona. È la prima scelta se arrivate in gruppo o con più auto.</p>
+      <span class="park-card-link">Apri in Maps <span>→</span></span>
+    </a>
+
+    <a href="https://maps.app.goo.gl/pKbeLzZAg3wKWmc38" target="_blank" rel="noopener" class="park-card">
+      <span class="park-card-num">02</span>
+      <h3 class="park-card-name">Parcheggio Comune di Cernobbio</h3>
+      <p class="park-card-note">Parcheggio pubblico vicino al centro del paese. Posti limitati, meglio arrivare con un po' di anticipo.</p>
+      <span class="park-card-link">Apri in Maps <span>→</span></span>
+    </a>
+
+    <a href="https://maps.app.goo.gl/AbNGZ78vEejeU6Cb7" target="_blank" rel="noopener" class="park-card">
+      <span class="park-card-num">03</span>
+      <h3 class="park-card-name">Campetto dell'oratorio</h3>
+      <p class="park-card-note">Spazio dell'oratorio di Cernobbio, a due passi dalla chiesa.</p>
+      <span class="park-card-link">Apri in Maps <span>→</span></span>
+    </a>
+
+    <a href="https://maps.app.goo.gl/ibFejg6DSKHcgQDX9" target="_blank" rel="noopener" class="park-card">
+      <span class="park-card-num">04</span>
+      <h3 class="park-card-name">Parcheggio LIDL Cernobbio</h3>
+      <p class="park-card-note">Alternativa comoda in paese. Trattandosi di un supermercato, controllate la segnaletica sulla sosta.</p>
+      <span class="park-card-link">Apri in Maps <span>→</span></span>
+    </a>
+
+    <a href="https://maps.app.goo.gl/X1YdShgSoJCwvK3y6" target="_blank" rel="noopener" class="park-card">
+      <span class="park-card-num">05</span>
+      <h3 class="park-card-name">Parcheggio Tavernola</h3>
+      <p class="park-card-note">Un po' più distante, verso Como. Utile come riserva se gli altri sono pieni.</p>
+      <span class="park-card-link">Apri in Maps <span>→</span></span>
+    </a>
+
+  </div>
+</section>
+
+<!-- CASTELLO -->
+<div class="castle-band">
+  <div class="castle-inner">
+    <div class="park-section-head" style="margin-bottom:8px;">
+      <span class="park-step" style="color:var(--green);">02</span>
+      <h2 class="park-h2" style="color:#fff;">Al Castello Visconti di San Vito</h2>
+    </div>
+    <p class="castle-eyebrow">Somma Lombardo, dalle ore 17:30</p>
+    <p class="castle-text">Qui il problema non esiste: davanti all'ingresso del castello c'è un ampio parcheggio gratuito nel parco. Non serve prenotare né cercare alternative.</p>
+    <a href="https://maps.app.goo.gl/ar9UN3nXsuoSBGTf7" target="_blank" rel="noopener" class="castle-btn">
+      Parcheggio del castello <span>→</span>
+    </a>
+  </div>
+</div>
+
+<!-- TIPS -->
+<section class="tips">
+  <h2 class="tips-title">Qualche consiglio</h2>
+  <ul>
+    <li>Settembre sul lago di Como è ancora periodo turistico: calcolate un margine di tempo in più sul tragitto e sulla ricerca del posto.</li>
+    <li>Se potete, organizzatevi per venire in auto insieme ad altri invitati. Meno auto significa meno posti da trovare per tutti.</li>
+    <li>Tra Cernobbio e il castello c'è una cinquantina di chilometri. Il trasferimento è a cura di ciascuno, quindi conviene accordarsi in anticipo su chi guida.</li>
+    <li>Salvate i link di questa pagina sul telefono prima di partire, così li avete pronti anche senza cercare.</li>
+  </ul>
+
+  <a href="matrimonio.html" class="back-link">← Torna a Il Matrimonio</a>
+</section>
+
+<footer>
+  <p class="foot-names">Lucrezia & Giorgio</p>
+  <p class="foot-date">12 · 09 · 2026 — Cernobbio, Como</p>
+  <p style="margin-top:18px;"><a href="privacy.html" style="font-size:0.58rem;letter-spacing:0.15em;text-transform:uppercase;color:rgba(245,240,232,0.3);text-decoration:none;border-bottom:1px solid rgba(245,240,232,0.2);">Privacy & Cookie</a></p>
+</footer>
+
+<script>
+(function() {
+  if (document.getElementById('navDrawer')) return;
+  const overlay = document.createElement('div');
+  overlay.className = 'nav-overlay';
+  overlay.id = 'navOverlay';
+  const navLinks = document.querySelector('.nav-links');
+  const monogram = document.querySelector('.nav-monogram');
+  const drawer = document.createElement('div');
+  drawer.className = 'nav-drawer';
+  drawer.id = 'navDrawer';
+  const dm = document.createElement('a');
+  dm.href = monogram.href;
+  dm.className = 'nav-drawer-monogram';
+  dm.innerHTML = monogram.innerHTML;
+  drawer.appendChild(dm);
+  const dl = document.createElement('div');
+  dl.className = 'nav-drawer-links';
+  dl.innerHTML = navLinks.innerHTML;
+  drawer.appendChild(dl);
+  document.body.appendChild(overlay);
+  document.body.appendChild(drawer);
+  const ham = document.createElement('button');
+  ham.className = 'hamburger';
+  ham.id = 'hamburger';
+  ham.setAttribute('aria-label', 'Apri menu');
+  ham.setAttribute('aria-expanded', 'false');
+  ham.innerHTML = '<span></span><span></span><span></span>';
+  document.querySelector('nav').appendChild(ham);
+  function openDrawer() {
+    ham.classList.add('open');
+    ham.setAttribute('aria-expanded', 'true');
+    overlay.classList.add('open');
+    drawer.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeDrawer() {
+    ham.classList.remove('open');
+    ham.setAttribute('aria-expanded', 'false');
+    overlay.classList.remove('open');
+    drawer.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  ham.addEventListener('click', () => ham.classList.contains('open') ? closeDrawer() : openDrawer());
+  overlay.addEventListener('click', closeDrawer);
+  dl.querySelectorAll('a').forEach(a => a.addEventListener('click', closeDrawer));
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && drawer.classList.contains('open')) closeDrawer(); });
+})();
+</script>
+
+<!-- ── Cookie consent + Google Analytics (caricato solo dopo consenso) ── -->
+<script>
+(function() {
+  var GA_ID = 'G-4PJDZDQ47H';
+  function loadGA() {
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+    document.head.appendChild(s);
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    window.gtag = gtag;
+    gtag('js', new Date());
+    gtag('config', GA_ID, { 'anonymize_ip': true });
+  }
+  var consent = null;
+  try { consent = localStorage.getItem('lg-cookie-consent'); } catch(e) {}
+  if (consent === 'accepted') { loadGA(); return; }
+  if (consent === 'rejected') return;
+  var banner = document.createElement('div');
+  banner.id = 'cookieBanner';
+  banner.setAttribute('role', 'dialog');
+  banner.setAttribute('aria-label', 'Informativa cookie');
+  banner.innerHTML =
+    '<div class="cb-inner">' +
+      '<p class="cb-text">🌿 &nbsp;Questo sito utilizza cookie di analisi (Google Analytics) per capire come viene visitato. Nessun dato viene usato per pubblicit\u00e0. <a href="privacy.html">Leggi l\u2019informativa</a></p>' +
+      '<div class="cb-actions">' +
+        '<button class="cb-btn cb-accept" id="cbAccept">Accetta</button>' +
+        '<button class="cb-btn cb-reject" id="cbReject">Rifiuta</button>' +
+      '</div>' +
+    '</div>';
+  document.body.appendChild(banner);
+  var style = document.createElement('style');
+  style.textContent =
+    '#cookieBanner{position:fixed;bottom:0;left:0;right:0;z-index:500;background:#2C3B28;box-shadow:0 -8px 30px rgba(44,59,40,0.25);transform:translateY(100%);animation:cbUp .45s .6s cubic-bezier(.4,0,.2,1) forwards;}' +
+    '@keyframes cbUp{to{transform:translateY(0)}}' +
+    '.cb-inner{max-width:1100px;margin:0 auto;padding:20px 28px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;}' +
+    '.cb-text{font-family:Montserrat,sans-serif;font-size:.74rem;font-weight:300;line-height:1.65;color:rgba(245,240,232,.85);margin:0;flex:1;min-width:240px;}' +
+    '.cb-text a{color:#A8C89A;text-decoration:none;border-bottom:1px solid #A8C89A;}' +
+    '.cb-actions{display:flex;gap:10px;flex-shrink:0;}' +
+    '.cb-btn{font-family:Montserrat,sans-serif;font-size:.62rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;padding:12px 26px;cursor:pointer;transition:all .25s;border-radius:2px;}' +
+    '.cb-accept{background:#A8C89A;color:#2C3B28;border:1px solid #A8C89A;}' +
+    '.cb-accept:hover{background:#bcd6b0;}' +
+    '.cb-reject{background:transparent;color:rgba(245,240,232,.7);border:1px solid rgba(245,240,232,.3);}' +
+    '.cb-reject:hover{color:#fff;border-color:rgba(245,240,232,.6);}' +
+    '@media(max-width:600px){.cb-inner{padding:18px 20px;flex-direction:column;align-items:stretch;text-align:center;}.cb-actions{justify-content:center;}.cb-btn{flex:1;}}';
+  document.head.appendChild(style);
+  function choose(value) {
+    try { localStorage.setItem('lg-cookie-consent', value); } catch(e) {}
+    banner.style.transition = 'transform .35s, opacity .35s';
+    banner.style.transform = 'translateY(100%)';
+    banner.style.opacity = '0';
+    setTimeout(function(){ banner.remove(); }, 400);
+    if (value === 'accepted') loadGA();
+  }
+  document.getElementById('cbAccept').addEventListener('click', function(){ choose('accepted'); });
+  document.getElementById('cbReject').addEventListener('click', function(){ choose('rejected'); });
+})();
+</script>
+
+</body>
+</html>
