@@ -110,6 +110,11 @@
   .form-group.full { grid-column:1/-1; }
   .form-label { font-size:0.6rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--green-deep); }
   .form-label .required { color:#b05a4a; margin-left:3px; }
+  .form-legend {
+    font-size:0.7rem; color:var(--ink-light); margin-bottom:28px;
+    padding-bottom:14px; border-bottom:1px solid rgba(168,200,154,0.4);
+  }
+  .form-legend .required { color:#b05a4a; font-weight:500; }
   .form-input, .form-textarea, .form-select {
     background:transparent;
     border:none; border-bottom:1px solid rgba(44,74,30,0.3);
@@ -333,6 +338,7 @@
   </p>
 
   <div id="formWrap">
+    <p class="form-legend">I campi contrassegnati con <span class="required">*</span> sono obbligatori</p>
     <div class="form-grid">
       <div class="form-group">
         <label class="form-label">Nome <span class="required">*</span></label>
@@ -347,8 +353,8 @@
         <input type="tel" class="form-input" id="f-tel" name="cellulare" autocomplete="tel" inputmode="tel" placeholder="+39 000 000 0000" required>
       </div>
       <div class="form-group">
-        <label class="form-label">Email</label>
-        <input type="email" class="form-input" id="f-email" name="email" autocomplete="email" inputmode="email" placeholder="nome@email.it">
+        <label class="form-label">Email <span class="required">*</span></label>
+        <input type="email" class="form-input" id="f-email" name="email" autocomplete="email" inputmode="email" placeholder="nome@email.it" required>
       </div>
       <div class="form-group full">
         <label class="form-label">Presenza <span class="required">*</span></label>
@@ -407,18 +413,24 @@ async function submitForm() {
   const nome     = document.getElementById('f-nome').value.trim();
   const cognome  = document.getElementById('f-cognome').value.trim();
   const tel      = document.getElementById('f-tel').value.trim();
+  const email    = document.getElementById('f-email').value.trim();
   const presenza = document.getElementById('f-presenza').value;
   const err      = document.getElementById('form-error');
   const btn      = document.querySelector('.form-submit');
 
-  if (!nome || !cognome || !tel || !presenza) {
+  if (!nome || !cognome || !tel || !email || !presenza) {
     err.style.display = 'block';
     err.textContent = 'Per favore compila tutti i campi obbligatori (*)';
     return;
   }
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) {
+    err.style.display = 'block';
+    err.textContent = 'Controlla l\u2019indirizzo email: sembra non essere valido.';
+    document.getElementById('f-email').focus();
+    return;
+  }
   err.style.display = 'none';
 
-  const email  = document.getElementById('f-email').value.trim();
   const intoll = document.getElementById('f-intolleranze').value.trim();
   const note   = document.getElementById('f-note').value.trim();
   const presenzaTxt = presenza === 'si' ? 'Sì, ci sarò con gioia!' : 'Mi dispiace, non potrò essere presente';
@@ -434,7 +446,7 @@ async function submitForm() {
         nome:         nome,
         cognome:      cognome,
         cellulare:    tel,
-        email:        email || 'non indicata',
+        email:        email,
         presenza:     presenzaTxt,
         intolleranze: intoll || 'Nessuna',
         note:         note || 'nessuna',
