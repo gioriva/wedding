@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="shortcut icon" href="favicon.svg">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#F5F0E8">
+<title>Chiesa di San Vincenzo | Lucrezia &amp; Giorgio</title>
+  <meta name="description" content="La chiesa di San Vincenzo a Cernobbio: origini del XII secolo, facciata del 1861 e affreschi. Il luogo della cerimonia di Lucrezia e Giorgio.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Lucrezia &amp; Giorgio | 12.09.2026">
+  <meta property="og:title" content="Chiesa di San Vincenzo | Lucrezia e Giorgio">
+  <meta property="og:description" content="La chiesa più antica di Cernobbio, a due passi dal lago. Il luogo della cerimonia del 12 settembre 2026.">
+  <meta property="og:image" content="https://www.giorgioelucrezia.it/og-social.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="it_IT">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Chiesa di San Vincenzo | Lucrezia e Giorgio">
+  <meta name="twitter:description" content="La chiesa più antica di Cernobbio, a due passi dal lago. Il luogo della cerimonia del 12 settembre 2026.">
+  <meta name="twitter:image" content="https://www.giorgioelucrezia.it/og-social.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://gioriva.github.io" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --white:#F5F0E8; --green:#A8C89A; --green-dark:#5C7A4E;
+    --green-deep:#2C4A1E; --ink:#2C3B28; --ink-light:#4a5e3a; --card:#FCFAF6;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body { background:var(--white); color:var(--ink); font-family:'Montserrat',sans-serif; font-weight:300; overflow-x:hidden; }
+
+  nav {
+    position:fixed; top:0; left:0; width:100%; z-index:200;
+    padding:22px 40px; display:flex; align-items:center; justify-content:space-between;
+    background:rgba(245,240,232,0.94); backdrop-filter:blur(12px);
+    border-bottom:1px solid rgba(168,200,154,0.3);
+  }
+  .nav-monogram { font-family:'Cormorant Garamond',serif; font-size:1.5rem; font-weight:300; letter-spacing:.08em; color:var(--ink); text-decoration:none; }
+  .nav-monogram span { color:var(--green-deep); }
+  .nav-links { display:flex; gap:32px; align-items:center; }
+  .nav-links a { font-size:.68rem; font-weight:500; letter-spacing:.16em; text-transform:uppercase; color:var(--ink-light); text-decoration:none; transition:color .3s; }
+  .nav-links a:hover, .nav-links a.active { color:var(--green-deep); }
+  .nav-rsvp { border:1px solid currentColor; padding:4px 14px; border-radius:2px; display:inline-flex; align-items:center; line-height:1; }
+  .nav-rsvp:hover, .nav-rsvp.active { background:var(--green-deep); color:var(--white) !important; border-color:var(--green-deep); }
+  .nav-drop { position:relative; }
+  .nav-drop-toggle { display:inline-flex; align-items:center; gap:6px; cursor:pointer; font-size:.68rem; font-weight:500; letter-spacing:.16em; text-transform:uppercase; color:var(--ink-light); background:none; border:none; font-family:inherit; transition:color .3s; }
+  .nav-drop:hover .nav-drop-toggle, .nav-drop-toggle.active { color:var(--green-deep); }
+  .nav-drop-toggle svg { transition:transform .3s; }
+  .nav-drop:hover .nav-drop-toggle svg { transform:rotate(180deg); }
+  .nav-drop-menu {
+    position:absolute; top:100%; left:50%; transform:translateX(-50%) translateY(8px);
+    background:var(--white); border:1px solid rgba(168,200,154,.5);
+    border-radius:2px; padding:8px 0; min-width:210px;
+    box-shadow:0 10px 30px rgba(44,59,40,.12);
+    opacity:0; visibility:hidden; transition:opacity .25s, transform .25s, visibility .25s;
+  }
+  .nav-drop:hover .nav-drop-menu { opacity:1; visibility:visible; transform:translateX(-50%) translateY(0); }
+  .nav-drop-menu::before { content:''; position:absolute; top:-10px; left:0; right:0; height:10px; }
+  .nav-drop-menu a { display:block; padding:11px 20px; font-size:.63rem; letter-spacing:.14em; white-space:nowrap; }
+  .nav-drop-menu a:hover { background:rgba(168,200,154,.2); }
+
+  /* HERO */
+  .hero { position:relative; min-height:74vh; display:flex; align-items:flex-end; padding:150px 60px 60px; overflow:hidden; background:var(--ink); }
+  .hero-img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center 40%; opacity:.5; }
+  .hero-ov { position:absolute; inset:0; background:linear-gradient(to top, rgba(26,33,24,.94) 0%, rgba(26,33,24,.45) 48%, rgba(26,33,24,.2) 100%); }
+  .hero-in { position:relative; z-index:2; max-width:1000px; margin:0 auto; width:100%; }
+  .hero-eyebrow { font-size:.6rem; letter-spacing:.3em; text-transform:uppercase; color:var(--green); margin-bottom:18px; display:flex; align-items:center; gap:12px; }
+  .hero-eyebrow::before { content:''; width:30px; height:1px; background:var(--green); }
+  .hero-title { font-family:'Cormorant Garamond',serif; font-size:clamp(2.6rem,6.5vw,5rem); font-weight:300; line-height:1.02; color:#fff; }
+  .hero-title em { font-style:italic; color:var(--green); }
+  .hero-sub { font-size:.78rem; letter-spacing:.14em; color:rgba(245,240,232,.6); margin-top:20px; }
+
+  .wrap { max-width:1000px; margin:0 auto; padding:0 60px; }
+  .sec { padding:80px 0; }
+  .sec-tint { background:linear-gradient(180deg, rgba(168,200,154,.14) 0%, rgba(168,200,154,.05) 100%); }
+  .sec-dark { background:var(--ink); color:var(--white); position:relative; overflow:hidden; }
+  .sec-dark::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse 60% 80% at 15% 100%, rgba(168,200,154,.14) 0%, transparent 65%); }
+  .sec-dark .wrap { position:relative; z-index:2; }
+
+  .eyebrow { font-size:.6rem; letter-spacing:.3em; text-transform:uppercase; color:var(--green-dark); margin-bottom:14px; display:flex; align-items:center; gap:12px; }
+  .eyebrow::before { content:''; width:26px; height:1px; background:var(--green-dark); }
+  .sec-dark .eyebrow { color:var(--green); }
+  .sec-dark .eyebrow::before { background:var(--green); }
+  h2 { font-family:'Cormorant Garamond',serif; font-size:clamp(1.9rem,4vw,2.9rem); font-weight:400; line-height:1.14; margin-bottom:26px; color:var(--ink); }
+  .sec-dark h2 { color:#fff; }
+  h2 em { font-style:italic; color:var(--green-deep); }
+  .sec-dark h2 em { color:var(--green); }
+  h3 { font-family:'Cormorant Garamond',serif; font-size:1.45rem; font-weight:400; color:var(--green-deep); margin:34px 0 12px; }
+  p.body { font-size:.85rem; line-height:1.95; color:var(--ink-light); margin-bottom:16px; max-width:720px; }
+  .sec-dark p.body { color:rgba(245,240,232,.72); }
+  .lead { font-size:.95rem; line-height:1.9; color:var(--ink); }
+
+  .pull { border-left:3px solid var(--green); padding:6px 0 6px 28px; margin:34px 0; max-width:680px; }
+  .pull p { font-family:'Cormorant Garamond',serif; font-size:clamp(1.3rem,2.6vw,1.75rem); font-style:italic; font-weight:300; line-height:1.55; color:var(--green-deep); }
+  .sec-dark .pull p { color:var(--green); }
+
+  /* SPLIT foto + testo */
+  .split { display:grid; grid-template-columns:1fr 1fr; gap:52px; align-items:center; }
+  .split img { width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:2px; box-shadow:0 10px 30px rgba(44,59,40,.1); }
+
+  /* SCHEDE */
+  .cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:16px; margin-top:34px; }
+  .card { background:var(--card); border:1px solid rgba(168,200,154,.5); border-top:3px solid var(--green); border-radius:3px; padding:26px 24px; box-shadow:0 2px 10px rgba(44,59,40,.04); }
+  .card h4 { font-family:'Cormorant Garamond',serif; font-size:1.28rem; font-weight:400; color:var(--green-deep); margin-bottom:10px; }
+  .card p { font-size:.78rem; line-height:1.78; color:var(--ink-light); }
+
+  /* CRONOLOGIA */
+  .tl { position:relative; padding-left:34px; margin-top:34px; }
+  .tl::before { content:''; position:absolute; left:0; top:6px; bottom:6px; width:1px; background:linear-gradient(to bottom, var(--green), rgba(168,200,154,.2)); }
+  .tl-item { position:relative; margin-bottom:24px; }
+  .tl-item::before { content:''; position:absolute; left:-38px; top:5px; width:9px; height:9px; border-radius:50%; background:var(--green); box-shadow:0 0 0 3px #eef3e9; }
+  .tl-year { font-size:.6rem; letter-spacing:.2em; text-transform:uppercase; color:var(--green-dark); margin-bottom:5px; font-weight:500; }
+  .tl-text { font-size:.81rem; line-height:1.7; color:var(--ink-light); }
+
+  /* INFO PRATICHE */
+  .info-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:28px; margin-top:30px; }
+  .info-l { font-size:.58rem; letter-spacing:.22em; text-transform:uppercase; color:var(--green); margin-bottom:8px; }
+  .info-v { font-size:.85rem; line-height:1.7; color:rgba(245,240,232,.8); }
+
+  .cta-row { display:flex; gap:14px; flex-wrap:wrap; margin-top:36px; }
+  .btn { display:inline-flex; align-items:center; gap:11px; font-size:.66rem; font-weight:500; letter-spacing:.2em; text-transform:uppercase; text-decoration:none; padding:16px 34px; border-radius:2px; transition:background .3s, transform .25s, color .3s, border-color .3s; }
+  .btn-p { background:var(--green); color:var(--ink); }
+  .btn-p:hover { background:#c2dab6; transform:translateY(-2px); }
+  .btn-s { background:transparent; color:rgba(245,240,232,.85); border:1px solid rgba(245,240,232,.35); }
+  .btn-s:hover { border-color:var(--green); color:var(--green); transform:translateY(-2px); }
+  .btn i { font-style:normal; transition:transform .3s; }
+  .btn:hover i { transform:translateX(4px); }
+
+  .srcs { font-size:.68rem; line-height:1.8; color:var(--ink-light); opacity:.75; margin-top:8px; }
+  .srcs a { color:var(--green-dark); text-decoration:none; border-bottom:1px solid rgba(92,122,78,.4); }
+
+  footer { background:var(--ink); color:var(--white); text-align:center; padding:48px 40px; }
+  footer .foot-names { font-family:'Cormorant Garamond',serif; font-size:2rem; font-weight:300; font-style:italic; color:var(--green); }
+  footer .foot-date { font-size:.62rem; letter-spacing:.25em; text-transform:uppercase; color:rgba(245,240,232,.45); margin-top:12px; }
+
+  /* HAMBURGER */
+  .hamburger { display:none; flex-direction:column; justify-content:center; gap:5px; width:36px; height:36px; cursor:pointer; background:none; border:none; padding:4px; z-index:310; flex-shrink:0; }
+  .hamburger span { display:block; width:22px; height:1.5px; background:var(--ink); transition:transform .35s, opacity .25s; transform-origin:center; }
+  .hamburger.open span:nth-child(1) { transform:translateY(6.5px) rotate(45deg); }
+  .hamburger.open span:nth-child(2) { opacity:0; }
+  .hamburger.open span:nth-child(3) { transform:translateY(-6.5px) rotate(-45deg); }
+  .nav-overlay { display:none; position:fixed; inset:0; z-index:290; background:rgba(44,59,40,.45); backdrop-filter:blur(2px); opacity:0; transition:opacity .3s; }
+  .nav-overlay.open { opacity:1; }
+  .nav-drawer { position:fixed; top:0; right:0; bottom:0; width:min(310px,84vw); background:var(--white); z-index:300; transform:translateX(100%); transition:transform .38s cubic-bezier(.4,0,.2,1); display:flex; flex-direction:column; padding:76px 32px 40px; box-shadow:-8px 0 40px rgba(44,59,40,.12); overflow-y:auto; -webkit-overflow-scrolling:touch; }
+  .nav-drawer.open { transform:translateX(0); }
+  .nav-drawer-monogram { font-family:'Cormorant Garamond',serif; font-size:1.6rem; font-weight:300; letter-spacing:.08em; color:var(--ink); margin-bottom:32px; text-decoration:none; }
+  .nav-drawer-monogram span { color:var(--green-deep); }
+  .dl { display:flex; flex-direction:column; }
+  .dl > a { font-size:1rem; font-weight:400; letter-spacing:.05em; color:var(--ink-light); text-decoration:none; padding:15px 0; border-bottom:1px solid rgba(168,200,154,.25); transition:color .2s, padding-left .2s; display:flex; align-items:center; justify-content:space-between; }
+  .dl > a::after { content:'→'; opacity:0; transition:opacity .2s; font-size:.85rem; }
+  .dl > a:hover { color:var(--green-deep); padding-left:6px; }
+  .dl > a:hover::after { opacity:1; }
+  .dl-group { border-bottom:1px solid rgba(168,200,154,.25); padding:15px 0 12px; }
+  .dl-group-label { font-size:1rem; font-weight:400; letter-spacing:.05em; color:var(--ink); margin-bottom:6px; }
+  .dl-sub { display:flex; flex-direction:column; padding-left:14px; border-left:1px solid rgba(168,200,154,.5); margin-top:8px; }
+  .dl-sub a { font-size:.86rem; color:var(--ink-light); text-decoration:none; padding:9px 0; transition:color .2s, padding-left .2s; }
+  .dl-sub a:hover, .dl-sub a.active { color:var(--green-deep); padding-left:5px; }
+  .dl .nav-rsvp { margin-top:22px; border:1px solid var(--green-deep) !important; padding:14px 20px !important; border-radius:2px; color:var(--green-deep) !important; justify-content:center; letter-spacing:.15em; font-size:.8rem; }
+  .dl .nav-rsvp::after { display:none; }
+  .dl .nav-rsvp:hover { background:var(--green-deep); color:var(--white) !important; padding-left:20px !important; }
+
+  @media (max-width:900px) {
+    .hamburger { display:flex; }
+    .nav-links { display:none; }
+    .nav-overlay { display:block; pointer-events:none; }
+    .nav-overlay.open { pointer-events:all; }
+    nav { padding:16px 20px; }
+    .nav-monogram { font-size:1.3rem; }
+    .hero { padding:110px 24px 44px; min-height:58vh; }
+    .wrap { padding:0 24px; }
+    .sec { padding:56px 0; }
+    .split { grid-template-columns:1fr; gap:32px; }
+    .cta-row .btn { width:100%; justify-content:center; }
+  }
+
+  a:focus-visible, button:focus-visible { outline:2px solid var(--green-dark); outline-offset:3px; }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-monogram">L <span>&amp;</span> G</a>
+  <div class="nav-links">
+    <a href="sposi.html">Gli Sposi</a>
+    <a href="matrimonio.html">Il Matrimonio</a>
+    <div class="nav-drop">
+      <button class="nav-drop-toggle active" aria-haspopup="true" aria-expanded="false">Le Location
+        <svg width="9" height="6" viewBox="0 0 9 6" fill="none" aria-hidden="true"><path d="M1 1l3.5 3.5L8 1" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+      </button>
+      <div class="nav-drop-menu">
+        <a href="chiesa.html" class="active">Chiesa S. Vincenzo</a>
+        <a href="castello.html">Castello Visconti</a>
+      </div>
+    </div>
+    <a href="viaggio.html">Lista Viaggio</a>
+    <a href="rsvp.html" class="nav-rsvp">R.S.V.P.</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <img src="https://gioriva.github.io/album/matrimonio/evento/chiesa1.jpg" alt="La chiesa di San Vincenzo a Cernobbio" class="hero-img">
+  <div class="hero-ov"></div>
+  <div class="hero-in">
+    <p class="hero-eyebrow">Il luogo della cerimonia</p>
+    <h1 class="hero-title">Chiesa di<br><em>San Vincenzo</em></h1>
+    <p class="hero-sub">Cernobbio, Lago di Como · Sabato 12 settembre 2026, ore 15:00</p>
+  </div>
+</header>
+
+<!-- INTRO -->
+<section class="sec">
+  <div class="wrap">
+    <p class="eyebrow">La più antica di Cernobbio</p>
+    <h2>Nel cuore del borgo,<br><em>a due passi dal lago</em></h2>
+    <p class="body lead">La chiesa di San Vincenzo sorge nel centro storico di Cernobbio, affacciata su piazza Tolomeo Gallio e a pochi metri dalla riva. È la chiesa più antica del paese, dedicata al patrono San Vincenzo martire, la cui memoria ricorre il 22 gennaio.</p>
+    <p class="body">Le sue origini risalgono al XII secolo: la presenza dell'edificio sul territorio è documentata già intorno al 1150. Per secoli fu la chiesa parrocchiale e prepositurale di Cernobbio, titolo che ha ceduto nel 1935 alla più capiente chiesa del Santissimo Redentore. Da allora è santuario, e resta il luogo di culto più amato del borgo.</p>
+  </div>
+</section>
+
+<!-- ARCHITETTURA -->
+<section class="sec sec-tint">
+  <div class="wrap">
+    <div class="split">
+      <img src="https://gioriva.github.io/album/matrimonio/evento/chiesa1.jpg" alt="La facciata bianca e rossa della chiesa" loading="lazy">
+      <div>
+        <p class="eyebrow">L'edificio</p>
+        <h2>Una facciata<br><em>che si riconosce</em></h2>
+        <p class="body">Nel 1593 una visita pastorale del vescovo Ninguarda la descriveva come un edificio piccolo e modesto. La chiesa venne poi profondamente rimaneggiata tra il 1758 e il 1775, e consacrata il 25 luglio 1775 dal vescovo di Como Giovan Battista Mugiasca.</p>
+        <p class="body">La facciata che vediamo oggi, bianca e rossa in cotto, è del 1861, su disegno dell'architetto milanese Giacomo Bussi. È una rarità da queste parti: il profilo a salienti, le lesene scanalate e le ricche decorazioni in cotto la rendono immediatamente riconoscibile fra le case del borgo. Il portale ha un frontone semicurvo e bassorilievi di angeli, mentre nelle nicchie laterali trovano posto le statue di San Costantino e Sant'Ippolito.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INTERNO -->
+<section class="sec">
+  <div class="wrap">
+    <p class="eyebrow">All'interno</p>
+    <h2>Una navata, <em>due altari, molte storie</em></h2>
+    <p class="body">L'interno è a navata unica, con volta centrale rialzata e presbiterio quadrato. L'apparato decorativo si compone di stucchi, capitelli corinzi e finte decorazioni marmoree. Sul fianco sinistro si eleva il campanile settecentesco, con alto basamento e copertura a quattro falde, restaurato nel 2005.</p>
+
+    <div class="cards">
+      <div class="card">
+        <h4>Gli affreschi</h4>
+        <p>Nella volta è affrescata una Gloria di angeli, mentre nell'arco sono rappresentati i sette dolori di Maria. Nel presbiterio si trovano una Santissima Trinità ed episodi delle vite dei santi Vincenzo e Lorenzo.</p>
+      </div>
+      <div class="card">
+        <h4>L'altare maggiore</h4>
+        <p>L'originale, opera lignea con quattro pannelli dipinti attribuiti alla scuola del Tiepolo, andò distrutto in un incendio nel 1978. Oggi se ne conserva una fedele riproduzione, sormontata da una statua seicentesca della Madonna del Rosario.</p>
+      </div>
+      <div class="card">
+        <h4>Gli altari laterali</h4>
+        <p>In marmi policromi e delimitati da balaustre. Quello di destra accoglie una statua di Maria Addolorata, quello di sinistra un simulacro ligneo di Santa Marta di inizio Settecento.</p>
+      </div>
+      <div class="card">
+        <h4>L'organo e gli arredi</h4>
+        <p>L'organo in controfacciata è opera della casa organaria Bernasconi, fornitrice ufficiale del Duomo di Milano. Il coro ligneo, il confessionale e il mobile in noce della sacrestia risalgono al Settecento.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LA COINCIDENZA -->
+<section class="sec sec-dark">
+  <div class="wrap">
+    <p class="eyebrow">Una coincidenza di calendario</p>
+    <h2>Settembre, il mese<br><em>dell'Addolorata</em></h2>
+    <p class="body">L'altare di destra custodisce la statua di Maria Addolorata, che in questa chiesa viene festeggiata proprio nel mese di settembre. Lucrezia e Giorgio si sposeranno il 12, pochi giorni prima della ricorrenza.</p>
+    <div class="pull"><p>Una coincidenza minima, di quelle che si notano solo guardando bene. Ma sono spesso le più belle.</p></div>
+  </div>
+</section>
+
+<!-- CRONOLOGIA -->
+<section class="sec sec-tint">
+  <div class="wrap">
+    <p class="eyebrow">In breve</p>
+    <h2>Nove secoli <em>in poche righe</em></h2>
+    <div class="tl">
+      <div class="tl-item"><p class="tl-year">Intorno al 1150</p><p class="tl-text">La presenza della chiesa è documentata sul territorio di Cernobbio.</p></div>
+      <div class="tl-item"><p class="tl-year">1593</p><p class="tl-text">La visita pastorale del vescovo Ninguarda la descrive come un edificio piccolo e modesto.</p></div>
+      <div class="tl-item"><p class="tl-year">1758 · 1775</p><p class="tl-text">Profondo rimaneggiamento dell'edificio.</p></div>
+      <div class="tl-item"><p class="tl-year">25 luglio 1775</p><p class="tl-text">Consacrazione da parte del vescovo di Como Giovan Battista Mugiasca.</p></div>
+      <div class="tl-item"><p class="tl-year">1861</p><p class="tl-text">Viene realizzata la facciata bianca e rossa su disegno di Giacomo Bussi.</p></div>
+      <div class="tl-item"><p class="tl-year">1935</p><p class="tl-text">Il titolo di parrocchiale passa alla chiesa del Santissimo Redentore.</p></div>
+      <div class="tl-item"><p class="tl-year">1978</p><p class="tl-text">Un incendio distrugge l'altare maggiore ligneo.</p></div>
+      <div class="tl-item"><p class="tl-year">2005</p><p class="tl-text">Intervento di restauro del campanile.</p></div>
+      <div class="tl-item"><p class="tl-year">12 settembre 2026</p><p class="tl-text">Lucrezia e Giorgio si sposano qui, alle ore 15:00.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- INFO PRATICHE -->
+<section class="sec sec-dark">
+  <div class="wrap">
+    <p class="eyebrow">Per il giorno della cerimonia</p>
+    <h2>Come <em>arrivare</em></h2>
+    <div class="info-grid">
+      <div>
+        <p class="info-l">Dove</p>
+        <p class="info-v">Piazza Tolomeo Gallio<br>Cernobbio (CO)</p>
+      </div>
+      <div>
+        <p class="info-l">Quando</p>
+        <p class="info-v">Sabato 12 settembre 2026<br>Ritrovo h 14:45, cerimonia h 15:00</p>
+      </div>
+      <div>
+        <p class="info-l">In auto</p>
+        <p class="info-v">Il centro storico è pedonale. Trovate i parcheggi consigliati nella pagina dedicata.</p>
+      </div>
+    </div>
+    <div class="cta-row">
+      <a href="https://maps.google.com/?q=Chiesa+San+Vincenzo+Cernobbio" target="_blank" rel="noopener" class="btn btn-p">Apri in Maps <i>→</i></a>
+      <a href="parcheggi.html" class="btn btn-s">Parcheggi <i>→</i></a>
+      <a href="castello.html" class="btn btn-s">Il castello <i>→</i></a>
+    </div>
+  </div>
+</section>
+
+<!-- FONTI -->
+<section class="sec" style="padding:44px 0 60px;">
+  <div class="wrap">
+    <p class="eyebrow">Fonti</p>
+    <p class="srcs">Notizie storiche tratte dalla <a href="https://www.bisbino.it/parrocchia-di-cernobbio-ss-redentore/" target="_blank" rel="noopener">Comunità Pastorale Beata Vergine del Bisbino</a>, da <a href="https://upel.va.it/it/news/chiesa-di-san-vincenzo-cernobbio/" target="_blank" rel="noopener">UPEL</a> e da <a href="https://www.lombardiabeniculturali.it/architetture/schede/CO260-00214/" target="_blank" rel="noopener">Lombardia Beni Culturali</a>.</p>
+  </div>
+</section>
+
+<footer>
+  <p class="foot-names">Lucrezia &amp; Giorgio</p>
+  <p class="foot-date">12 · 09 · 2026 · Cernobbio, Como</p>
+  <p style="margin-top:18px;"><a href="privacy.html" style="font-size:.58rem;letter-spacing:.15em;text-transform:uppercase;color:rgba(245,240,232,.3);text-decoration:none;border-bottom:1px solid rgba(245,240,232,.2);">Privacy &amp; Cookie</a></p>
+</footer>
+
+<script>
+(function(){
+  if(document.getElementById('navDrawer'))return;
+  const overlay=document.createElement('div'); overlay.className='nav-overlay'; overlay.id='navOverlay';
+  const monogram=document.querySelector('.nav-monogram');
+  const drawer=document.createElement('div'); drawer.className='nav-drawer'; drawer.id='navDrawer';
+  drawer.innerHTML=
+    '<a href="'+monogram.getAttribute('href')+'" class="nav-drawer-monogram">'+monogram.innerHTML+'</a>'+
+    '<div class="dl">'+
+      '<a href="sposi.html">Gli Sposi</a>'+
+      '<a href="matrimonio.html">Il Matrimonio</a>'+
+      '<div class="dl-group">'+
+        '<p class="dl-group-label">Le Location</p>'+
+        '<div class="dl-sub">'+
+          '<a href="chiesa.html" class="active">Chiesa S. Vincenzo</a>'+
+          '<a href="castello.html">Castello Visconti</a>'+
+        '</div>'+
+      '</div>'+
+      '<a href="viaggio.html">Lista Viaggio</a>'+
+      '<a href="rsvp.html" class="nav-rsvp">R.S.V.P.</a>'+
+    '</div>';
+  document.body.appendChild(overlay); document.body.appendChild(drawer);
+  const ham=document.createElement('button');
+  ham.className='hamburger'; ham.id='hamburger';
+  ham.setAttribute('aria-label','Apri menu'); ham.setAttribute('aria-expanded','false');
+  ham.innerHTML='<span></span><span></span><span></span>';
+  document.querySelector('nav').appendChild(ham);
+  function o(){ham.classList.add('open');ham.setAttribute('aria-expanded','true');overlay.classList.add('open');drawer.classList.add('open');document.body.style.overflow='hidden';}
+  function c(){ham.classList.remove('open');ham.setAttribute('aria-expanded','false');overlay.classList.remove('open');drawer.classList.remove('open');document.body.style.overflow='';}
+  ham.addEventListener('click',()=>ham.classList.contains('open')?c():o());
+  overlay.addEventListener('click',c);
+  drawer.querySelectorAll('a').forEach(a=>a.addEventListener('click',c));
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&drawer.classList.contains('open'))c();});
+})();
+</script>
+
+<!-- ── Cookie consent + Google Analytics (caricato solo dopo consenso) ── -->
+<script>
+(function() {
+  var GA_ID = 'G-4PJDZDQ47H';
+  function loadGA() {
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+    document.head.appendChild(s);
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    window.gtag = gtag;
+    gtag('js', new Date());
+    gtag('config', GA_ID, { 'anonymize_ip': true });
+  }
+  var consent = null;
+  try { consent = localStorage.getItem('lg-cookie-consent'); } catch(e) {}
+  if (consent === 'accepted') { loadGA(); return; }
+  if (consent === 'rejected') return;
+  var banner = document.createElement('div');
+  banner.id = 'cookieBanner';
+  banner.setAttribute('role', 'dialog');
+  banner.setAttribute('aria-label', 'Informativa cookie');
+  banner.innerHTML =
+    '<div class="cb-inner">' +
+      '<p class="cb-text">🌿 &nbsp;Questo sito utilizza cookie di analisi (Google Analytics) per capire come viene visitato. Nessun dato viene usato per pubblicit\u00e0. <a href="privacy.html">Leggi l\u2019informativa</a></p>' +
+      '<div class="cb-actions">' +
+        '<button class="cb-btn cb-accept" id="cbAccept">Accetta</button>' +
+        '<button class="cb-btn cb-reject" id="cbReject">Rifiuta</button>' +
+      '</div>' +
+    '</div>';
+  document.body.appendChild(banner);
+  var style = document.createElement('style');
+  style.textContent =
+    '#cookieBanner{position:fixed;bottom:0;left:0;right:0;z-index:500;background:#2C3B28;box-shadow:0 -8px 30px rgba(44,59,40,0.25);transform:translateY(100%);animation:cbUp .45s .6s cubic-bezier(.4,0,.2,1) forwards;}' +
+    '@keyframes cbUp{to{transform:translateY(0)}}' +
+    '.cb-inner{max-width:1100px;margin:0 auto;padding:20px 28px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;}' +
+    '.cb-text{font-family:Montserrat,sans-serif;font-size:.74rem;font-weight:300;line-height:1.65;color:rgba(245,240,232,.85);margin:0;flex:1;min-width:240px;}' +
+    '.cb-text a{color:#A8C89A;text-decoration:none;border-bottom:1px solid #A8C89A;}' +
+    '.cb-actions{display:flex;gap:10px;flex-shrink:0;}' +
+    '.cb-btn{font-family:Montserrat,sans-serif;font-size:.62rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;padding:12px 26px;cursor:pointer;transition:all .25s;border-radius:2px;}' +
+    '.cb-accept{background:#A8C89A;color:#2C3B28;border:1px solid #A8C89A;}' +
+    '.cb-accept:hover{background:#bcd6b0;}' +
+    '.cb-reject{background:transparent;color:rgba(245,240,232,.7);border:1px solid rgba(245,240,232,.3);}' +
+    '.cb-reject:hover{color:#fff;border-color:rgba(245,240,232,.6);}' +
+    '@media(max-width:600px){.cb-inner{padding:18px 20px;flex-direction:column;align-items:stretch;text-align:center;}.cb-actions{justify-content:center;}.cb-btn{flex:1;}}';
+  document.head.appendChild(style);
+  function choose(value) {
+    try { localStorage.setItem('lg-cookie-consent', value); } catch(e) {}
+    banner.style.transition = 'transform .35s, opacity .35s';
+    banner.style.transform = 'translateY(100%)';
+    banner.style.opacity = '0';
+    setTimeout(function(){ banner.remove(); }, 400);
+    if (value === 'accepted') loadGA();
+  }
+  document.getElementById('cbAccept').addEventListener('click', function(){ choose('accepted'); });
+  document.getElementById('cbReject').addEventListener('click', function(){ choose('rejected'); });
+})();
+</script>
+
+</body>
+</html>

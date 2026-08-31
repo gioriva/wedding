@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="shortcut icon" href="favicon.svg">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#F5F0E8">
+<title>Castello Visconti di San Vito | Lucrezia &amp; Giorgio</title>
+  <meta name="description" content="Il Castello Visconti di San Vito a Somma Lombardo: sette secoli di storia, affreschi e collezioni. La location del ricevimento di Lucrezia e Giorgio.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Lucrezia &amp; Giorgio | 12.09.2026">
+  <meta property="og:title" content="Castello Visconti di San Vito | Lucrezia e Giorgio">
+  <meta property="og:description" content="Sette secoli di storia, affreschi e collezioni. La location del ricevimento del 12 settembre 2026.">
+  <meta property="og:image" content="https://www.giorgioelucrezia.it/og-social.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="it_IT">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Castello Visconti di San Vito | Lucrezia e Giorgio">
+  <meta name="twitter:description" content="Sette secoli di storia, affreschi e collezioni. La location del ricevimento del 12 settembre 2026.">
+  <meta name="twitter:image" content="https://www.giorgioelucrezia.it/og-social.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://gioriva.github.io" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --white:#F5F0E8; --green:#A8C89A; --green-dark:#5C7A4E;
+    --green-deep:#2C4A1E; --ink:#2C3B28; --ink-light:#4a5e3a; --card:#FCFAF6;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body { background:var(--white); color:var(--ink); font-family:'Montserrat',sans-serif; font-weight:300; overflow-x:hidden; }
+
+  /* NAV */
+  nav {
+    position:fixed; top:0; left:0; width:100%; z-index:200;
+    padding:22px 40px; display:flex; align-items:center; justify-content:space-between;
+    background:rgba(245,240,232,0.94); backdrop-filter:blur(12px);
+    border-bottom:1px solid rgba(168,200,154,0.3);
+  }
+  .nav-monogram { font-family:'Cormorant Garamond',serif; font-size:1.5rem; font-weight:300; letter-spacing:.08em; color:var(--ink); text-decoration:none; }
+  .nav-monogram span { color:var(--green-deep); }
+  .nav-links { display:flex; gap:32px; align-items:center; }
+  .nav-links a { font-size:.68rem; font-weight:500; letter-spacing:.16em; text-transform:uppercase; color:var(--ink-light); text-decoration:none; transition:color .3s; }
+  .nav-links a:hover, .nav-links a.active { color:var(--green-deep); }
+  .nav-rsvp { border:1px solid currentColor; padding:4px 14px; border-radius:2px; display:inline-flex; align-items:center; line-height:1; }
+  .nav-rsvp:hover, .nav-rsvp.active { background:var(--green-deep); color:var(--white) !important; border-color:var(--green-deep); }
+  .nav-drop { position:relative; }
+  .nav-drop-toggle { display:inline-flex; align-items:center; gap:6px; cursor:pointer; font-size:.68rem; font-weight:500; letter-spacing:.16em; text-transform:uppercase; color:var(--ink-light); background:none; border:none; font-family:inherit; transition:color .3s; }
+  .nav-drop:hover .nav-drop-toggle, .nav-drop-toggle.active { color:var(--green-deep); }
+  .nav-drop-toggle svg { transition:transform .3s; }
+  .nav-drop:hover .nav-drop-toggle svg { transform:rotate(180deg); }
+  .nav-drop-menu {
+    position:absolute; top:100%; left:50%; transform:translateX(-50%) translateY(8px);
+    background:var(--white); border:1px solid rgba(168,200,154,.5);
+    border-radius:2px; padding:8px 0; min-width:210px;
+    box-shadow:0 10px 30px rgba(44,59,40,.12);
+    opacity:0; visibility:hidden; transition:opacity .25s, transform .25s, visibility .25s;
+  }
+  .nav-drop:hover .nav-drop-menu { opacity:1; visibility:visible; transform:translateX(-50%) translateY(0); }
+  .nav-drop-menu::before { content:''; position:absolute; top:-10px; left:0; right:0; height:10px; }
+  .nav-drop-menu a { display:block; padding:11px 20px; font-size:.63rem; letter-spacing:.14em; white-space:nowrap; }
+  .nav-drop-menu a:hover { background:rgba(168,200,154,.2); }
+
+  /* HERO */
+  .hero { position:relative; min-height:78vh; display:flex; align-items:flex-end; padding:150px 60px 60px; overflow:hidden; background:var(--ink); }
+  .hero-img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center 42%; opacity:.52; }
+  .hero-ov { position:absolute; inset:0; background:linear-gradient(to top, rgba(26,33,24,.94) 0%, rgba(26,33,24,.45) 45%, rgba(26,33,24,.25) 100%); }
+  .hero-in { position:relative; z-index:2; max-width:1000px; margin:0 auto; width:100%; }
+  .hero-eyebrow { font-size:.6rem; letter-spacing:.3em; text-transform:uppercase; color:var(--green); margin-bottom:18px; display:flex; align-items:center; gap:12px; }
+  .hero-eyebrow::before { content:''; width:30px; height:1px; background:var(--green); }
+  .hero-title { font-family:'Cormorant Garamond',serif; font-size:clamp(2.6rem,6.5vw,5rem); font-weight:300; line-height:1.02; color:#fff; }
+  .hero-title em { font-style:italic; color:var(--green); }
+  .hero-sub { font-size:.78rem; letter-spacing:.14em; color:rgba(245,240,232,.6); margin-top:20px; }
+
+  /* SEZIONI */
+  .wrap { max-width:1000px; margin:0 auto; padding:0 60px; }
+  .sec { padding:80px 0; }
+  .sec-tint { background:linear-gradient(180deg, rgba(168,200,154,.14) 0%, rgba(168,200,154,.05) 100%); }
+  .sec-dark { background:var(--ink); color:var(--white); position:relative; overflow:hidden; }
+  .sec-dark::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse 60% 80% at 85% 100%, rgba(168,200,154,.14) 0%, transparent 65%); }
+  .sec-dark .wrap { position:relative; z-index:2; }
+
+  .eyebrow { font-size:.6rem; letter-spacing:.3em; text-transform:uppercase; color:var(--green-dark); margin-bottom:14px; display:flex; align-items:center; gap:12px; }
+  .eyebrow::before { content:''; width:26px; height:1px; background:var(--green-dark); }
+  .sec-dark .eyebrow { color:var(--green); }
+  .sec-dark .eyebrow::before { background:var(--green); }
+  h2 { font-family:'Cormorant Garamond',serif; font-size:clamp(1.9rem,4vw,2.9rem); font-weight:400; line-height:1.14; margin-bottom:26px; color:var(--ink); }
+  .sec-dark h2 { color:#fff; }
+  h2 em { font-style:italic; color:var(--green-deep); }
+  .sec-dark h2 em { color:var(--green); }
+  h3 { font-family:'Cormorant Garamond',serif; font-size:1.45rem; font-weight:400; color:var(--green-deep); margin:34px 0 12px; }
+  .sec-dark h3 { color:var(--green); }
+  p.body { font-size:.85rem; line-height:1.95; color:var(--ink-light); margin-bottom:16px; max-width:720px; }
+  .sec-dark p.body { color:rgba(245,240,232,.72); }
+  .lead { font-size:.95rem; line-height:1.9; color:var(--ink); font-weight:300; }
+
+  /* CITAZIONE */
+  .pull { border-left:3px solid var(--green); padding:6px 0 6px 28px; margin:34px 0; max-width:680px; }
+  .pull p { font-family:'Cormorant Garamond',serif; font-size:clamp(1.3rem,2.6vw,1.75rem); font-style:italic; font-weight:300; line-height:1.55; color:var(--green-deep); }
+  .sec-dark .pull { border-left-color:var(--green); }
+  .sec-dark .pull p { color:var(--green); }
+
+  /* GRIGLIA TEMI */
+  .cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(270px,1fr)); gap:16px; margin-top:34px; }
+  .card { background:var(--card); border:1px solid rgba(168,200,154,.5); border-top:3px solid var(--green); border-radius:3px; padding:28px 26px; box-shadow:0 2px 10px rgba(44,59,40,.04); }
+  .card h4 { font-family:'Cormorant Garamond',serif; font-size:1.3rem; font-weight:400; color:var(--green-deep); margin-bottom:10px; }
+  .card p { font-size:.78rem; line-height:1.78; color:var(--ink-light); }
+
+  /* CRONOLOGIA */
+  .tl { position:relative; padding-left:34px; margin-top:34px; }
+  .tl::before { content:''; position:absolute; left:0; top:6px; bottom:6px; width:1px; background:linear-gradient(to bottom, var(--green), rgba(168,200,154,.2)); }
+  .tl-item { position:relative; margin-bottom:26px; }
+  .tl-item::before { content:''; position:absolute; left:-38px; top:5px; width:9px; height:9px; border-radius:50%; background:var(--green); box-shadow:0 0 0 3px var(--white); }
+  .sec-tint .tl-item::before { box-shadow:0 0 0 3px #eef3e9; }
+  .tl-year { font-size:.6rem; letter-spacing:.2em; text-transform:uppercase; color:var(--green-dark); margin-bottom:5px; font-weight:500; }
+  .tl-text { font-size:.81rem; line-height:1.7; color:var(--ink-light); }
+
+  /* GALLERIA */
+  .gal { display:grid; grid-template-columns:repeat(3,1fr); gap:8px; margin-top:34px; }
+  .gal-it { overflow:hidden; cursor:pointer; position:relative; aspect-ratio:4/3; border-radius:2px; }
+  .gal-it:first-child { grid-column:1/3; grid-row:1/3; aspect-ratio:auto; }
+  .gal-it img { width:100%; height:100%; object-fit:cover; display:block; transition:transform .6s cubic-bezier(.25,.46,.45,.94), filter .3s; filter:brightness(.95); }
+  .gal-it:hover img { transform:scale(1.05); filter:brightness(1.05); }
+  .gal-ov { position:absolute; inset:0; background:rgba(26,33,24,.35); display:flex; align-items:center; justify-content:center; opacity:0; transition:opacity .3s; }
+  .gal-it:hover .gal-ov { opacity:1; }
+  .gal-ov span { width:42px; height:42px; border:1px solid rgba(255,255,255,.85); border-radius:50%; display:flex; align-items:center; justify-content:center; color:#fff; font-size:1.2rem; }
+  .gal-note { font-size:.68rem; color:var(--ink-light); margin-top:14px; font-style:italic; }
+  .sec-dark .gal-note { color:rgba(245,240,232,.45); }
+
+  /* VIDEO */
+  .video-wrap { position:relative; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:3px; margin-top:30px; box-shadow:0 14px 40px rgba(0,0,0,.3); }
+  .video-wrap iframe { position:absolute; top:0; left:0; width:100%; height:100%; border:0; }
+
+  /* CTA */
+  .cta-row { display:flex; gap:14px; flex-wrap:wrap; margin-top:36px; }
+  .btn { display:inline-flex; align-items:center; gap:11px; font-size:.66rem; font-weight:500; letter-spacing:.2em; text-transform:uppercase; text-decoration:none; padding:16px 34px; border-radius:2px; transition:background .3s, transform .25s, color .3s; }
+  .btn-p { background:var(--green); color:var(--ink); }
+  .btn-p:hover { background:#c2dab6; transform:translateY(-2px); }
+  .btn-s { background:transparent; color:rgba(245,240,232,.85); border:1px solid rgba(245,240,232,.35); }
+  .btn-s:hover { border-color:var(--green); color:var(--green); transform:translateY(-2px); }
+  .btn-l { background:var(--ink); color:var(--white); }
+  .btn-l:hover { background:var(--green-deep); transform:translateY(-2px); }
+  .btn i { font-style:normal; transition:transform .3s; }
+  .btn:hover i { transform:translateX(4px); }
+
+  /* LIGHTBOX */
+  .lb { position:fixed; inset:0; z-index:1000; background:rgba(20,26,18,.97); display:flex; align-items:center; justify-content:center; opacity:0; pointer-events:none; transition:opacity .3s; }
+  .lb.open { opacity:1; pointer-events:all; }
+  .lb img { max-width:90vw; max-height:84vh; object-fit:contain; box-shadow:0 40px 80px rgba(0,0,0,.5); transition:opacity .2s; }
+  .lb-b { background:none; border:none; cursor:pointer; color:rgba(245,240,232,.5); transition:color .2s; }
+  .lb-b:hover { color:#fff; }
+  .lb-x { position:fixed; top:24px; right:28px; font-size:.6rem; letter-spacing:.25em; text-transform:uppercase; }
+  .lb-p, .lb-n { position:fixed; top:50%; transform:translateY(-50%); font-size:2.4rem; line-height:1; padding:16px 20px; }
+  .lb-p { left:6px; } .lb-n { right:6px; }
+  .lb-c { position:fixed; bottom:26px; left:50%; transform:translateX(-50%); font-size:.6rem; letter-spacing:.2em; color:rgba(245,240,232,.4); }
+
+  footer { background:var(--ink); color:var(--white); text-align:center; padding:48px 40px; }
+  footer .foot-names { font-family:'Cormorant Garamond',serif; font-size:2rem; font-weight:300; font-style:italic; color:var(--green); }
+  footer .foot-date { font-size:.62rem; letter-spacing:.25em; text-transform:uppercase; color:rgba(245,240,232,.45); margin-top:12px; }
+
+  /* HAMBURGER */
+  .hamburger { display:none; flex-direction:column; justify-content:center; gap:5px; width:36px; height:36px; cursor:pointer; background:none; border:none; padding:4px; z-index:310; flex-shrink:0; }
+  .hamburger span { display:block; width:22px; height:1.5px; background:var(--ink); transition:transform .35s, opacity .25s; transform-origin:center; }
+  .hamburger.open span:nth-child(1) { transform:translateY(6.5px) rotate(45deg); }
+  .hamburger.open span:nth-child(2) { opacity:0; }
+  .hamburger.open span:nth-child(3) { transform:translateY(-6.5px) rotate(-45deg); }
+  .nav-overlay { display:none; position:fixed; inset:0; z-index:290; background:rgba(44,59,40,.45); backdrop-filter:blur(2px); opacity:0; transition:opacity .3s; }
+  .nav-overlay.open { opacity:1; }
+  .nav-drawer { position:fixed; top:0; right:0; bottom:0; width:min(310px,84vw); background:var(--white); z-index:300; transform:translateX(100%); transition:transform .38s cubic-bezier(.4,0,.2,1); display:flex; flex-direction:column; padding:76px 32px 40px; box-shadow:-8px 0 40px rgba(44,59,40,.12); overflow-y:auto; -webkit-overflow-scrolling:touch; }
+  .nav-drawer.open { transform:translateX(0); }
+  .nav-drawer-monogram { font-family:'Cormorant Garamond',serif; font-size:1.6rem; font-weight:300; letter-spacing:.08em; color:var(--ink); margin-bottom:32px; text-decoration:none; }
+  .nav-drawer-monogram span { color:var(--green-deep); }
+  .dl { display:flex; flex-direction:column; }
+  .dl > a { font-size:1rem; font-weight:400; letter-spacing:.05em; color:var(--ink-light); text-decoration:none; padding:15px 0; border-bottom:1px solid rgba(168,200,154,.25); transition:color .2s, padding-left .2s; display:flex; align-items:center; justify-content:space-between; }
+  .dl > a::after { content:'→'; opacity:0; transition:opacity .2s; font-size:.85rem; }
+  .dl > a:hover { color:var(--green-deep); padding-left:6px; }
+  .dl > a:hover::after { opacity:1; }
+  .dl-group { border-bottom:1px solid rgba(168,200,154,.25); padding:15px 0 12px; }
+  .dl-group-label { font-size:1rem; font-weight:400; letter-spacing:.05em; color:var(--ink); margin-bottom:6px; }
+  .dl-sub { display:flex; flex-direction:column; padding-left:14px; border-left:1px solid rgba(168,200,154,.5); margin-top:8px; }
+  .dl-sub a { font-size:.86rem; color:var(--ink-light); text-decoration:none; padding:9px 0; transition:color .2s, padding-left .2s; }
+  .dl-sub a:hover, .dl-sub a.active { color:var(--green-deep); padding-left:5px; }
+  .dl .nav-rsvp { margin-top:22px; border:1px solid var(--green-deep) !important; padding:14px 20px !important; border-radius:2px; color:var(--green-deep) !important; justify-content:center; letter-spacing:.15em; font-size:.8rem; }
+  .dl .nav-rsvp::after { display:none; }
+  .dl .nav-rsvp:hover { background:var(--green-deep); color:var(--white) !important; padding-left:20px !important; }
+
+  @media (max-width:900px) {
+    .hamburger { display:flex; }
+    .nav-links { display:none; }
+    .nav-overlay { display:block; pointer-events:none; }
+    .nav-overlay.open { pointer-events:all; }
+    nav { padding:16px 20px; }
+    .nav-monogram { font-size:1.3rem; }
+    .hero { padding:110px 24px 44px; min-height:62vh; }
+    .wrap { padding:0 24px; }
+    .sec { padding:56px 0; }
+    .gal { grid-template-columns:repeat(2,1fr); }
+    .gal-it:first-child { grid-column:1/3; grid-row:auto; aspect-ratio:4/3; }
+    .cta-row .btn { width:100%; justify-content:center; }
+    .lb-p, .lb-n { font-size:2rem; padding:12px 10px; }
+  }
+
+  a:focus-visible, button:focus-visible { outline:2px solid var(--green-dark); outline-offset:3px; }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-monogram">L <span>&amp;</span> G</a>
+  <div class="nav-links">
+    <a href="sposi.html">Gli Sposi</a>
+    <a href="matrimonio.html">Il Matrimonio</a>
+    <div class="nav-drop">
+      <button class="nav-drop-toggle active" aria-haspopup="true" aria-expanded="false">Le Location
+        <svg width="9" height="6" viewBox="0 0 9 6" fill="none" aria-hidden="true"><path d="M1 1l3.5 3.5L8 1" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+      </button>
+      <div class="nav-drop-menu">
+        <a href="chiesa.html">Chiesa S. Vincenzo</a>
+        <a href="castello.html" class="active">Castello Visconti</a>
+      </div>
+    </div>
+    <a href="viaggio.html">Lista Viaggio</a>
+    <a href="rsvp.html" class="nav-rsvp">R.S.V.P.</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <img src="https://gioriva.github.io/album/matrimonio/castello/cast01.jpg" alt="Vista aerea del Castello Visconti di San Vito" class="hero-img">
+  <div class="hero-ov"></div>
+  <div class="hero-in">
+    <p class="hero-eyebrow">La location del ricevimento</p>
+    <h1 class="hero-title">Castello Visconti<br><em>di San Vito</em></h1>
+    <p class="hero-sub">Somma Lombardo, Varese · Sette secoli di storia</p>
+  </div>
+</header>
+
+<!-- INTRO -->
+<section class="sec">
+  <div class="wrap">
+    <p class="eyebrow">Un luogo dove la storia continua</p>
+    <h2>Ci sono luoghi nei quali il tempo<br><em>non passa, si accumula</em></h2>
+    <p class="body lead">Il Castello Visconti di San Vito è uno di questi. Le sue torri, i cortili, le sale, gli affreschi e le collezioni raccontano oltre sette secoli di storia: quella di una famiglia, ma anche quella di un territorio e di una società che nei secoli ha cambiato volto.</p>
+    <p class="body">Nelle sue stanze sono passati nobili, uomini di cultura, sovrani e collezionisti. Sono state celebrate feste, ricevuti ospiti, custodite opere d'arte e tramandate memorie familiari. Il 12 settembre 2026 il Castello accoglie una nuova storia: quella di Lucrezia e Giorgio.</p>
+  </div>
+</section>
+
+<!-- VIDEO -->
+<section class="sec sec-dark">
+  <div class="wrap">
+    <p class="eyebrow">Visto dall'alto</p>
+    <h2>Il castello <em>dal drone</em></h2>
+    <p class="body">Un volo sopra le corti, le torri e i tetti del complesso, girato e montato da Giorgio.</p>
+    <div class="video-wrap">
+      <iframe src="https://www.youtube-nocookie.com/embed/u1lcylbxZlI" title="Castello Visconti di San Vito visto dal drone" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- STORIA -->
+<section class="sec">
+  <div class="wrap">
+    <p class="eyebrow">Le origini</p>
+    <h2>I Visconti a <em>Somma Lombardo</em></h2>
+    <p class="body">Le origini del complesso risalgono al Medioevo, quando il Castello aveva una funzione soprattutto difensiva. La posizione era strategica: Somma Lombardo si trovava lungo importanti vie di comunicazione tra Milano, il Ticino e il territorio del Verbano.</p>
+    <p class="body">Nel 1448 Francesco e Guido Visconti si stabilirono qui e avviarono una profonda trasformazione della residenza. La vecchia rocca medievale cominciò ad assumere il carattere di dimora signorile, più adatta alla rappresentanza e alla vita di una grande famiglia aristocratica. Nel 1473, però, i due fratelli divisero il complesso, dando origine a due rami distinti: i Visconti di San Vito e i Visconti di Modrone.</p>
+    <div class="pull"><p>Ancora oggi la struttura articolata in più corti e corpi di fabbrica conserva la memoria di quella divisione familiare.</p></div>
+
+    <h3>Dalla rocca alla villa di delizie</h3>
+    <p class="body">Tra Cinquecento e Seicento il modo di abitare delle grandi famiglie cambiò profondamente: la dimora non doveva più soltanto proteggere, doveva rappresentare. Un ruolo importante ebbe Ermes Visconti, che tra la fine del Cinquecento e l'inizio del Seicento promosse una grande campagna di trasformazione e decorazione degli ambienti nobili.</p>
+    <p class="body">È in questo periodo che il Castello si arricchisce del grande ciclo di affreschi che ancora oggi costituisce uno dei suoi tesori più importanti. Le sale diventano un teatro di immagini: mitologia classica, religione, allegorie e cultura figurativa europea entrano nella vita quotidiana della famiglia. Nel 1619 ai Visconti venne riconosciuto il titolo di Marchesi di San Vito.</p>
+  </div>
+</section>
+
+<!-- IL MATRIMONIO DEL 1578 -->
+<section class="sec sec-tint">
+  <div class="wrap">
+    <p class="eyebrow">Una coincidenza</p>
+    <h2>Un matrimonio raccontato <em>dal castello</em></h2>
+    <p class="body">C'è un particolare della storia del Castello che rende significativo essere qui oggi. Ermes Visconti sposò Margherita Taverna nel 1578, e l'unione tra le due famiglie è ricordata anche nel programma decorativo del Castello, dove compaiono gli stemmi dei Visconti e dei Taverna.</p>
+    <p class="body">Per una dimora aristocratica un matrimonio non era soltanto una vicenda privata: era un'unione tra famiglie, patrimoni, relazioni e prestigio. L'arte diventava lo strumento per celebrare quella nuova alleanza e renderla visibile.</p>
+    <div class="pull"><p>Quattro secoli dopo, nelle stesse sale, un altro matrimonio entra nella storia del Castello.</p></div>
+  </div>
+</section>
+
+<!-- GALLERIA -->
+<section class="sec sec-dark">
+  <div class="wrap">
+    <p class="eyebrow">Galleria</p>
+    <h2>Le corti, le torri, <em>i tetti</em></h2>
+    <div class="gal" id="gal">
+      <div class="gal-it" data-i="0"><img src="https://gioriva.github.io/album/matrimonio/castello/cast01.jpg" alt="Il castello visto dall'alto" loading="lazy"><div class="gal-ov"><span>+</span></div></div>
+      <div class="gal-it" data-i="1"><img src="https://gioriva.github.io/album/matrimonio/castello/cast02.jpg" alt="La torre principale del castello" loading="lazy"><div class="gal-ov"><span>+</span></div></div>
+      <div class="gal-it" data-i="2"><img src="https://gioriva.github.io/album/matrimonio/castello/cast03.jpg" alt="Il fronte del castello e il giardino" loading="lazy"><div class="gal-ov"><span>+</span></div></div>
+      <div class="gal-it" data-i="3"><img src="https://gioriva.github.io/album/matrimonio/castello/cast04.jpg" alt="I tetti e il loggiato" loading="lazy"><div class="gal-ov"><span>+</span></div></div>
+      <div class="gal-it" data-i="4"><img src="https://gioriva.github.io/album/matrimonio/castello/cast05.jpg" alt="Le corti interne del complesso" loading="lazy"><div class="gal-ov"><span>+</span></div></div>
+      <div class="gal-it" data-i="5"><img src="https://gioriva.github.io/album/matrimonio/castello/cast06.jpg" alt="Vista zenitale del castello" loading="lazy"><div class="gal-ov"><span>+</span></div></div>
+    </div>
+    <p class="gal-note">Fotografie aeree di Giorgio, giugno 2026</p>
+  </div>
+</section>
+
+<!-- COLLEZIONI -->
+<section class="sec">
+  <div class="wrap">
+    <p class="eyebrow">Le collezioni</p>
+    <h2>Il gusto <em>del collezionista</em></h2>
+    <p class="body">Tra i personaggi della famiglia, Carlo Ermes Visconti occupa un posto particolare. Uomo di cultura e amministratore pubblico, ma soprattutto appassionato collezionista, era capace di riconoscere interesse e bellezza anche in oggetti legati alla vita quotidiana. Da questa sensibilità nacque una delle raccolte più originali conservate nel Castello.</p>
+
+    <div class="cards">
+      <div class="card">
+        <h4>I bacili da barba</h4>
+        <p>Tutto comincia nella seconda metà dell'Ottocento, quando Carlo Ermes riceve in dono un antico bacile da barba. Da quel primo esemplare nasce una raccolta che oggi conta centinaia di pezzi: maioliche italiane, porcellane europee e orientali, esemplari francesi, spagnoli, tedeschi, inglesi, cinesi e giapponesi.</p>
+      </div>
+      <div class="card">
+        <h4>Un museo del quotidiano</h4>
+        <p>Il bacile serviva a un gesto semplice, la rasatura, e la sua forma permetteva di appoggiarlo al collo mentre il barbiere lavorava. Ma poteva essere decorato con grande raffinatezza. Ogni pezzo racconta un luogo di produzione, una tecnica, una moda, una classe sociale.</p>
+      </div>
+      <div class="card">
+        <h4>La Camera Reale</h4>
+        <p>Tra gli ambienti più suggestivi c'è la Camera Reale, destinata ad accogliere i sovrani d'Italia. Vi soggiornarono Vittorio Emanuele II e Umberto I. Il grande letto a baldacchino e gli arredi storici restituiscono l'atmosfera di una dimora aristocratica ottocentesca.</p>
+      </div>
+      <div class="card">
+        <h4>Le altre memorie</h4>
+        <p>Armi e armature, ceramiche, arredi, libri e oggetti appartenuti alle diverse generazioni. Una parte importante delle raccolte è costituita dai reperti della civiltà di Golasecca, cultura antichissima sviluppatasi nell'Italia nord-occidentale tra la prima età del Ferro e l'età romana.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AFFRESCHI -->
+<section class="sec sec-tint">
+  <div class="wrap">
+    <p class="eyebrow">Gli affreschi</p>
+    <h2>Una scoperta <em>da vivere</em></h2>
+    <p class="body">Il piano nobile custodisce uno straordinario ciclo di affreschi realizzato tra la fine del Cinquecento e i primi decenni del Seicento. Le decorazioni appartengono alla cultura figurativa lombarda dell'epoca, ma testimoniano anche la circolazione delle immagini nell'Europa del tempo: numerose composizioni furono elaborate a partire da modelli incisori che viaggiavano da una corte all'altra e da una bottega all'altra.</p>
+    <p class="body">Non vogliamo anticipare qui il racconto. Gli affreschi meritano di essere scoperti direttamente nelle sale, osservandone i dettagli e ascoltandone la storia. Per chi lo desidera abbiamo organizzato una visita guidata con una guida qualificata.</p>
+    <div class="pull"><p>Sarà l'occasione per entrare nel mondo delle immagini del Castello e lasciarsi sorprendere dai suoi racconti.</p></div>
+  </div>
+</section>
+
+<!-- GRANDE STORIA -->
+<section class="sec">
+  <div class="wrap">
+    <p class="eyebrow">Non solo i proprietari</p>
+    <h2>Un castello nella <em>grande storia</em></h2>
+    <p class="body">Tra queste mura passano vicende che attraversano la storia italiana. Nel 1535 nacque a Somma Niccolò Sfondrati, destinato alla carriera ecclesiastica: nel 1590 venne eletto papa con il nome di Gregorio XIV. Nell'Ottocento Ermes Ignazio Visconti, uomo di cultura e filosofo, frequentò l'ambiente intellettuale milanese e fu amico d'infanzia di Alessandro Manzoni.</p>
+    <p class="body">Al Risorgimento è legata la figura di Gabrio Casati, patriota e uomo politico, protagonista delle Cinque Giornate di Milano e ministro della Pubblica Istruzione. Il Castello diventa così un osservatorio privilegiato sulla storia lombarda: dalla società aristocratica dell'età moderna alla cultura dell'Ottocento, fino alla nascita dell'Italia contemporanea.</p>
+
+    <p class="eyebrow" style="margin-top:52px;">Una piccola cronologia</p>
+    <div class="tl">
+      <div class="tl-item"><p class="tl-year">Medioevo</p><p class="tl-text">Nasce il nucleo fortificato del Castello.</p></div>
+      <div class="tl-item"><p class="tl-year">1448</p><p class="tl-text">Francesco e Guido Visconti si stabiliscono a Somma.</p></div>
+      <div class="tl-item"><p class="tl-year">1473</p><p class="tl-text">Il complesso viene diviso tra i due fratelli.</p></div>
+      <div class="tl-item"><p class="tl-year">1535</p><p class="tl-text">Nasce a Somma Niccolò Sfondrati, futuro papa Gregorio XIV.</p></div>
+      <div class="tl-item"><p class="tl-year">XVI secolo</p><p class="tl-text">La rocca viene progressivamente trasformata in residenza signorile.</p></div>
+      <div class="tl-item"><p class="tl-year">1578</p><p class="tl-text">Ermes Visconti sposa Margherita Taverna.</p></div>
+      <div class="tl-item"><p class="tl-year">Fine XVI, inizi XVII secolo</p><p class="tl-text">Viene realizzato il grande programma decorativo degli ambienti nobili.</p></div>
+      <div class="tl-item"><p class="tl-year">1590</p><p class="tl-text">Niccolò Sfondrati viene eletto papa.</p></div>
+      <div class="tl-item"><p class="tl-year">1619</p><p class="tl-text">I Visconti ricevono il titolo di Marchesi di San Vito.</p></div>
+      <div class="tl-item"><p class="tl-year">XIX secolo</p><p class="tl-text">La famiglia si distingue per attività culturali, politiche e collezionistiche.</p></div>
+      <div class="tl-item"><p class="tl-year">Seconda metà dell'Ottocento</p><p class="tl-text">Carlo Ermes Visconti inizia la collezione dei bacili da barba.</p></div>
+      <div class="tl-item"><p class="tl-year">XX secolo</p><p class="tl-text">Il complesso viene progressivamente restaurato e valorizzato.</p></div>
+      <div class="tl-item"><p class="tl-year">1998</p><p class="tl-text">Nasce la Fondazione Visconti di San Vito.</p></div>
+      <div class="tl-item"><p class="tl-year">12 settembre 2026</p><p class="tl-text">Lucrezia e Giorgio scelgono queste sale per celebrare il loro matrimonio.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CHIUSURA -->
+<section class="sec sec-dark">
+  <div class="wrap">
+    <p class="eyebrow">Il tempo che passa, il tempo che resta</p>
+    <h2>Una <em>nuova storia</em></h2>
+    <p class="body">Ogni luogo storico è fatto di memoria, ma la memoria non è qualcosa di immobile. Continua ad arricchirsi attraverso le persone che lo abitano, lo visitano e lo scelgono per celebrare i momenti importanti della propria vita. Per secoli il Castello ha visto matrimoni, feste, incontri e generazioni succedersi nelle sue sale.</p>
+    <p class="body">Tra queste mura rimarranno gli affreschi, gli stemmi, gli arredi e le collezioni. Ma rimarrà anche, per chi quel giorno sarà qui, il ricordo di una giornata particolare.</p>
+    <div class="pull"><p>Che queste antiche mura custodiscano a lungo il ricordo della vostra felicità.</p></div>
+
+    <div class="cta-row">
+      <a href="https://maps.app.goo.gl/ar9UN3nXsuoSBGTf7" target="_blank" rel="noopener" class="btn btn-p">Come arrivare <i>→</i></a>
+      <a href="parcheggi.html" class="btn btn-s">Parcheggi <i>→</i></a>
+      <a href="chiesa.html" class="btn btn-s">La chiesa <i>→</i></a>
+    </div>
+  </div>
+</section>
+
+<!-- LIGHTBOX -->
+<div class="lb" id="lb">
+  <button class="lb-b lb-x" id="lbX" aria-label="Chiudi galleria">✕ &nbsp;chiudi</button>
+  <button class="lb-b lb-p" id="lbP" aria-label="Foto precedente">&#8249;</button>
+  <img id="lbI" src="" alt="">
+  <button class="lb-b lb-n" id="lbN" aria-label="Foto successiva">&#8250;</button>
+  <div class="lb-c" id="lbC"></div>
+</div>
+
+<footer>
+  <p class="foot-names">Lucrezia &amp; Giorgio</p>
+  <p class="foot-date">12 · 09 · 2026 · Cernobbio, Como</p>
+  <p style="margin-top:18px;"><a href="privacy.html" style="font-size:.58rem;letter-spacing:.15em;text-transform:uppercase;color:rgba(245,240,232,.3);text-decoration:none;border-bottom:1px solid rgba(245,240,232,.2);">Privacy &amp; Cookie</a></p>
+</footer>
+
+<script>
+// ── Galleria + lightbox ──
+const IMG_BASE = 'https://gioriva.github.io/album/matrimonio';
+const shots = Array.from({length:6},(_,i)=>`${IMG_BASE}/castello/cast0${i+1}.jpg`);
+const lb=document.getElementById('lb'), lbI=document.getElementById('lbI'), lbC=document.getElementById('lbC');
+let cur=0;
+function show(){ lbI.style.opacity=0; setTimeout(()=>{lbI.src=shots[cur]; lbI.style.opacity=1;},110); lbC.textContent=`${cur+1} / ${shots.length}`; }
+function open_(i){ cur=i; show(); lb.classList.add('open'); document.body.style.overflow='hidden'; }
+function close_(){ lb.classList.remove('open'); document.body.style.overflow=''; }
+document.querySelectorAll('.gal-it').forEach(el=>el.addEventListener('click',()=>open_(+el.dataset.i)));
+document.getElementById('lbX').addEventListener('click',close_);
+document.getElementById('lbP').addEventListener('click',()=>{cur=(cur-1+shots.length)%shots.length;show();});
+document.getElementById('lbN').addEventListener('click',()=>{cur=(cur+1)%shots.length;show();});
+lb.addEventListener('click',e=>{if(e.target===lb)close_();});
+document.addEventListener('keydown',e=>{
+  if(!lb.classList.contains('open'))return;
+  if(e.key==='Escape')close_();
+  if(e.key==='ArrowLeft'){cur=(cur-1+shots.length)%shots.length;show();}
+  if(e.key==='ArrowRight'){cur=(cur+1)%shots.length;show();}
+});
+let tx=0;
+lb.addEventListener('touchstart',e=>{tx=e.changedTouches[0].clientX;},{passive:true});
+lb.addEventListener('touchend',e=>{
+  const dx=e.changedTouches[0].clientX-tx;
+  if(Math.abs(dx)>50){ cur=dx<0?(cur+1)%shots.length:(cur-1+shots.length)%shots.length; show(); }
+},{passive:true});
+</script>
+
+<script>
+// ── Drawer mobile ──
+(function(){
+  if(document.getElementById('navDrawer'))return;
+  const overlay=document.createElement('div'); overlay.className='nav-overlay'; overlay.id='navOverlay';
+  const monogram=document.querySelector('.nav-monogram');
+  const drawer=document.createElement('div'); drawer.className='nav-drawer'; drawer.id='navDrawer';
+  drawer.innerHTML=
+    '<a href="'+monogram.getAttribute('href')+'" class="nav-drawer-monogram">'+monogram.innerHTML+'</a>'+
+    '<div class="dl">'+
+      '<a href="sposi.html">Gli Sposi</a>'+
+      '<a href="matrimonio.html">Il Matrimonio</a>'+
+      '<div class="dl-group">'+
+        '<p class="dl-group-label">Le Location</p>'+
+        '<div class="dl-sub">'+
+          '<a href="chiesa.html">Chiesa S. Vincenzo</a>'+
+          '<a href="castello.html" class="active">Castello Visconti</a>'+
+        '</div>'+
+      '</div>'+
+      '<a href="viaggio.html">Lista Viaggio</a>'+
+      '<a href="rsvp.html" class="nav-rsvp">R.S.V.P.</a>'+
+    '</div>';
+  document.body.appendChild(overlay); document.body.appendChild(drawer);
+  const ham=document.createElement('button');
+  ham.className='hamburger'; ham.id='hamburger';
+  ham.setAttribute('aria-label','Apri menu'); ham.setAttribute('aria-expanded','false');
+  ham.innerHTML='<span></span><span></span><span></span>';
+  document.querySelector('nav').appendChild(ham);
+  function o(){ham.classList.add('open');ham.setAttribute('aria-expanded','true');overlay.classList.add('open');drawer.classList.add('open');document.body.style.overflow='hidden';}
+  function c(){ham.classList.remove('open');ham.setAttribute('aria-expanded','false');overlay.classList.remove('open');drawer.classList.remove('open');document.body.style.overflow='';}
+  ham.addEventListener('click',()=>ham.classList.contains('open')?c():o());
+  overlay.addEventListener('click',c);
+  drawer.querySelectorAll('a').forEach(a=>a.addEventListener('click',c));
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&drawer.classList.contains('open'))c();});
+})();
+</script>
+
+<!-- ── Cookie consent + Google Analytics (caricato solo dopo consenso) ── -->
+<script>
+(function() {
+  var GA_ID = 'G-4PJDZDQ47H';
+  function loadGA() {
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+    document.head.appendChild(s);
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    window.gtag = gtag;
+    gtag('js', new Date());
+    gtag('config', GA_ID, { 'anonymize_ip': true });
+  }
+  var consent = null;
+  try { consent = localStorage.getItem('lg-cookie-consent'); } catch(e) {}
+  if (consent === 'accepted') { loadGA(); return; }
+  if (consent === 'rejected') return;
+  var banner = document.createElement('div');
+  banner.id = 'cookieBanner';
+  banner.setAttribute('role', 'dialog');
+  banner.setAttribute('aria-label', 'Informativa cookie');
+  banner.innerHTML =
+    '<div class="cb-inner">' +
+      '<p class="cb-text">🌿 &nbsp;Questo sito utilizza cookie di analisi (Google Analytics) per capire come viene visitato. Nessun dato viene usato per pubblicit\u00e0. <a href="privacy.html">Leggi l\u2019informativa</a></p>' +
+      '<div class="cb-actions">' +
+        '<button class="cb-btn cb-accept" id="cbAccept">Accetta</button>' +
+        '<button class="cb-btn cb-reject" id="cbReject">Rifiuta</button>' +
+      '</div>' +
+    '</div>';
+  document.body.appendChild(banner);
+  var style = document.createElement('style');
+  style.textContent =
+    '#cookieBanner{position:fixed;bottom:0;left:0;right:0;z-index:500;background:#2C3B28;box-shadow:0 -8px 30px rgba(44,59,40,0.25);transform:translateY(100%);animation:cbUp .45s .6s cubic-bezier(.4,0,.2,1) forwards;}' +
+    '@keyframes cbUp{to{transform:translateY(0)}}' +
+    '.cb-inner{max-width:1100px;margin:0 auto;padding:20px 28px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;}' +
+    '.cb-text{font-family:Montserrat,sans-serif;font-size:.74rem;font-weight:300;line-height:1.65;color:rgba(245,240,232,.85);margin:0;flex:1;min-width:240px;}' +
+    '.cb-text a{color:#A8C89A;text-decoration:none;border-bottom:1px solid #A8C89A;}' +
+    '.cb-actions{display:flex;gap:10px;flex-shrink:0;}' +
+    '.cb-btn{font-family:Montserrat,sans-serif;font-size:.62rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;padding:12px 26px;cursor:pointer;transition:all .25s;border-radius:2px;}' +
+    '.cb-accept{background:#A8C89A;color:#2C3B28;border:1px solid #A8C89A;}' +
+    '.cb-accept:hover{background:#bcd6b0;}' +
+    '.cb-reject{background:transparent;color:rgba(245,240,232,.7);border:1px solid rgba(245,240,232,.3);}' +
+    '.cb-reject:hover{color:#fff;border-color:rgba(245,240,232,.6);}' +
+    '@media(max-width:600px){.cb-inner{padding:18px 20px;flex-direction:column;align-items:stretch;text-align:center;}.cb-actions{justify-content:center;}.cb-btn{flex:1;}}';
+  document.head.appendChild(style);
+  function choose(value) {
+    try { localStorage.setItem('lg-cookie-consent', value); } catch(e) {}
+    banner.style.transition = 'transform .35s, opacity .35s';
+    banner.style.transform = 'translateY(100%)';
+    banner.style.opacity = '0';
+    setTimeout(function(){ banner.remove(); }, 400);
+    if (value === 'accepted') loadGA();
+  }
+  document.getElementById('cbAccept').addEventListener('click', function(){ choose('accepted'); });
+  document.getElementById('cbReject').addEventListener('click', function(){ choose('rejected'); });
+})();
+</script>
+
+</body>
+</html>
