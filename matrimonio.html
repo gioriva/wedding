@@ -137,7 +137,7 @@
   .info-band { background:var(--green); padding:56px 60px; }
   .info-band-inner { max-width:1100px; margin:0 auto; }
   .info-band-title { font-family:'Cormorant Garamond',serif; font-size:1.4rem; font-weight:300; font-style:italic; color:var(--ink); margin-bottom:28px; }
-  .info-items { display:grid; grid-template-columns:repeat(3,1fr); gap:32px; }
+  .info-items { display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:32px; }
   .info-item-label { font-size:0.6rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--green-deep); margin-bottom:6px; }
   .info-item-val { font-size:0.82rem; color:var(--ink); line-height:1.6; }
 
@@ -270,7 +270,7 @@
   .nav-drop-toggle { display:inline-flex; align-items:center; gap:6px; cursor:pointer; font-size:.68rem; font-weight:500; letter-spacing:.16em; text-transform:uppercase; color:var(--ink-light); background:none; border:none; font-family:inherit; transition:color .3s; }
   .nav-drop:hover .nav-drop-toggle { color:var(--green-deep); }
   .nav-drop-toggle svg { transition:transform .3s; }
-  .nav-drop:hover .nav-drop-toggle svg { transform:rotate(180deg); }
+  .nav-drop:hover .nav-drop-toggle svg, .nav-drop.open .nav-drop-toggle svg { transform:rotate(180deg); }
   .nav-drop-menu {
     position:absolute; top:100%; left:50%; transform:translateX(-50%) translateY(8px);
     background:var(--white); border:1px solid rgba(168,200,154,.5);
@@ -278,7 +278,7 @@
     box-shadow:0 10px 30px rgba(44,59,40,.12);
     opacity:0; visibility:hidden; transition:opacity .25s, transform .25s, visibility .25s;
   }
-  .nav-drop:hover .nav-drop-menu { opacity:1; visibility:visible; transform:translateX(-50%) translateY(0); }
+  .nav-drop:hover .nav-drop-menu, .nav-drop.open .nav-drop-menu { opacity:1; visibility:visible; transform:translateX(-50%) translateY(0); }
   .nav-drop-menu::before { content:''; position:absolute; top:-10px; left:0; right:0; height:10px; }
   .nav-drop-menu a { display:block; padding:11px 20px; font-size:.63rem; letter-spacing:.14em; white-space:nowrap; color:var(--ink-light); }
   .nav-drop-menu a:hover { background:rgba(168,200,154,.2); color:var(--green-deep); }
@@ -305,6 +305,7 @@
       <div class="nav-drop-menu">
         <a href="chiesa.html">Chiesa S. Vincenzo</a>
         <a href="castello.html">Castello Visconti</a>
+      <a href="parcheggi.html">Parcheggi</a>
       </div>
     </div>
     <a href="viaggio.html">Lista Viaggio</a>
@@ -327,17 +328,17 @@
     <div class="timeline-item">
       <p class="timeline-time">h 14:45</p>
       <h3 class="timeline-title">Ritrovo alla Chiesa</h3>
-      <p class="timeline-sub">Vi aspettiamo davanti alla chiesa qualche minuto prima dell’inizio, per accomodarvi con calma</p>
+      <p class="timeline-sub">Vi aspettiamo davanti alla chiesa qualche minuto prima dell’inizio. Le navette partono dal parcheggio di Villa Erba</p>
     </div>
     <div class="timeline-item">
       <p class="timeline-time">h 15:00</p>
       <h3 class="timeline-title">Cerimonia Religiosa</h3>
-      <p class="timeline-sub">Chiesa Parrocchiale di San Vincenzo Martire<br>Via Regina, Cernobbio (CO)</p>
+      <p class="timeline-sub">Chiesa di San Vincenzo Martire<br>Piazza Tolomeo Gallio, Cernobbio (CO)</p>
     </div>
     <div class="timeline-item">
       <p class="timeline-time">h 16:45</p>
       <h3 class="timeline-title">Trasferimento al Castello</h3>
-      <p class="timeline-sub">Al termine della cerimonia, partenza verso il Castello Visconti di San Vito a Somma Lombardo</p>
+      <p class="timeline-sub">Le navette vi riportano al parcheggio di Villa Erba, poi partenza in auto verso il Castello Visconti di San Vito a Somma Lombardo</p>
     </div>
     <div class="timeline-item">
       <p class="timeline-time">h 18:00</p>
@@ -375,7 +376,7 @@
           <div class="venue-details">
             <div class="venue-detail">
               <span class="venue-detail-icon">📍</span>
-              <span>Via Regina, Cernobbio (CO)</span>
+              <span>Piazza Tolomeo Gallio, Cernobbio (CO)</span>
             </div>
             <div class="venue-detail">
               <span class="venue-detail-icon">🕒</span>
@@ -450,8 +451,13 @@
       </div>
       <div>
         <p class="info-item-label">Conferma presenza</p>
-        <p class="info-item-val">Vi preghiamo di confermare la vostra presenza entro il 31 Luglio 2026.</p>
+        <p class="info-item-val">Se non l’hai ancora fatto, confermaci la tua presenza al più presto: stiamo chiudendo i numeri con il castello.</p>
         <a href="rsvp.html" style="display:inline-block;margin-top:14px;font-size:0.62rem;letter-spacing:0.2em;text-transform:uppercase;background:var(--ink);color:var(--white);padding:10px 24px;text-decoration:none;transition:background 0.3s;" onmouseover="this.style.background='#1a2518'" onmouseout="this.style.background='var(--ink)'">Conferma la presenza →</a>
+      </div>
+      <div>
+        <p class="info-item-label">Navette per la chiesa</p>
+        <p class="info-item-val">Due navette dal parcheggio di Villa Erba alla chiesa, all’arrivo e dopo la cerimonia.</p>
+        <a href="parcheggi.html" style="display:inline-block;margin-top:14px;font-size:0.62rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--ink);text-decoration:none;border-bottom:1px solid var(--ink);padding-bottom:3px;">Dettagli e parcheggi →</a>
       </div>
       <div>
         <p class="info-item-label">Celebrazione</p>
@@ -475,7 +481,7 @@
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-a">
-          <p>La cerimonia religiosa inizierà alle ore 15:00 presso la Chiesa di San Vincenzo a Cernobbio.</p>
+          <p>La cerimonia inizia alle ore 15:00 nella Chiesa di San Vincenzo a Cernobbio. Il ritrovo è alle 14:45, così ci si accomoda con calma.</p>
         </div>
       </div>
 
@@ -495,7 +501,7 @@
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-a">
-          <p>No, gli spostamenti sono a cura dei singoli ospiti. Vi invitiamo a organizzarvi per tempo, eventualmente condividendo i tragitti con altri invitati.</p>
+          <p>Sì, per la chiesa. Due navette fanno la spola tra il <a href="https://maps.app.goo.gl/Dfg1eLngckbPDh1y7" target="_blank" rel="noopener" style="color:var(--green-dark);text-decoration:none;border-bottom:1px solid var(--green-dark);">parcheggio di Villa Erba</a> e la Chiesa di San Vincenzo, sia prima della cerimonia sia al termine, per riportarvi all'auto. Vi consigliamo quindi di lasciare la macchina a Villa Erba. Il trasferimento da Cernobbio al castello resta invece con mezzi propri. Tutti i dettagli nella pagina <a href="parcheggi.html" style="color:var(--green-dark);text-decoration:none;border-bottom:1px solid var(--green-dark);">Parcheggi</a>.</p>
         </div>
       </div>
 
@@ -575,7 +581,7 @@
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-a">
-          <p>Vi preghiamo di confermare la vostra presenza entro venerdì 31 luglio 2026.</p>
+          <p>Il termine era il 31 luglio, ma se non l’hai ancora fatto scrivici subito: ogni conferma in più ci aiuta a chiudere i numeri con il castello.</p>
         </div>
       </div>
 
@@ -645,6 +651,7 @@
         '<div class="dl-sub">'+
           '<a href="chiesa.html">Chiesa S. Vincenzo</a>'+
           '<a href="castello.html">Castello Visconti</a>'+
+          '<a href="parcheggi.html">Parcheggi</a>'+
         '</div>'+
       '</div>'+
       '<a href="viaggio.html">Lista Viaggio</a>'+
@@ -733,5 +740,19 @@
 })();
 </script>
 
+<script>
+// Tendina "Le Location": apertura anche al tocco, per tablet senza hover
+(function navDropTouch(){
+  var d=document.querySelector('.nav-drop'); if(!d) return;
+  var t=d.querySelector('.nav-drop-toggle');
+  t.addEventListener('click',function(e){
+    e.stopPropagation();
+    var open=d.classList.toggle('open');
+    t.setAttribute('aria-expanded', open?'true':'false');
+  });
+  document.addEventListener('click',function(){ d.classList.remove('open'); t.setAttribute('aria-expanded','false'); });
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape'){ d.classList.remove('open'); t.setAttribute('aria-expanded','false'); } });
+})();
+</script>
 </body>
 </html>

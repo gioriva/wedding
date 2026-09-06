@@ -50,7 +50,7 @@
   .nav-drop-toggle { display:inline-flex; align-items:center; gap:6px; cursor:pointer; font-size:.68rem; font-weight:500; letter-spacing:.16em; text-transform:uppercase; color:var(--ink-light); background:none; border:none; font-family:inherit; transition:color .3s; }
   .nav-drop:hover .nav-drop-toggle, .nav-drop-toggle.active { color:var(--green-deep); }
   .nav-drop-toggle svg { transition:transform .3s; }
-  .nav-drop:hover .nav-drop-toggle svg { transform:rotate(180deg); }
+  .nav-drop:hover .nav-drop-toggle svg, .nav-drop.open .nav-drop-toggle svg { transform:rotate(180deg); }
   .nav-drop-menu {
     position:absolute; top:100%; left:50%; transform:translateX(-50%) translateY(8px);
     background:var(--white); border:1px solid rgba(168,200,154,.5);
@@ -58,7 +58,7 @@
     box-shadow:0 10px 30px rgba(44,59,40,.12);
     opacity:0; visibility:hidden; transition:opacity .25s, transform .25s, visibility .25s;
   }
-  .nav-drop:hover .nav-drop-menu { opacity:1; visibility:visible; transform:translateX(-50%) translateY(0); }
+  .nav-drop:hover .nav-drop-menu, .nav-drop.open .nav-drop-menu { opacity:1; visibility:visible; transform:translateX(-50%) translateY(0); }
   .nav-drop-menu::before { content:''; position:absolute; top:-10px; left:0; right:0; height:10px; }
   .nav-drop-menu a { display:block; padding:11px 20px; font-size:.63rem; letter-spacing:.14em; white-space:nowrap; }
   .nav-drop-menu a:hover { background:rgba(168,200,154,.2); }
@@ -219,6 +219,7 @@
       <div class="nav-drop-menu">
         <a href="chiesa.html">Chiesa S. Vincenzo</a>
         <a href="castello.html" class="active">Castello Visconti</a>
+      <a href="parcheggi.html">Parcheggi</a>
       </div>
     </div>
     <a href="viaggio.html">Lista Viaggio</a>
@@ -446,6 +447,7 @@ lb.addEventListener('touchend',e=>{
         '<div class="dl-sub">'+
           '<a href="chiesa.html">Chiesa S. Vincenzo</a>'+
           '<a href="castello.html" class="active">Castello Visconti</a>'+
+          '<a href="parcheggi.html">Parcheggi</a>'+
         '</div>'+
       '</div>'+
       '<a href="viaggio.html">Lista Viaggio</a>'+
@@ -526,5 +528,19 @@ lb.addEventListener('touchend',e=>{
 })();
 </script>
 
+<script>
+// Tendina "Le Location": apertura anche al tocco, per tablet senza hover
+(function navDropTouch(){
+  var d=document.querySelector('.nav-drop'); if(!d) return;
+  var t=d.querySelector('.nav-drop-toggle');
+  t.addEventListener('click',function(e){
+    e.stopPropagation();
+    var open=d.classList.toggle('open');
+    t.setAttribute('aria-expanded', open?'true':'false');
+  });
+  document.addEventListener('click',function(){ d.classList.remove('open'); t.setAttribute('aria-expanded','false'); });
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape'){ d.classList.remove('open'); t.setAttribute('aria-expanded','false'); } });
+})();
+</script>
 </body>
 </html>
