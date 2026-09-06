@@ -688,19 +688,25 @@
   const ctx = canvas.getContext('2d');
   let W = 0, H = 0, petals = [];
 
+  const DPR = Math.min(window.devicePixelRatio || 1, 2);
   function resize() {
     const rect = canvas.parentElement.getBoundingClientRect();
-    W = canvas.width  = rect.width  || window.innerWidth;
-    H = canvas.height = rect.height || window.innerHeight;
+    W = rect.width  || window.innerWidth;
+    H = rect.height || window.innerHeight;
+    canvas.width  = Math.round(W * DPR);
+    canvas.height = Math.round(H * DPR);
+    ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
   }
   window.addEventListener('resize', resize);
+  window.addEventListener('orientationchange', () => setTimeout(resize, 150));
+  window.addEventListener('load', resize);
   resize();
 
   const COLORS = [
-    [181, 234, 172],
-    [200, 245, 192],
-    [244, 245, 247],
-    [125, 201, 117],
+    [168, 200, 154],
+    [190, 215, 178],
+    [245, 240, 232],
+    [92, 122, 78],
   ];
 
   function makePetal(randomY) {
@@ -722,20 +728,21 @@
     };
   }
 
-  // Rispetta prefers-reduced-motion e riduci i petali su mobile (batteria)
+  // Con "Riduci movimento" attivo l'animazione resta, ma più leggera: meno petali e più lenti
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const petalCount = reducedMotion ? 0 : (W < 768 ? 28 : 55);
+  const SPEED = reducedMotion ? 0.5 : 1;
+  let petalCount = (W < 768 ? 28 : 55);
+  if (reducedMotion) petalCount = Math.round(petalCount / 2);
   for (let i = 0; i < petalCount; i++) petals.push(makePetal(true));
-  if (reducedMotion) return;
 
   function animate() {
     ctx.clearRect(0, 0, W, H);
     for (let i = 0; i < petals.length; i++) {
       const p = petals[i];
-      p.y     += p.speed;
-      p.sway  += p.swaySpeed;
-      p.x     += p.drift + Math.sin(p.sway) * p.swayAmp;
-      p.angle += p.spin;
+      p.y     += p.speed * SPEED;
+      p.sway  += p.swaySpeed * SPEED;
+      p.x     += (p.drift + Math.sin(p.sway) * p.swayAmp) * SPEED;
+      p.angle += p.spin * SPEED;
 
       ctx.save();
       ctx.globalAlpha = p.alpha;
