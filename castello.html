@@ -198,6 +198,13 @@
   }
 
   a:focus-visible, button:focus-visible { outline:2px solid var(--green-dark); outline-offset:3px; }
+
+  /* Voce in evidenza: Lista Viaggio */
+  .nav-cta { border:1px solid currentColor; padding:4px 14px; border-radius:2px; display:inline-flex; align-items:center; line-height:1; }
+  .nav-cta:hover, .nav-cta.active { background:var(--green-deep); color:var(--white) !important; border-color:var(--green-deep); }
+  .dl .nav-cta { margin-top:22px; border:1px solid var(--green-deep) !important; padding:14px 20px !important; border-radius:2px; color:var(--green-deep) !important; justify-content:center; letter-spacing:.15em; font-size:.8rem; }
+  .dl .nav-cta::after { display:none; }
+  .dl .nav-cta:hover, .dl .nav-cta.active { background:var(--green-deep); color:var(--white) !important; padding-left:20px !important; }
 </style>
 </head>
 <body>
@@ -217,7 +224,7 @@
       <a href="parcheggi.html">Parcheggi</a>
       </div>
     </div>
-    <a href="viaggio.html">Lista Viaggio</a>
+    <a href="viaggio.html" class="nav-cta">Lista Viaggio</a>
   </div>
 </nav>
 
@@ -444,7 +451,7 @@ lb.addEventListener('touchend',e=>{
           '<a href="parcheggi.html">Parcheggi</a>'+
         '</div>'+
       '</div>'+
-      '<a href="viaggio.html">Lista Viaggio</a>'+
+      '<a href="viaggio.html" class="nav-cta">Lista Viaggio</a>'+
     '</div>';
   document.body.appendChild(overlay); document.body.appendChild(drawer);
   const ham=document.createElement('button');

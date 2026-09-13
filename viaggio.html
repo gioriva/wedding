@@ -128,6 +128,35 @@
   .globe-svg { width:100%; height:auto; display:block; }
   .globe-title { font-family:'Cormorant Garamond',serif; font-size:clamp(2rem,5vw,3.5rem); font-weight:300; font-style:italic; color:#fff; text-align:center; margin-top:48px; position:relative; }
 
+
+
+  /* TOP CTA: lista nozze + diario di viaggio */
+  .top-cta { background:var(--ocean); border-top:1px solid rgba(168,200,154,.1); padding:44px 40px; display:flex; justify-content:center; align-items:stretch; gap:0; }
+  .top-cta-col { display:flex; flex-direction:column; align-items:center; text-align:center; padding:0 56px; }
+  .top-cta-sep { width:1px; background:rgba(168,200,154,.18); }
+  .top-cta-label { font-size:.6rem; letter-spacing:.28em; text-transform:uppercase; color:var(--green); margin-bottom:20px; max-width:300px; line-height:1.9; }
+  .top-btn { display:inline-flex; align-items:center; gap:12px; margin-top:auto; font-family:'Montserrat',sans-serif; font-size:.7rem; font-weight:500; letter-spacing:.22em; text-transform:uppercase; text-decoration:none; padding:17px 40px; border-radius:2px; transition:background .3s, transform .2s, border-color .3s, color .3s; }
+  .top-btn i { font-style:normal; transition:transform .3s; }
+  .top-btn:hover i { transform:translateX(4px); }
+  .top-btn-p { background:var(--green); color:var(--ink); }
+  .top-btn-p:hover { background:#c2dab6; transform:translateY(-2px); }
+  .top-btn-s { background:transparent; color:var(--green); border:1px solid rgba(168,200,154,.55); }
+  .top-btn-s:hover { border-color:var(--green); background:rgba(168,200,154,.1); transform:translateY(-2px); }
+
+  /* PERCORSO */
+  .trip { max-width:860px; margin:0 auto; padding:0 40px 100px; position:relative; z-index:1; }
+  .trip-label { font-size:.6rem; letter-spacing:.3em; text-transform:uppercase; color:var(--green); margin-bottom:40px; text-align:center; }
+  .trip-tl { position:relative; padding-left:36px; }
+  .trip-tl::before { content:''; position:absolute; left:0; top:8px; bottom:8px; width:1px; background:linear-gradient(to bottom, var(--green), rgba(168,200,154,.12)); }
+  .trip-item { position:relative; margin-bottom:30px; }
+  .trip-item::before { content:''; position:absolute; left:-40px; top:6px; width:9px; height:9px; border-radius:50%; background:var(--green); box-shadow:0 0 0 3px var(--ink); }
+  .trip-date { font-size:.6rem; letter-spacing:.22em; text-transform:uppercase; color:var(--lagoon); margin-bottom:6px; font-weight:500; }
+  .trip-place { font-family:'Cormorant Garamond',serif; font-size:1.45rem; font-style:italic; font-weight:300; color:#fff; margin-bottom:5px; }
+  .trip-follow { margin-top:40px; padding-left:36px; font-size:.8rem; line-height:1.8; color:rgba(245,240,232,.62); }
+  .trip-follow a { color:var(--green); text-decoration:none; border-bottom:1px solid rgba(168,200,154,.5); }
+  .trip-follow a:hover { border-bottom-color:var(--green); }
+  .trip-text { font-size:.79rem; line-height:1.72; color:rgba(245,240,232,.62); max-width:560px; }
+
   /* DESTINATIONS */
   .destinations { max-width:1200px; margin:0 auto; padding:0 40px 100px; }
 
@@ -191,7 +220,8 @@
   .island-card:hover .island-bg { transform:scale(1.06); }
   .island-overlay { position:absolute; inset:0; }
   .island-content { position:absolute; inset:0; display:flex; flex-direction:column; justify-content:flex-end; padding:40px; }
-  .island-icon { font-size:2.5rem; margin-bottom:16px; }
+  .island-icon { font-size:2.5rem; margin-bottom:12px; }
+  .island-tag { font-size:.58rem; letter-spacing:.22em; text-transform:uppercase; color:var(--green); margin-bottom:8px; }
   .island-name { font-family:'Cormorant Garamond',serif; font-size:2.5rem; font-weight:300; font-style:italic; margin-bottom:10px; }
   .island-desc { font-size:0.75rem; line-height:1.65; color:rgba(245,240,232,0.7); max-width:360px; }
 
@@ -253,6 +283,11 @@
     nav{padding:16px 20px}
     .nav-links{gap:20px}
     .dest-header{grid-template-columns:1fr;gap:32px}
+    .trip{padding:0 24px 70px}
+    .top-cta{flex-direction:column;padding:36px 24px;gap:32px}
+    .top-cta-sep{width:auto;height:1px}
+    .top-cta-col{padding:0}
+    .top-btn{width:100%;justify-content:center}
     .cities-grid{grid-template-columns:1fr}
     .poly-islands{grid-template-columns:1fr}
     .island-card{aspect-ratio:3/2}
@@ -379,6 +414,13 @@
   .dl-sub a { font-size:.86rem; color:var(--ink-light); text-decoration:none; padding:9px 0; transition:color .2s, padding-left .2s; }
   .dl-sub a:hover, .dl-sub a.active { color:var(--green-deep); padding-left:5px; }
   .nav-drawer { overflow-y:auto; -webkit-overflow-scrolling:touch; }
+
+  /* Voce in evidenza: Lista Viaggio */
+  .nav-cta { border:1px solid currentColor; padding:4px 14px; border-radius:2px; display:inline-flex; align-items:center; line-height:1; }
+  .nav-cta:hover, .nav-cta.active { background:var(--green); color:var(--ink) !important; border-color:var(--green); }
+  .dl .nav-cta { margin-top:22px; border:1px solid var(--green-deep) !important; padding:14px 20px !important; border-radius:2px; color:var(--green-deep) !important; justify-content:center; letter-spacing:.15em; font-size:.8rem; }
+  .dl .nav-cta::after { display:none; }
+  .dl .nav-cta:hover, .dl .nav-cta.active { background:var(--green-deep); color:var(--white) !important; padding-left:20px !important; }
 </style>
 </head>
 <body>
@@ -398,7 +440,7 @@
       <a href="parcheggi.html">Parcheggi</a>
       </div>
     </div>
-    <a href="viaggio.html" class="active">Lista Viaggio</a>
+    <a href="viaggio.html" class="nav-cta active">Lista Viaggio</a>
   </div>
 </nav>
 
@@ -412,17 +454,17 @@
       Fine del mondo<br>
       <em>e oltre</em>
     </h1>
-    <p class="hero-subtitle">Argentina · Patagonia · Ushuaia · Bora Bora · Tahaa</p>
+    <p class="hero-subtitle">15 settembre · 7 ottobre 2026 &nbsp;·&nbsp; 23 giorni</p>
     <div class="hero-path">
       <span class="path-node">Buenos Aires</span>
       <span class="path-sep">✦</span>
-      <span class="path-node">Patagonia</span>
+      <span class="path-node">El Calafate</span>
       <span class="path-sep">✦</span>
       <span class="path-node">Ushuaia</span>
       <span class="path-sep">✦</span>
-      <span class="path-node">Bora Bora</span>
+      <span class="path-node">Taha'a</span>
       <span class="path-sep">✦</span>
-      <span class="path-node">Tahaa</span>
+      <span class="path-node">Bora Bora</span>
     </div>
   </div>
   <div class="hero-scroll">
@@ -432,9 +474,16 @@
 </section>
 
 <!-- TOP CTA -->
-<div style="background:var(--ocean);text-align:center;padding:40px 20px;border-top:1px solid rgba(181,234,172,0.1);">
-  <p style="font-size:0.6rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--green);margin-bottom:20px;">La nostra lista nozze è fatta di latitudini e longitudini</p>
-  <a href="https://www.viaggironchi.it/frame/viaggironchi/modules/lino/purchaseHoneymoonQuotasForm.jsp?pKey=4133" target="_blank" style="display:inline-flex;align-items:center;gap:12px;font-family:'Montserrat',sans-serif;font-size:0.72rem;font-weight:500;letter-spacing:0.22em;text-transform:uppercase;background:var(--green);color:var(--ink);text-decoration:none;padding:18px 44px;transition:background 0.3s,transform 0.2s;" onmouseover="this.style.background='#7dc975';this.style.transform='translateY(-2px)'" onmouseout="this.style.background='var(--green)';this.style.transform='translateY(0)'">Regala una quota &nbsp;→</a>
+<div class="top-cta">
+  <div class="top-cta-col">
+    <p class="top-cta-label">La nostra lista nozze è fatta di latitudini e longitudini</p>
+    <a href="https://www.viaggironchi.it/frame/viaggironchi/modules/lino/purchaseHoneymoonQuotasForm.jsp?pKey=4133" target="_blank" rel="noopener" class="top-btn top-btn-p">Regala una quota <i>→</i></a>
+  </div>
+  <div class="top-cta-sep"></div>
+  <div class="top-cta-col">
+    <p class="top-cta-label">Lo raccontiamo giorno per giorno, da quando partiamo</p>
+    <a href="https://www.gioriva.it/poitiracconto/patagonia2026/" target="_blank" rel="noopener" class="top-btn top-btn-s">Segui il viaggio <i>→</i></a>
+  </div>
 </div>
 
 <!-- GLOBE ROUTE -->
@@ -546,6 +595,22 @@
   <h2 class="globe-title" style="position:relative;z-index:1;">Dal Lago di Como<br><em>al confine del mondo</em></h2>
 </section>
 
+<!-- PERCORSO -->
+<section class="trip">
+  <p class="trip-label">Il percorso</p>
+  <div class="trip-tl">
+    <div class="trip-item"><p class="trip-date">15 · 18 settembre</p><p class="trip-place">Buenos Aires</p><p class="trip-text">Tre notti nella capitale. Un giorno di visita con guida tra i quartieri storici, uno libero per perdersi.</p></div>
+    <div class="trip-item"><p class="trip-date">18 · 22 settembre</p><p class="trip-place">El Calafate, Patagonia</p><p class="trip-text">Quattro notti sul Lago Argentino. Il Perito Moreno, la navigazione tra i ghiacciai e una giornata in un'estancia.</p></div>
+    <div class="trip-item"><p class="trip-date">22 · 24 settembre</p><p class="trip-place">Ushuaia, Terra del Fuoco</p><p class="trip-text">Due notti alla fine del mondo. Il parco nazionale e il Canale di Beagle in catamarano.</p></div>
+    <div class="trip-item"><p class="trip-date">24 · 26 settembre</p><p class="trip-place">La traversata</p><p class="trip-text">Rientro a Buenos Aires, poi via Lima e Los Angeles verso il Pacifico.</p></div>
+    <div class="trip-item"><p class="trip-date">26 · 27 settembre</p><p class="trip-place">Tahiti</p><p class="trip-text">Una notte a Papeete, con l'accoglienza polinesiana e la collana di fiori.</p></div>
+    <div class="trip-item"><p class="trip-date">27 settembre · 1 ottobre</p><p class="trip-place">Taha'a</p><p class="trip-text">Quattro notti in una suite sull'acqua, nella laguna condivisa con Raiatea.</p></div>
+    <div class="trip-item"><p class="trip-date">1 · 5 ottobre</p><p class="trip-place">Bora Bora</p><p class="trip-text">Quattro notti in un bungalow sulla laguna, con il Monte Otemanu davanti.</p></div>
+    <div class="trip-item"><p class="trip-date">5 · 7 ottobre</p><p class="trip-place">Il ritorno</p><p class="trip-text">Papeete, Los Angeles, Parigi. Atterraggio a Milano il 7 ottobre nel primo pomeriggio.</p></div>
+  </div>
+  <p class="trip-follow">Tappa dopo tappa, foto e racconto sul diario: <a href="https://www.gioriva.it/poitiracconto/patagonia2026/" target="_blank" rel="noopener">gioriva.it/poitiracconto/patagonia2026</a></p>
+</section>
+
 <!-- DESTINATIONS -->
 <div class="destinations">
 
@@ -555,7 +620,7 @@
       <div>
         <p class="dest-flag">Prima tappa</p>
         <h2 class="dest-country">Argen<em>tina</em></h2>
-        <p class="dest-desc">Il primo capitolo del viaggio porta Giorgio e Lucrezia nella terra dei contrasti assoluti: la vivacità cosmopolita di Buenos Aires, i silenzi eterni della Patagonia e il fascino del Fin del Mundo a Ushuaia. Un paese che stupisce, commuove, e non lascia mai indifferenti.</p>
+        <p class="dest-desc">Dieci giorni, dal 15 al 25 settembre. Il primo capitolo del viaggio porta Lucrezia e Giorgio nella terra dei contrasti assoluti: la vivacità di Buenos Aires, i ghiacciai della Patagonia e il confine estremo di Ushuaia.</p>
       </div>
       <div style="display:flex;align-items:center;justify-content:center;">
         <div style="width:120px;height:120px;border:1px solid rgba(181,234,172,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;">
@@ -575,51 +640,53 @@
     <div class="cities-grid">
       <div class="city-card ba">
         <span class="city-card-icon">🌆</span>
-        <p class="city-card-tag">Metropoli</p>
+        <p class="city-card-tag">3 notti · 15 · 18 settembre</p>
         <h3 class="city-card-name">Buenos Aires</h3>
-        <p class="city-card-text">La Parigi del Sud America. Quartieri come San Telmo, Palermo e La Boca, il tango nelle strade, la carne asada, i caffè storici e un'energia che non si ferma mai. Una città da vivere lentamente, assaporando ogni dettaglio.</p>
+        <p class="city-card-text">Si comincia dalla Plaza de Mayo con la Casa Rosada, la Cattedrale e il Cabildo. Poi La Boca e il Caminito con le sue case multicolore, il mercato di San Telmo intorno a Plaza Dorrego, il quartiere della Recoleta con il cimitero dove riposa Evita Perón, e Palermo. Il terzo giorno è libero.</p>
       </div>
       <div class="city-card patagonia">
         <span class="city-card-icon">🏔</span>
-        <p class="city-card-tag">Natura selvaggia</p>
-        <h3 class="city-card-name">Patagonia</h3>
-        <p class="city-card-text">Ghiacciai immensi, laghi cristallini, montagne che toccano il cielo. Il Parco Nazionale Los Glaciares, il Perito Moreno, Torres del Paine. Una natura primordiale che mette in prospettiva ogni cosa e riempie il cuore di meraviglia.</p>
+        <p class="city-card-tag">4 notti · 18 · 22 settembre</p>
+        <h3 class="city-card-name">El Calafate</h3>
+        <p class="city-card-text">Sulle sponde del Lago Argentino, nel Parco Nazionale Los Glaciares. Il Perito Moreno con il suo fronte di cinque chilometri e i blocchi di ghiaccio che crollano in acqua. La navigazione tra gli iceberg del Brazo Norte fino al ghiacciaio Spegazzini. E una giornata all'Estancia Nibepo Aike, tra gauchos, cavalli e asado de cordero.</p>
       </div>
       <div class="city-card ushuaia">
         <span class="city-card-icon">🌏</span>
-        <p class="city-card-tag">Fin del Mundo</p>
+        <p class="city-card-tag">2 notti · 22 · 24 settembre</p>
         <h3 class="city-card-name">Ushuaia</h3>
-        <p class="city-card-text">La città più meridionale del mondo. Il Canale di Beagle, i pinguini di Magellano, i paesaggi marziani della Terra del Fuoco. Un luogo che si visita e non si dimentica: il senso del confine estremo, della fine e dell'inizio.</p>
+        <p class="city-card-text">La città più australe del mondo, sul Canale di Beagle. Il Parco Nazionale Tierra del Fuego, poi la navigazione in catamarano: l'Isla de los Lobos con i leoni marini, il Faro Les Eclaireurs detto Faro della Fine del Mondo, fino a Isla Martillo, dove i pinguini arrivano se la stagione lo permette.</p>
       </div>
     </div>
   </div>
 
-  <div class="dest-divider">Poi, attraversando l'oceano</div>
+  <div class="dest-divider">Poi, attraversando il Pacifico</div>
 
   <!-- POLYNESIA -->
   <div class="dest-polynesia">
     <div class="poly-header">
       <p class="dest-flag" style="justify-content:center;margin-bottom:16px;">Seconda tappa</p>
       <h2 class="poly-country">Polinesia<br><em>Francese</em></h2>
-      <p class="poly-subtitle">✦ &nbsp; L'arcipelago del paradiso in mezzo al Pacifico</p>
+      <p class="poly-subtitle">✦ &nbsp; Dal 26 settembre al 5 ottobre: una notte a Tahiti, poi otto tra le Isole della Società</p>
     </div>
     <div class="poly-islands">
-      <div class="island-card island-bora">
-        <div class="island-bg"></div>
-        <div class="island-overlay"></div>
-        <div class="island-content">
-          <span class="island-icon">🏝</span>
-          <h3 class="island-name">Bora Bora</h3>
-          <p class="island-desc">L'isola più bella del mondo, dicono. La laguna turchese che cambia colore a ogni ora del giorno, il Monte Otemanu che si specchia nell'acqua, i bungalow sull'acqua, i tramonti infuocati. Un luogo che supera qualunque immaginazione.</p>
-        </div>
-      </div>
       <div class="island-card island-moorea">
         <div class="island-bg"></div>
         <div class="island-overlay"></div>
         <div class="island-content">
           <span class="island-icon">🌺</span>
-          <h3 class="island-name">Tahaa</h3>
-          <p class="island-desc">L'isola della vaniglia. Tahaa è avvolta da una laguna condivisa con Raiatea, ricca di coralli e mante. Qui il tempo scorre al ritmo delle piantagioni di vaniglia, tra acque cristalline, barriere coralline intatte e un silenzio che avvolge tutto.</p>
+          <p class="island-tag">4 notti · 27 settembre · 1 ottobre</p>
+          <h3 class="island-name">Taha'a</h3>
+          <p class="island-desc">L'isola della vaniglia, nella laguna condivisa con Raiatea. Si arriva in barca dall'aeroporto di Raiatea al Taha'a by Pearl Resorts, in una suite sull'acqua. Coralli, mante, piantagioni di vaniglia e un silenzio che avvolge tutto.</p>
+        </div>
+      </div>
+      <div class="island-card island-bora">
+        <div class="island-bg"></div>
+        <div class="island-overlay"></div>
+        <div class="island-content">
+          <span class="island-icon">🏝</span>
+          <p class="island-tag">4 notti · 1 · 5 ottobre</p>
+          <h3 class="island-name">Bora Bora</h3>
+          <p class="island-desc">L'isola più bella del mondo, dicono. Un bungalow sulla laguna al Bora Bora by Pearl Resorts, con il Monte Otemanu che si specchia nell'acqua e il turchese che cambia a ogni ora del giorno. Gli ultimi quattro giorni prima di tornare.</p>
         </div>
       </div>
     </div>
@@ -706,7 +773,7 @@
           '<a href="parcheggi.html">Parcheggi</a>'+
         '</div>'+
       '</div>'+
-      '<a href="viaggio.html" class="active">Lista Viaggio</a>'+
+      '<a href="viaggio.html" class="nav-cta active">Lista Viaggio</a>'+
     '</div>';
   document.body.appendChild(overlay); document.body.appendChild(drawer);
   const ham=document.createElement('button');
