@@ -7,18 +7,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#F5F0E8">
 <title>Gli Sposi | Lucrezia & Giorgio</title>
-  <meta name="description" content="Lucrezia e Giorgio si sposano! Festeggia con noi. Il 12 settembre 2026 a Cernobbio, Lago di Como">
+  <meta name="description" content="Lucrezia e Giorgio si sono sposati il 12 settembre 2026 a Cernobbio, sul Lago di Como. Grazie a tutti.">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Lucrezia & Giorgio | 12.09.2026">
-  <meta property="og:title" content="Lucrezia e Giorgio si sposano!">
-  <meta property="og:description" content="Lucrezia e Giorgio si sposano! Festeggia con noi. Il 12 settembre 2026 a Cernobbio, Lago di Como">
+  <meta property="og:title" content="Lucrezia e Giorgio si sono sposati">
+  <meta property="og:description" content="Lucrezia e Giorgio si sono sposati il 12 settembre 2026 a Cernobbio, sul Lago di Como. Grazie a tutti.">
   <meta property="og:image" content="https://www.giorgioelucrezia.it/og-social.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:locale" content="it_IT">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Lucrezia e Giorgio si sposano!">
-  <meta name="twitter:description" content="Lucrezia e Giorgio si sposano! Festeggia con noi. Il 12 settembre 2026 a Cernobbio, Lago di Como">
+  <meta name="twitter:title" content="Lucrezia e Giorgio si sono sposati">
+  <meta name="twitter:description" content="Lucrezia e Giorgio si sono sposati il 12 settembre 2026 a Cernobbio, sul Lago di Como. Grazie a tutti.">
   <meta name="twitter:image" content="https://www.giorgioelucrezia.it/og-social.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://gioriva.github.io" crossorigin>
@@ -47,19 +47,6 @@
   .nav-links { display:flex; gap:30px; align-items:center; }
   .nav-links a { line-height:1; font-size:0.68rem; font-weight:500; letter-spacing:0.18em; text-transform:uppercase; color:var(--ink-light); text-decoration:none; transition:color 0.3s; }
   .nav-links a:hover, .nav-links a.active { color:var(--green-deep); }
-  .nav-rsvp {
-    border: 1px solid currentColor;
-    padding: 4px 14px;
-    border-radius: 2px;
-    display: inline-flex;
-    align-items: center;
-    line-height: 1;
-  }
-  .nav-rsvp:hover, .nav-rsvp.active {
-    background: var(--green-deep);
-    color: var(--white) !important;
-    border-color: var(--green-deep);
-  }
 
   .page-hero {
     min-height:65vh; display:flex; align-items:flex-end;
@@ -157,7 +144,6 @@
     .nav-monogram { font-size: 1.1rem; white-space: nowrap; flex-shrink: 0; }
     .nav-links { gap: 12px; flex-wrap: wrap; justify-content: flex-end; }
     .nav-links a { font-size: 0.56rem; letter-spacing: 0.1em; }
-    .nav-rsvp { padding: 3px 8px; }
   }
 
   /* ── HAMBURGER MENU ── */
@@ -230,21 +216,6 @@
   .nav-drawer-links a:hover { color: var(--green-deep); padding-left: 6px; }
   .nav-drawer-links a:hover::after { opacity: 1; }
   .nav-drawer-links a.active { color: var(--green-deep); font-weight: 500; }
-  .nav-drawer-links .nav-rsvp {
-    margin-top: 24px;
-    border: 1px solid var(--green-deep) !important;
-    padding: 14px 20px !important;
-    border-radius: 2px;
-    color: var(--green-deep) !important;
-    justify-content: center;
-    letter-spacing: 0.15em;
-  }
-  .nav-drawer-links .nav-rsvp::after { display: none; }
-  .nav-drawer-links .nav-rsvp:hover {
-    background: var(--green-deep);
-    color: var(--white) !important;
-    padding-left: 20px !important;
-  }
 
   @media (max-width: 900px) {
     .hamburger { display: flex; }
@@ -306,7 +277,6 @@
       </div>
     </div>
     <a href="viaggio.html">Lista Viaggio</a>
-    <a href="rsvp.html" class="nav-rsvp">R.S.V.P.</a>
   </div>
 </nav>
 
@@ -509,7 +479,6 @@ document.querySelectorAll('.photo-item').forEach(el => {
         '</div>'+
       '</div>'+
       '<a href="viaggio.html">Lista Viaggio</a>'+
-      '<a href="rsvp.html" class="nav-rsvp">R.S.V.P.</a>'+
     '</div>';
   document.body.appendChild(overlay); document.body.appendChild(drawer);
   const ham=document.createElement('button');

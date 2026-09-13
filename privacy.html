@@ -34,19 +34,6 @@
   .nav-links { display:flex; gap:30px; align-items:center; }
   .nav-links a { line-height:1; font-size:0.68rem; font-weight:500; letter-spacing:0.18em; text-transform:uppercase; color:var(--ink-light); text-decoration:none; transition:color 0.3s; }
   .nav-links a:hover, .nav-links a.active { color:var(--green-deep); }
-  .nav-rsvp {
-    border: 1px solid currentColor;
-    padding: 4px 14px;
-    border-radius: 2px;
-    display: inline-flex;
-    align-items: center;
-    line-height: 1;
-  }
-  .nav-rsvp:hover, .nav-rsvp.active {
-    background: var(--green-deep);
-    color: var(--white) !important;
-    border-color: var(--green-deep);
-  }
 
   .page-head {
     padding:150px 40px 60px;
@@ -148,21 +135,6 @@
   .nav-drawer-links a::after { content: '→'; opacity: 0; transition: opacity 0.2s; font-size: 0.85rem; }
   .nav-drawer-links a:hover { color: var(--green-deep); padding-left: 6px; }
   .nav-drawer-links a:hover::after { opacity: 1; }
-  .nav-drawer-links .nav-rsvp {
-    margin-top: 24px;
-    border: 1px solid var(--green-deep) !important;
-    padding: 14px 20px !important;
-    border-radius: 2px;
-    color: var(--green-deep) !important;
-    justify-content: center;
-    letter-spacing: 0.15em;
-  }
-  .nav-drawer-links .nav-rsvp::after { display: none; }
-  .nav-drawer-links .nav-rsvp:hover {
-    background: var(--green-deep);
-    color: var(--white) !important;
-    padding-left: 20px !important;
-  }
 
   @media (max-width: 900px) {
     .hamburger { display: flex; }
@@ -224,14 +196,13 @@
       </div>
     </div>
     <a href="viaggio.html">Lista Viaggio</a>
-    <a href="rsvp.html" class="nav-rsvp">R.S.V.P.</a>
   </div>
 </nav>
 
 <div class="page-head">
   <p class="page-eyebrow">Informativa</p>
   <h1 class="page-title">Privacy & Cookie</h1>
-  <p class="page-updated">Ultimo aggiornamento: giugno 2026</p>
+  <p class="page-updated">Ultimo aggiornamento: settembre 2026</p>
 </div>
 
 <div class="content">
@@ -239,10 +210,10 @@
   <p>Questa pagina descrive come vengono trattati i dati personali dei visitatori di <strong>www.giorgioelucrezia.it</strong>, il sito dedicato al matrimonio di Lucrezia e Giorgio.</p>
 
   <h2>Titolare del trattamento</h2>
-  <p>I titolari del trattamento sono gli sposi, <strong>Lucrezia e Giorgio</strong>, contattabili ai recapiti indicati nella pagina <a href="rsvp.html">R.S.V.P.</a> del sito.</p>
+  <p>I titolari del trattamento sono gli sposi, <strong>Lucrezia e Giorgio</strong>, contattabili ai numeri 340 600 6211 (Giorgio) e 333 931 2139 (Lucrezia).</p>
 
-  <h2>Dati raccolti tramite il modulo R.S.V.P.</h2>
-  <p>Compilando il modulo di conferma presenza, vengono raccolti: nome, cognome, numero di cellulare, indirizzo email (facoltativo), conferma di partecipazione, eventuali intolleranze o allergie alimentari e note libere.</p>
+  <h2>Dati raccolti tramite il modulo di conferma presenza</h2>
+  <p>Il modulo di conferma presenza, attivo fino al giorno del matrimonio e ora rimosso dal sito, ha raccolto: nome, cognome, numero di cellulare, indirizzo email (facoltativo), conferma di partecipazione, eventuali intolleranze o allergie alimentari e note libere.</p>
   <p>Questi dati sono utilizzati <strong>esclusivamente per l'organizzazione del matrimonio</strong> (gestione degli inviti, predisposizione del menù, comunicazioni relative all'evento) e non vengono condivisi con terze parti per finalità commerciali. Le informazioni su intolleranze e allergie sono trattate al solo scopo di garantire un menù adeguato e vengono comunicate al solo personale di catering.</p>
   <p>L'invio del modulo avviene tramite il servizio <strong>Formspree</strong> (Formspree, Inc.), che agisce come responsabile del trattamento. Per maggiori dettagli: <a href="https://formspree.io/legal/privacy-policy/" target="_blank" rel="noopener">privacy policy di Formspree</a>.</p>
   <p>I dati raccolti saranno conservati fino al termine delle attività organizzative legate all'evento e successivamente cancellati.</p>
@@ -296,7 +267,6 @@
         '</div>'+
       '</div>'+
       '<a href="viaggio.html">Lista Viaggio</a>'+
-      '<a href="rsvp.html" class="nav-rsvp">R.S.V.P.</a>'+
     '</div>';
   document.body.appendChild(overlay); document.body.appendChild(drawer);
   const ham=document.createElement('button');

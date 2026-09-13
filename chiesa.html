@@ -43,8 +43,6 @@
   .nav-links { display:flex; gap:32px; align-items:center; }
   .nav-links a { line-height:1; font-size:.68rem; font-weight:500; letter-spacing:.16em; text-transform:uppercase; color:var(--ink-light); text-decoration:none; transition:color .3s; }
   .nav-links a:hover, .nav-links a.active { color:var(--green-deep); }
-  .nav-rsvp { border:1px solid currentColor; padding:4px 14px; border-radius:2px; display:inline-flex; align-items:center; line-height:1; }
-  .nav-rsvp:hover, .nav-rsvp.active { background:var(--green-deep); color:var(--white) !important; border-color:var(--green-deep); }
   .nav-drop { position:relative; display:flex; align-items:center; line-height:1; }
   .nav-drop-toggle { display:inline-flex; align-items:center; gap:6px; cursor:pointer; font-size:.68rem; font-weight:500; letter-spacing:.16em; padding:0; margin:0; line-height:1; vertical-align:baseline; text-transform:uppercase; color:var(--ink-light); background:none; border:none; font-family:inherit; transition:color .3s; }
   .nav-drop:hover .nav-drop-toggle, .nav-drop-toggle.active { color:var(--green-deep); }
@@ -158,9 +156,6 @@
   .dl-sub { display:flex; flex-direction:column; padding-left:14px; border-left:1px solid rgba(168,200,154,.5); margin-top:8px; }
   .dl-sub a { font-size:.86rem; color:var(--ink-light); text-decoration:none; padding:9px 0; transition:color .2s, padding-left .2s; }
   .dl-sub a:hover, .dl-sub a.active { color:var(--green-deep); padding-left:5px; }
-  .dl .nav-rsvp { margin-top:22px; border:1px solid var(--green-deep) !important; padding:14px 20px !important; border-radius:2px; color:var(--green-deep) !important; justify-content:center; letter-spacing:.15em; font-size:.8rem; }
-  .dl .nav-rsvp::after { display:none; }
-  .dl .nav-rsvp:hover { background:var(--green-deep); color:var(--white) !important; padding-left:20px !important; }
 
   @media (max-width:900px) {
     .hamburger { display:flex; }
@@ -197,7 +192,6 @@
       </div>
     </div>
     <a href="viaggio.html">Lista Viaggio</a>
-    <a href="rsvp.html" class="nav-rsvp">R.S.V.P.</a>
   </div>
 </nav>
 
@@ -206,7 +200,7 @@
   <img src="https://gioriva.github.io/album/matrimonio/evento/chiesa1.jpg" alt="La chiesa di San Vincenzo a Cernobbio" class="hero-img">
   <div class="hero-ov"></div>
   <div class="hero-in">
-    <p class="hero-eyebrow">Il luogo della cerimonia</p>
+    <p class="hero-eyebrow">Dove ci siamo sposati</p>
     <h1 class="hero-title">Chiesa di<br><em>San Vincenzo</em></h1>
     <p class="hero-sub">Cernobbio, Lago di Como · Sabato 12 settembre 2026, ore 15:00</p>
   </div>
@@ -270,7 +264,7 @@
   <div class="wrap">
     <p class="eyebrow">Una coincidenza di calendario</p>
     <h2>Settembre, il mese<br><em>dell'Addolorata</em></h2>
-    <p class="body">L'altare di destra custodisce la statua di Maria Addolorata, che in questa chiesa viene festeggiata proprio nel mese di settembre. Lucrezia e Giorgio si sposeranno il 12, pochi giorni prima della ricorrenza.</p>
+    <p class="body">L'altare di destra custodisce la statua di Maria Addolorata, che in questa chiesa viene festeggiata proprio nel mese di settembre. Lucrezia e Giorgio si sono sposati il 12, pochi giorni prima della ricorrenza.</p>
     <div class="pull"><p>Una coincidenza minima, di quelle che si notano solo guardando bene. Ma sono spesso le più belle.</p></div>
   </div>
 </section>
@@ -289,7 +283,7 @@
       <div class="tl-item"><p class="tl-year">1935</p><p class="tl-text">Il titolo di parrocchiale passa alla chiesa del Santissimo Redentore.</p></div>
       <div class="tl-item"><p class="tl-year">1978</p><p class="tl-text">Un incendio distrugge l'altare maggiore ligneo.</p></div>
       <div class="tl-item"><p class="tl-year">2005</p><p class="tl-text">Intervento di restauro del campanile.</p></div>
-      <div class="tl-item"><p class="tl-year">12 settembre 2026</p><p class="tl-text">Lucrezia e Giorgio si sposano qui, alle ore 15:00.</p></div>
+      <div class="tl-item"><p class="tl-year">12 settembre 2026</p><p class="tl-text">Lucrezia e Giorgio si sono sposati qui, alle ore 15:00.</p></div>
     </div>
   </div>
 </section>
@@ -297,8 +291,8 @@
 <!-- INFO PRATICHE -->
 <section class="sec sec-dark">
   <div class="wrap">
-    <p class="eyebrow">Per il giorno della cerimonia</p>
-    <h2>Come <em>arrivare</em></h2>
+    <p class="eyebrow">Dove si trova</p>
+    <h2>Per chi vuole <em>tornarci</em></h2>
     <div class="info-grid">
       <div>
         <p class="info-l">Dove</p>
@@ -306,11 +300,11 @@
       </div>
       <div>
         <p class="info-l">Quando</p>
-        <p class="info-v">Sabato 12 settembre 2026<br>Ritrovo h 14:45, cerimonia h 15:00</p>
+        <p class="info-v">Sabato 12 settembre 2026<br>Cerimonia alle ore 15:00</p>
       </div>
       <div>
         <p class="info-l">In auto</p>
-        <p class="info-v">Lasciate l’auto al parcheggio di Villa Erba: due navette vi portano in chiesa e vi riaccompagnano dopo la cerimonia.</p>
+        <p class="info-v">Il centro storico è pedonale. Il parcheggio più comodo resta quello di Villa Erba.</p>
       </div>
     </div>
     <div class="cta-row">
@@ -355,7 +349,6 @@
         '</div>'+
       '</div>'+
       '<a href="viaggio.html">Lista Viaggio</a>'+
-      '<a href="rsvp.html" class="nav-rsvp">R.S.V.P.</a>'+
     '</div>';
   document.body.appendChild(overlay); document.body.appendChild(drawer);
   const ham=document.createElement('button');
