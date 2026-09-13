@@ -95,7 +95,7 @@
   .venue-desc { font-size:0.78rem; line-height:1.7; color:rgba(245,240,232,0.6); }
   .venue-details { margin-top:20px; display:flex; flex-direction:column; gap:8px; }
   .venue-detail { display:flex; align-items:flex-start; gap:12px; font-size:0.75rem; color:rgba(245,240,232,0.5); }
-  .venue-detail-icon { color:var(--green); flex-shrink:0; width:16px; }
+  .venue-detail-icon { color:var(--green); flex-shrink:0; width:16px; display:inline-flex; align-items:center; margin-top:2px; }
   .venue-cta {
     display:inline-block; margin-top:18px;
     font-size:0.62rem; letter-spacing:0.2em; text-transform:uppercase;
@@ -349,14 +349,14 @@
         <div class="venue-info">
           <p class="venue-tag">Cerimonia · h 15:00</p>
           <h3 class="venue-name">Chiesa di San Vincenzo</h3>
-          <p class="venue-desc">L'antica chiesa parrocchiale di Cernobbio, affacciata sul lungolago di Como, sarà la cornice sacra in cui Giorgio e Lucrezia si scambieranno il loro sì. Un luogo di rara bellezza, immerso nel verde e nella storia del borgo.</p>
+          <p class="venue-desc">La chiesa più antica di Cernobbio, a pochi passi dal lago, è stata la cornice in cui Lucrezia e Giorgio si sono scambiati il loro sì. Un luogo di rara bellezza, nel cuore del borgo.</p>
           <div class="venue-details">
             <div class="venue-detail">
-              <span class="venue-detail-icon">📍</span>
+              <span class="venue-detail-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s-6-5.3-6-11a6 6 0 0 1 12 0c0 5.7-6 11-6 11z" stroke="#A8C89A" stroke-width="1.6" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.2" stroke="#A8C89A" stroke-width="1.6"/></svg></span>
               <span>Piazza Tolomeo Gallio, Cernobbio (CO)</span>
             </div>
             <div class="venue-detail">
-              <span class="venue-detail-icon">🕒</span>
+              <span class="venue-detail-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="8.5" stroke="#A8C89A" stroke-width="1.6"/><path d="M12 7.5V12l3 2" stroke="#A8C89A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
               <span>Sabato 12 Settembre 2026, ore 15:00</span>
             </div>
           </div>
@@ -372,14 +372,14 @@
         <div class="venue-info">
           <p class="venue-tag">Cena & Festa · h 19:30</p>
           <h3 class="venue-name">Castello Visconti di San Vito</h3>
-          <p class="venue-desc">Un castello medievale dalla storia millenaria, immerso in un parco secolare a Somma Lombardo. Tra le sue sale storiche e i giardini romantici, la serata si trasformerà in un ricordo indelebile.</p>
+          <p class="venue-desc">Un castello medievale dalla storia millenaria, immerso in un parco secolare a Somma Lombardo. Tra le sue sale storiche e i giardini, la serata è diventata un ricordo indelebile.</p>
           <div class="venue-details">
             <div class="venue-detail">
-              <span class="venue-detail-icon">📍</span>
+              <span class="venue-detail-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s-6-5.3-6-11a6 6 0 0 1 12 0c0 5.7-6 11-6 11z" stroke="#A8C89A" stroke-width="1.6" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.2" stroke="#A8C89A" stroke-width="1.6"/></svg></span>
               <span>Via Visconti di San Vito, Somma Lombardo (VA)</span>
             </div>
             <div class="venue-detail">
-              <span class="venue-detail-icon">🕒</span>
+              <span class="venue-detail-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="8.5" stroke="#A8C89A" stroke-width="1.6"/><path d="M12 7.5V12l3 2" stroke="#A8C89A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
               <span>Sabato 12 Settembre 2026, ore 19:30</span>
             </div>
           </div>
@@ -647,7 +647,7 @@
   banner.setAttribute('aria-label', 'Informativa cookie');
   banner.innerHTML =
     '<div class="cb-inner">' +
-      '<p class="cb-text">🌿 &nbsp;Questo sito utilizza cookie di analisi (Google Analytics) per capire come viene visitato. Nessun dato viene usato per pubblicit\u00e0. <a href="privacy.html">Leggi l\u2019informativa</a></p>' +
+      '<p class="cb-text"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="vertical-align:-2px;margin-right:4px;flex-shrink:0"><path d="M20 4c-8 0-14 5-14 13 0 1 .1 2 .3 3C13 20 19 15 20 4z" stroke="#A8C89A" stroke-width="1.5" stroke-linejoin="round"/><path d="M6.3 20C9 15 12 11 16 8" stroke="#A8C89A" stroke-width="1.5" stroke-linecap="round"/></svg>Questo sito utilizza cookie di analisi (Google Analytics) per capire come viene visitato. Nessun dato viene usato per pubblicit\u00e0. <a href="privacy.html">Leggi l\u2019informativa</a></p>' +
       '<div class="cb-actions">' +
         '<button class="cb-btn cb-accept" id="cbAccept">Accetta</button>' +
         '<button class="cb-btn cb-reject" id="cbReject">Rifiuta</button>' +

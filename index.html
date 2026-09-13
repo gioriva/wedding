@@ -149,11 +149,10 @@
   .thanks-photo img { width:100%; height:100%; object-fit:cover; object-position:center 40%; display:block; }
   .thanks-photo::after { content:''; position:absolute; inset:0; background:linear-gradient(to right, transparent 70%, var(--ink) 100%); pointer-events:none; }
   .thanks-text { display:flex; flex-direction:column; justify-content:center; padding:80px 72px 80px 48px; max-width:640px; }
-  .thanks-eyebrow { font-size:.6rem; letter-spacing:.3em; text-transform:uppercase; color:var(--green); margin-bottom:18px; display:flex; align-items:center; gap:12px; }
-  .thanks-eyebrow::before { content:''; width:28px; height:1px; background:var(--green); }
   .thanks-title { font-family:'Cormorant Garamond',serif; font-size:clamp(3.4rem,7vw,6rem); font-weight:300; font-style:italic; line-height:.95; color:#fff; margin-bottom:28px; }
   .thanks-body { font-size:.88rem; line-height:1.95; color:rgba(245,240,232,.78); margin-bottom:16px; }
   .thanks-sign { font-family:'Cormorant Garamond',serif; font-size:1.6rem; font-style:italic; font-weight:300; color:var(--green); margin-top:18px; }
+  .thanks-date { font-family:'Cormorant Garamond',serif; font-size:1.05rem; font-style:italic; font-weight:300; color:rgba(245,240,232,.5); margin-top:4px; letter-spacing:.04em; }
 
   /* FOOTER */
   footer {
@@ -438,12 +437,12 @@
       <img src="https://gioriva.github.io/album/matrimonio/giorno/torta.jpg" alt="Lucrezia e Giorgio al taglio della torta, sotto una pioggia di scintille" loading="lazy">
     </div>
     <div class="thanks-text">
-      <p class="thanks-eyebrow">12 settembre 2026</p>
       <h2 class="thanks-title">Grazie</h2>
       <p class="thanks-body">Ci siamo sposati. Nella chiesa di San Vincenzo, con il lago fuori dalla porta, e poi tra le mura del Castello, fino a tarda notte.</p>
-      <p class="thanks-body">Grazie a chi c'era. A chi ha viaggiato per esserci, a chi ha ballato fino all'una, a chi ci ha aiutato a costruire ogni dettaglio di questa giornata e a chi, semplicemente, ci ha abbracciato forte.</p>
+      <p class="thanks-body">Grazie a chi c'era. A chi ha viaggiato per esserci, a chi ha ballato fino a notte fonda, a chi ci ha aiutato a costruire ogni dettaglio di questa giornata e a chi, semplicemente, ci ha abbracciato forte.</p>
       <p class="thanks-body">È stata la giornata che avevamo immaginato, e anche qualcosa in più. L'abbiamo vissuta con voi, ed è questo che resta.</p>
       <p class="thanks-sign">Lucrezia e Giorgio</p>
+      <p class="thanks-date">12 settembre 2026</p>
     </div>
   </div>
 </section>
@@ -609,7 +608,7 @@
   banner.setAttribute('aria-label', 'Informativa cookie');
   banner.innerHTML =
     '<div class="cb-inner">' +
-      '<p class="cb-text">🌿 &nbsp;Questo sito utilizza cookie di analisi (Google Analytics) per capire come viene visitato. Nessun dato viene usato per pubblicit\u00e0. <a href="privacy.html">Leggi l\u2019informativa</a></p>' +
+      '<p class="cb-text"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="vertical-align:-2px;margin-right:4px;flex-shrink:0"><path d="M20 4c-8 0-14 5-14 13 0 1 .1 2 .3 3C13 20 19 15 20 4z" stroke="#A8C89A" stroke-width="1.5" stroke-linejoin="round"/><path d="M6.3 20C9 15 12 11 16 8" stroke="#A8C89A" stroke-width="1.5" stroke-linecap="round"/></svg>Questo sito utilizza cookie di analisi (Google Analytics) per capire come viene visitato. Nessun dato viene usato per pubblicit\u00e0. <a href="privacy.html">Leggi l\u2019informativa</a></p>' +
       '<div class="cb-actions">' +
         '<button class="cb-btn cb-accept" id="cbAccept">Accetta</button>' +
         '<button class="cb-btn cb-reject" id="cbReject">Rifiuta</button>' +
